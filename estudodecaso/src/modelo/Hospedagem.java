@@ -66,6 +66,12 @@ public class Hospedagem {
 	public void setNumeroPessoas(Integer numeroPessoas) {
 		this.numeroPessoas = numeroPessoas;
 	}
+	@Override
+	public String toString() {
+		return "Hospedagem [cpf=" + cpf + ", nome=" + nome + ", dataNascimento=" + dataNascimento + ", telefone="
+				+ telefone + ", cep=" + cep + ", email=" + email + ", numeroPessoas=" + numeroPessoas + "]";
+	}
+	
 	
 	
 
