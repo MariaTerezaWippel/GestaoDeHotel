@@ -3,6 +3,7 @@ package visao;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,6 +13,9 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import modelo.Hospedagem;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class telaCadastro extends JFrame {
 
@@ -23,6 +27,7 @@ public class telaCadastro extends JFrame {
 	private JTextField txtDataNascimento;
 	private JTextField txtQuanHospede;
 	private JTextField txtCep;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -130,12 +135,41 @@ public class telaCadastro extends JFrame {
 				
 				Hospedagem hospedagem = new Hospedagem();
 				
-				//ArrayList 
+				ArrayList<Hospedagem> hospedagemLista = new ArrayList();
+				hospedagem.setNome(nome);
+				Long cpfLong = Long.valueOf(cpf);
+				hospedagem.setCpf(cpfLong);
+				hospedagem.setDataNascimento(dataNascimento);
+				hospedagem.setEmail(email);
+				Integer numeroP= Integer.valueOf(quantidadeDeHospedes);
+				hospedagem.setNumeroPessoas(numeroP);
+				Long cepLong = Long.valueOf(cep); 
+				hospedagem.setCep(cepLong);
+				Long telefoneLong = Long.valueOf(telefone);
+				hospedagem.setTelefone(telefoneLong);
+				
+				hospedagemLista.add(hospedagem);
+				
+				
 
 						
 			}
 		});
 		btnCadastrar.setBounds(446, 440, 113, 23);
 		contentPane.add(btnCadastrar);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(422, 103, 528, 287);
+		contentPane.add(scrollPane);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"Email", "Cpf", "Nome"
+			}
+		));
+		scrollPane.setViewportView(table);
 	}
 }
