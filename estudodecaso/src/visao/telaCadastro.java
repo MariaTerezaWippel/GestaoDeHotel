@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -63,112 +64,82 @@ public class telaCadastro extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-<<<<<<< Updated upstream
 
-		JLabel lblNewLabel = new JLabel("Nome");
-		lblNewLabel.setBounds(92, 124, 46, 14);
-=======
 		
 		JLabel lblNewLabel = new JLabel("Nome:");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel.setBounds(120, 124, 46, 14);
->>>>>>> Stashed changes
+
 		contentPane.add(lblNewLabel);
 
 		txtNome = new JTextField();
 		txtNome.setBounds(207, 123, 177, 20);
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
-<<<<<<< Updated upstream
 
-		JLabel lblNewLabel_1 = new JLabel("CPF");
-		lblNewLabel_1.setBounds(92, 161, 46, 14);
-=======
 		
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_1.setBounds(131, 168, 35, 14);
->>>>>>> Stashed changes
 		contentPane.add(lblNewLabel_1);
 
 		txtCpf = new JTextField();
 		txtCpf.setBounds(207, 167, 148, 20);
 		contentPane.add(txtCpf);
 		txtCpf.setColumns(10);
-<<<<<<< Updated upstream
 
-		JLabel lblNewLabel_2 = new JLabel("Email");
-		lblNewLabel_2.setBounds(92, 196, 46, 14);
-=======
 		
 		JLabel lblNewLabel_2 = new JLabel("Email:");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_2.setBounds(131, 214, 46, 14);
->>>>>>> Stashed changes
+
 		contentPane.add(lblNewLabel_2);
 
 		txtEmail = new JTextField();
 		txtEmail.setBounds(207, 213, 177, 20);
 		contentPane.add(txtEmail);
 		txtEmail.setColumns(10);
-<<<<<<< Updated upstream
 
-		JLabel lblNewLabel_3 = new JLabel("Telefone");
-		lblNewLabel_3.setBounds(92, 237, 46, 14);
-=======
 		
 		JLabel lblNewLabel_3 = new JLabel("Telefone:");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(118, 257, 87, 14);
->>>>>>> Stashed changes
+
 		contentPane.add(lblNewLabel_3);
 
 		txtTelefone = new JTextField();
 		txtTelefone.setBounds(207, 256, 106, 20);
 		contentPane.add(txtTelefone);
 		txtTelefone.setColumns(10);
-<<<<<<< Updated upstream
 
-		JLabel lblNewLabel_4 = new JLabel("Data de Nascimento");
-		lblNewLabel_4.setBounds(51, 276, 113, 14);
-=======
 		
 		JLabel lblNewLabel_4 = new JLabel("Data de Nascimento:");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_4.setBounds(45, 301, 128, 14);
->>>>>>> Stashed changes
 		contentPane.add(lblNewLabel_4);
 
 		txtDataNascimento = new JTextField();
 		txtDataNascimento.setBounds(207, 300, 98, 20);
 		contentPane.add(txtDataNascimento);
 		txtDataNascimento.setColumns(10);
-<<<<<<< Updated upstream
 
-		JLabel lblNewLabel_5 = new JLabel("Quantidade de Hóspedes");
-		lblNewLabel_5.setBounds(10, 317, 128, 14);
-=======
 		
 		JLabel lblNewLabel_5 = new JLabel("Quantidade de Hóspedes:");
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_5.setBounds(20, 349, 167, 14);
->>>>>>> Stashed changes
+
 		contentPane.add(lblNewLabel_5);
 
 		txtQuanHospede = new JTextField();
 		txtQuanHospede.setBounds(207, 348, 46, 20);
 		contentPane.add(txtQuanHospede);
 		txtQuanHospede.setColumns(10);
-<<<<<<< Updated upstream
 
-		JLabel lblNewLabel_6 = new JLabel("CEP");
-		lblNewLabel_6.setBounds(92, 361, 46, 14);
-=======
-		
+
 		JLabel lblNewLabel_6 = new JLabel("CEP:");
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_6.setBounds(147, 400, 46, 14);
->>>>>>> Stashed changes
+
 		contentPane.add(lblNewLabel_6);
 
 		txtCep = new JTextField();
@@ -192,11 +163,26 @@ public class telaCadastro extends JFrame {
 				Hospedagem hospedagem = new Hospedagem();
 
 				ArrayList<Hospedagem> hospedagemLista = new ArrayList();
-				hospedagem.setNome(nome);
-				Long cpfLong = Long.valueOf(cpf);
-				hospedagem.setCpf(cpfLong);
+				
+				if(nome.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Nome errado");
+				}else{
+					hospedagem.setNome(nome);
+				}
+				if(cpf.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "cpf errado");
+				}else{
+					Long cpfLong = Long.valueOf(cpf);
+					hospedagem.setCpf(cpfLong);
+				}
+				if(email.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "email errado");
+				}else{
+					hospedagem.setEmail(email);
+				}
+			
 				hospedagem.setDataNascimento(dataNascimento);
-				hospedagem.setEmail(email);
+				
 				Integer numeroP = Integer.valueOf(quantidadeDeHospedes);
 				hospedagem.setNumeroPessoas(numeroP);
 				Long cepLong = Long.valueOf(cep);
@@ -224,14 +210,13 @@ public class telaCadastro extends JFrame {
 		dataModel = new DefaultTableModel(new Object[][] {}, new String[] { "Email", "Cpf", "Nome" });
 		table.setModel(dataModel);
 		scrollPane.setViewportView(table);
-<<<<<<< Updated upstream
 
-=======
+
 		
 		JLabel lblNewLabel_7 = new JLabel(" Cadastro Hóspede");
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblNewLabel_7.setBounds(383, 31, 304, 23);
 		contentPane.add(lblNewLabel_7);
->>>>>>> Stashed changes
+
 	}
 }
