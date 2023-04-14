@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.Font;
 import java.awt.Color;
 
-public class telaCadastro extends JFrame {
+public class TelaCadastro extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtNome;
@@ -40,7 +40,7 @@ public class telaCadastro extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaCadastro frame = new telaCadastro();
+					TelaCadastro frame = new TelaCadastro();
 					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -53,7 +53,7 @@ public class telaCadastro extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaCadastro() {
+	public TelaCadastro() {
 		setTitle("Tela Cadastro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 600);
