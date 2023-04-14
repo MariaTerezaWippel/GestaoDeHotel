@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import modelo.Hospedagem;
+import modelo.Hospede;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -160,9 +160,9 @@ public class TelaCadastro extends JFrame {
 				String quantidadeDeHospedes = txtQuanHospede.getText();
 				String dataNascimento = txtDataNascimento.getText();
 
-				Hospedagem hospedagem = new Hospedagem();
+				Hospede hospedagem = new Hospede();
 
-				ArrayList<Hospedagem> hospedagemLista = new ArrayList();
+				ArrayList<Hospede> hospedagemLista = new ArrayList();
 				
 				if(nome.isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Nome errado");
@@ -193,7 +193,7 @@ public class TelaCadastro extends JFrame {
 				hospedagemLista.add(hospedagem);
 				System.out.println(hospedagem);
 
-				for (Hospedagem h : hospedagemLista) {
+				for (Hospede h : hospedagemLista) {
 					dataModel.addRow(new Object[] { h.getNome(), h.getCpf(), h.getEmail() });
 				}
 

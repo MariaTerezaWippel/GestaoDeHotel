@@ -1,6 +1,6 @@
 package modelo;
 
-public class Hospedagem {
+public class Hospede {
 	
 	private Long cpf;
 	private String nome;
@@ -11,9 +11,9 @@ public class Hospedagem {
 	private Integer numeroPessoas;
 	
 	
-	public Hospedagem() {
+	public Hospede() {
 	}
-	public Hospedagem(Long cpf, String nome, String dataNascimento, Long telefone, Long cep, String email,
+	public Hospede(Long cpf, String nome, String dataNascimento, Long telefone, Long cep, String email,
 			Integer numeroPessoas) {
 		super();
 		this.cpf = cpf;
