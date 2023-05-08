@@ -56,7 +56,7 @@ public class TelaCadastro extends JFrame {
 	public TelaCadastro() {
 		setTitle("Tela Cadastro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1000, 600);
+		setBounds(100, 100, 1260, 991);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(224, 255, 255));
 		contentPane.setForeground(new Color(152, 251, 152));
