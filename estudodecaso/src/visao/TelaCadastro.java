@@ -47,7 +47,7 @@ public class TelaCadastro extends JFrame {
 					e.printStackTrace();
 				}
 			}
-		});
+		}
 	}
 
 	/**
