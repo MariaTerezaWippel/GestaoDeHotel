@@ -17,7 +17,7 @@ import javax.swing.JTextPane;
 public class TelaPrincipal extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textPesquisarCampo;
 
 	/**
 	 * Launch the application.
@@ -26,7 +26,7 @@ public class TelaPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaLogin frame = new TelaLogin();
+					TelaPrincipal frame = new TelaPrincipal();
 					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -44,7 +44,7 @@ public class TelaPrincipal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 600);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(224, 255, 255));
+		contentPane.setBackground(new Color(135, 206, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -54,40 +54,42 @@ public class TelaPrincipal extends JFrame {
 		lblNewLabel_2.setBounds(548, 10, 46, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_1 = new JLabel("HotelBoulevard.com");
-		lblNewLabel_1.setBounds(580, 89, 328, 25);
-		lblNewLabel_1.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 35));
-		contentPane.add(lblNewLabel_1);
+		JLabel lblHotel = new JLabel("HotelBoulevard.com");
+		lblHotel.setBounds(580, 89, 328, 25);
+		lblHotel.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 35));
+		contentPane.add(lblHotel);
 		
-		JButton btnNewButton = new JButton("Já tem Reserva? Clique aqui!");
-		btnNewButton.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 11));
-		btnNewButton.setBounds(655, 356, 172, 23);
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnReservar = new JButton("Já tem Reserva? Clique aqui!");
+		btnReservar.setBackground(new Color(135, 206, 250));
+		btnReservar.setFont(new Font("Source Sans Pro Semibold", Font.BOLD, 12));
+		btnReservar.setBounds(658, 354, 177, 23);
+		btnReservar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		contentPane.add(btnNewButton);
+		contentPane.add(btnReservar);
 		
-		textField = new JTextField();
-		textField.setBounds(579, 269, 248, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textPesquisarCampo = new JTextField();
+		textPesquisarCampo.setBounds(579, 269, 248, 20);
+		contentPane.add(textPesquisarCampo);
+		textPesquisarCampo.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Pesquisar");
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 11));
-		lblNewLabel.setBounds(579, 244, 84, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblPesquisar = new JLabel("Pesquisar");
+		lblPesquisar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 12));
+		lblPesquisar.setBounds(579, 244, 84, 14);
+		contentPane.add(lblPesquisar);
 		
-		JButton btnNewButton_1 = new JButton("Ir");
-		btnNewButton_1.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 11));
-		btnNewButton_1.setBounds(837, 268, 46, 22);
-		contentPane.add(btnNewButton_1);
+		JButton btnBotaoIr = new JButton("Ir");
+		btnBotaoIr.setBackground(new Color(135, 206, 250));
+		btnBotaoIr.setFont(new Font("Source Sans Pro Semibold", Font.BOLD, 12));
+		btnBotaoIr.setBounds(837, 268, 46, 22);
+		contentPane.add(btnBotaoIr);
 		
-		JTextPane txtpnAquiVoc = new JTextPane();
-		txtpnAquiVoc.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 11));
-		txtpnAquiVoc.setBackground(new Color(224, 255, 255));
-		txtpnAquiVoc.setText("Aqui você encontra os melhores preços com qualidade de acomodação e serviço. Faça sua reserva agora!");
-		txtpnAquiVoc.setBounds(621, 460, 240, 48);
-		contentPane.add(txtpnAquiVoc);
+		JTextPane txtTexto = new JTextPane();
+		txtTexto.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 11));
+		txtTexto.setBackground(new Color(135, 206, 250));
+		txtTexto.setText("Aqui você encontra os melhores preços com qualidade de acomodação e serviço. Faça sua reserva agora!");
+		txtTexto.setBounds(547, 470, 427, 48);
+		contentPane.add(txtTexto);
 	}
 }
