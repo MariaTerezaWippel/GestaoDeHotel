@@ -55,8 +55,8 @@ public class TelaReserva extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Data de Entrada:");
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel.setBounds(573, 228, 158, 14);
+		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblNewLabel);
 		
 		txtDataEntra = new JTextField();
@@ -65,13 +65,13 @@ public class TelaReserva extends JFrame {
 		txtDataEntra.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Reserva da Hospedagem");
-		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 26));
 		lblNewLabel_1.setBounds(573, 57, 363, 27);
+		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 26));
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Data de Saída:");
-		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel_2.setBounds(591, 284, 128, 14);
+		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblNewLabel_2);
 		
 		txtDataSaida = new JTextField();
@@ -80,8 +80,8 @@ public class TelaReserva extends JFrame {
 		txtDataSaida.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("Tipo de Quarto:");
-		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel_3.setBounds(573, 332, 161, 27);
+		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblNewLabel_3);
 		
 		txtTipoQuarto = new JTextField();
@@ -90,8 +90,8 @@ public class TelaReserva extends JFrame {
 		txtTipoQuarto.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Número da Reserva:");
-		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel_4.setBounds(528, 397, 201, 14);
+		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblNewLabel_4);
 		
 		txtNumReserva = new JTextField();
@@ -100,8 +100,8 @@ public class TelaReserva extends JFrame {
 		txtNumReserva.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Quantidade de Pessoas:");
+		lblNewLabel_5.setBounds(498, 457, 233, 20);
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_5.setBounds(498, 457, 233, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		txtQuatdPessoas = new JTextField();
@@ -110,8 +110,8 @@ public class TelaReserva extends JFrame {
 		txtQuatdPessoas.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Realizar Reserva");
-		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton.setBounds(623, 562, 210, 23);
+		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(btnNewButton);
 	}
 }
