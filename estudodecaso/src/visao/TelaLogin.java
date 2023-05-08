@@ -53,7 +53,7 @@ public class TelaLogin extends JFrame {
 		lblNewLabel.setBounds(197, 246, 100, -150);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel(" Login :");
+		JLabel lblNewLabel_1 = new JLabel(" Login");
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 24));
 		lblNewLabel_1.setBounds(899, 34, 100, 34);
 		contentPane.add(lblNewLabel_1);
