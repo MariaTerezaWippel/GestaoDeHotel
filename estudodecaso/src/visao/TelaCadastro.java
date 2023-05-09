@@ -58,7 +58,7 @@ public class TelaCadastro extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1260, 991);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(224, 255, 255));
+		contentPane.setBackground(new Color(135, 206, 250));
 		contentPane.setForeground(new Color(152, 251, 152));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -205,7 +205,7 @@ public class TelaCadastro extends JFrame {
 		scrollPane.setViewportView(table);
 
 		JLabel lblNewLabel_7 = new JLabel(" Cadastro Hóspede");
-		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblNewLabel_7.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 23));
 		lblNewLabel_7.setBounds(383, 31, 304, 23);
 		contentPane.add(lblNewLabel_7);
 
