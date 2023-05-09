@@ -28,7 +28,6 @@ public class TelaCadastro extends JFrame {
 	private JTextField txtEmail;
 	private JTextField txtTelefone;
 	private JTextField txtDataNascimento;
-	private JTextField txtQuanHospede;
 	private JTextField txtCep;
 	private JTable table;
 	private DefaultTableModel dataModel;
@@ -66,83 +65,73 @@ public class TelaCadastro extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Nome:");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel.setBounds(120, 124, 46, 14);
+		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel.setBounds(169, 121, 75, 21);
 
 		contentPane.add(lblNewLabel);
 
 		txtNome = new JTextField();
-		txtNome.setBounds(207, 123, 177, 20);
+		txtNome.setForeground(new Color(240, 248, 255));
+		txtNome.setBounds(169, 149, 241, 21);
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
 
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_1.setBounds(131, 168, 35, 14);
+		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel_1.setBounds(169, 178, 66, 21);
 		contentPane.add(lblNewLabel_1);
 
 		txtCpf = new JTextField();
-		txtCpf.setBounds(207, 167, 148, 20);
+		txtCpf.setBounds(169, 204, 186, 21);
 		contentPane.add(txtCpf);
 		txtCpf.setColumns(10);
 
 		JLabel lblNewLabel_2 = new JLabel("Email:");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_2.setBounds(131, 214, 46, 14);
+		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel_2.setBounds(169, 236, 66, 21);
 
 		contentPane.add(lblNewLabel_2);
 
 		txtEmail = new JTextField();
-		txtEmail.setBounds(207, 213, 177, 20);
+		txtEmail.setBounds(169, 268, 241, 21);
 		contentPane.add(txtEmail);
 		txtEmail.setColumns(10);
 
 		JLabel lblNewLabel_3 = new JLabel("Telefone:");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_3.setBounds(118, 257, 87, 14);
+		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel_3.setBounds(169, 298, 95, 21);
 
 		contentPane.add(lblNewLabel_3);
 
 		txtTelefone = new JTextField();
-		txtTelefone.setBounds(207, 256, 106, 20);
+		txtTelefone.setBounds(169, 327, 148, 20);
 		contentPane.add(txtTelefone);
 		txtTelefone.setColumns(10);
 
 		JLabel lblNewLabel_4 = new JLabel("Data de Nascimento:");
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_4.setBounds(45, 301, 128, 14);
+		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel_4.setBounds(169, 358, 169, 14);
 		contentPane.add(lblNewLabel_4);
 
 		txtDataNascimento = new JTextField();
-		txtDataNascimento.setBounds(207, 300, 98, 20);
+		txtDataNascimento.setBounds(169, 383, 98, 20);
 		contentPane.add(txtDataNascimento);
 		txtDataNascimento.setColumns(10);
 
-		JLabel lblNewLabel_5 = new JLabel("Quantidade de Hóspedes:");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_5.setBounds(20, 349, 167, 14);
-
-		contentPane.add(lblNewLabel_5);
-
-		txtQuanHospede = new JTextField();
-		txtQuanHospede.setBounds(207, 348, 46, 20);
-		contentPane.add(txtQuanHospede);
-		txtQuanHospede.setColumns(10);
-
 		JLabel lblNewLabel_6 = new JLabel("CEP:");
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_6.setBounds(147, 400, 46, 14);
+		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel_6.setBounds(169, 429, 46, 14);
 
 		contentPane.add(lblNewLabel_6);
 
 		txtCep = new JTextField();
-		txtCep.setBounds(207, 399, 87, 20);
+		txtCep.setBounds(169, 454, 177, 20);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
 		JButton btnCadastrar = new JButton("CADASTRAR");
-		btnCadastrar.setBackground(new Color(127, 255, 212));
-		btnCadastrar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnCadastrar.setBackground(new Color(0, 0, 0));
+		btnCadastrar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 16));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String nome = txtNome.getText();
@@ -192,11 +181,11 @@ public class TelaCadastro extends JFrame {
 
 			}
 		});
-		btnCadastrar.setBounds(379, 492, 157, 23);
+		btnCadastrar.setBounds(515, 658, 157, 42);
 		contentPane.add(btnCadastrar);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(422, 103, 528, 287);
+		scrollPane.setBounds(551, 120, 518, 354);
 		contentPane.add(scrollPane);
 
 		table = new JTable();
@@ -204,9 +193,10 @@ public class TelaCadastro extends JFrame {
 		table.setModel(dataModel);
 		scrollPane.setViewportView(table);
 
-		JLabel lblNewLabel_7 = new JLabel(" Cadastro Hóspede");
-		lblNewLabel_7.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 23));
-		lblNewLabel_7.setBounds(383, 31, 304, 23);
+		JLabel lblNewLabel_7 = new JLabel(" Cadastro do Hóspede");
+		lblNewLabel_7.setForeground(new Color(0, 0, 255));
+		lblNewLabel_7.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 42));
+		lblNewLabel_7.setBounds(355, 25, 463, 70);
 		contentPane.add(lblNewLabel_7);
 
 	}

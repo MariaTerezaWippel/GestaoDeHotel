@@ -96,12 +96,12 @@ public class TelaLogin extends JFrame {
 		lblNewLabel_4.setBounds(505, 81, 251, 44);
 		contentPane.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("Ainda não possui uma conta?");
+		JLabel lblNewLabel_5 = new JLabel("Cliente ainda não possui uma conta?");
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_5.setBounds(516, 607, 240, 25);
+		lblNewLabel_5.setBounds(483, 605, 315, 25);
 		contentPane.add(lblNewLabel_5);
 		
-		JButton btnNewButton_1 = new JButton("Cadastra-se ! ");
+		JButton btnNewButton_1 = new JButton("Cadastrar! ");
 		btnNewButton_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 11));
 		btnNewButton_1.setBounds(583, 653, 109, 23);
 		contentPane.add(btnNewButton_1);

@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import java.awt.SystemColor;
 
 public class TelaPagamento extends JFrame {
 
@@ -58,6 +59,7 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		textField = new JTextField();
+		textField.setBackground(SystemColor.inactiveCaptionBorder);
 		textField.setBounds(496, 178, 92, 27);
 		contentPane.add(textField);
 		textField.setColumns(10);
@@ -68,11 +70,13 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblServioDeQuarto);
 		
 		JButton btnNewButton = new JButton("Sim");
+		btnNewButton.setBackground(new Color(0, 0, 0));
 		btnNewButton.setBounds(496, 308, 89, 38);
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 11));
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Não");
+		btnNewButton_1.setBackground(new Color(0, 0, 0));
 		btnNewButton_1.setBounds(610, 308, 89, 38);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -98,11 +102,13 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblFormaPagamento);
 		
 		textField_2 = new JTextField();
+		textField_2.setBackground(new Color(255, 255, 255));
 		textField_2.setBounds(496, 564, 141, 27);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
 		JButton btnNewButton_2 = new JButton("Finalizar ");
+		btnNewButton_2.setBackground(new Color(0, 0, 0));
 		btnNewButton_2.setBounds(488, 764, 228, 56);
 		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
 		contentPane.add(btnNewButton_2);
