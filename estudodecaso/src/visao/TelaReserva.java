@@ -20,7 +20,6 @@ import javax.swing.JTree;
 import javax.swing.JSpinner;
 import java.awt.Canvas;
 import java.awt.Checkbox;
-import com.jgoodies.forms.factories.DefaultComponentFactory;
 import java.awt.Button;
 import java.awt.SystemColor;
 import java.awt.Scrollbar;

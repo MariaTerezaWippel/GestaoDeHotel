@@ -19,16 +19,15 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import modelo.Hospede;
-<<<<<<< Updated upstream
+
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JProgressBar;
 import javax.swing.JSeparator;
 import javax.swing.ImageIcon;
-=======
+
 import java.awt.Button;
->>>>>>> Stashed changes
 
 public class TelaCadastro extends JFrame {
 
@@ -56,7 +55,7 @@ public class TelaCadastro extends JFrame {
 					e.printStackTrace();
 				}
 			}
-		}
+		});
 	}
 
 	/**
