@@ -29,6 +29,7 @@ import javax.swing.JRadioButton;
 import java.awt.Component;
 import javax.swing.Box;
 import java.awt.Dimension;
+import javax.swing.ImageIcon;
 
 public class TelaReserva extends JFrame {
 
