@@ -19,12 +19,16 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import modelo.Hospede;
+<<<<<<< Updated upstream
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JProgressBar;
 import javax.swing.JSeparator;
 import javax.swing.ImageIcon;
+=======
+import java.awt.Button;
+>>>>>>> Stashed changes
 
 public class TelaCadastro extends JFrame {
 
@@ -64,7 +68,7 @@ public class TelaCadastro extends JFrame {
 		setBounds(100, 100, 1260, 991);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(135, 206, 250));
-		contentPane.setForeground(new Color(152, 251, 152));
+		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -120,60 +124,6 @@ public class TelaCadastro extends JFrame {
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
-		JButton btnCadastrar = new JButton("CADASTRAR");
-		btnCadastrar.setBackground(new Color(0, 0, 0));
-		btnCadastrar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 16));
-		btnCadastrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String nome = txtNome.getText();
-				String cpf = txtCpf.getText();
-				String telefone = txtTelefone.getText();
-				String email = txtEmail.getText();
-				String cep = txtCep.getText();
-				String quantidadeDeHospedes = txtQuanHospede.getText();
-				String dataNascimento = txtDataNascimento.getText();
-
-				Hospede hospedagem = new Hospede();
-
-				ArrayList<Hospede> hospedagemLista = new ArrayList();
-
-				if (nome.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Nome errado");
-				} else {
-					hospedagem.setNome(nome);
-				}
-				if (cpf.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "cpf errado");
-				} else {
-					Long cpfLong = Long.valueOf(cpf);
-					hospedagem.setCpf(cpfLong);
-				}
-				if (email.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "email errado");
-				} else {
-					hospedagem.setEmail(email);
-				}
-
-				hospedagem.setDataNascimento(dataNascimento);
-
-				Integer numeroP = Integer.valueOf(quantidadeDeHospedes);
-				hospedagem.setNumeroPessoas(numeroP);
-				Long cepLong = Long.valueOf(cep);
-				hospedagem.setCep(cepLong);
-				Long telefoneLong = Long.valueOf(telefone);
-				hospedagem.setTelefone(telefoneLong);
-
-				hospedagemLista.add(hospedagem);
-				System.out.println(hospedagem);
-
-				for (Hospede h : hospedagemLista) {
-					dataModel.addRow(new Object[] { h.getNome(), h.getCpf(), h.getEmail() });
-				}
-
-			}
-		});
-		btnCadastrar.setBounds(505, 781, 157, 42);
-		contentPane.add(btnCadastrar);
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(672, 274, 518, 354);
@@ -185,11 +135,12 @@ public class TelaCadastro extends JFrame {
 		scrollPane.setViewportView(table);
 
 		JLabel lblNewLabel_7 = new JLabel(" Cadastro do Hóspede");
-		lblNewLabel_7.setForeground(new Color(0, 0, 255));
-		lblNewLabel_7.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 42));
-		lblNewLabel_7.setBounds(355, 25, 463, 70);
+		lblNewLabel_7.setForeground(new Color(0, 0, 128));
+		lblNewLabel_7.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel_7.setBounds(396, 45, 377, 38);
 		contentPane.add(lblNewLabel_7);
 		
+
 		textField = new JTextField();
 		textField.setBounds(171, 360, 184, 20);
 		contentPane.add(textField);
@@ -210,5 +161,11 @@ public class TelaCadastro extends JFrame {
 		lblNewLabel_5.setBounds(317, 90, 323, 83);
 		contentPane.add(lblNewLabel_5);
 
+		JButton btnNewButton = new JButton("CADASTRAR");
+		btnNewButton.setBackground(new Color(0, 0, 128));
+		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		btnNewButton.setBounds(516, 722, 148, 38);
+		contentPane.add(btnNewButton);
+       
 	}
 }

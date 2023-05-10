@@ -58,8 +58,8 @@ public class TelaExclusaoHospede extends JFrame {
 		JLabel lblNewLabel = new JLabel("Tela Exclusão de Hóspede");
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setBackground(new Color(240, 240, 240));
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 26));
-		lblNewLabel.setBounds(486, 71, 384, 28);
+		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel.setBounds(424, 71, 446, 28);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nome:");
@@ -143,7 +143,8 @@ public class TelaExclusaoHospede extends JFrame {
 		txtNumeroReserva.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Excluir Hóspede");
-		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		btnNewButton.setBackground(new Color(25, 25, 112));
+		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnNewButton.setBounds(486, 742, 314, 35);
 		contentPane.add(btnNewButton);
 		

@@ -51,8 +51,10 @@ public class TelaCheckIn extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Efetuar Check-In");
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 26));
-		lblNewLabel.setBounds(408, 58, 238, 36);
+		lblNewLabel.setForeground(new Color(25, 25, 112));
+		lblNewLabel.setBackground(new Color(240, 240, 240));
+		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel.setBounds(353, 58, 293, 36);
 		contentPane.add(lblNewLabel);
 		
 		textField = new JTextField();
@@ -77,9 +79,9 @@ public class TelaCheckIn extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Confimar Check-In");
-		btnNewButton.setBackground(new Color(135, 206, 250));
-		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD, 12));
-		btnNewButton.setBounds(440, 345, 139, 23);
+		btnNewButton.setBackground(new Color(0, 0, 128));
+		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		btnNewButton.setBounds(408, 345, 187, 23);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");

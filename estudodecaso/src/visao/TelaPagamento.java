@@ -46,6 +46,7 @@ public class TelaPagamento extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaPagamento() {
+		setTitle("Tela Pagamento");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1260, 991);
 		contentPane = new JPanel();
@@ -77,9 +78,15 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblFormaPagamento);
 		
 		JButton btnNewButton_2 = new JButton("Finalizar ");
+
 		btnNewButton_2.setBackground(new Color(0, 0, 0));
 		btnNewButton_2.setBounds(584, 768, 228, 56);
 		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
+
+		btnNewButton_2.setBackground(new Color(25, 25, 112));
+		btnNewButton_2.setBounds(488, 764, 228, 56);
+		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+
 		contentPane.add(btnNewButton_2);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Sim");

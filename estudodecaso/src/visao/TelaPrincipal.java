@@ -57,14 +57,14 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblHotel = new JLabel("HotelBoulevard.com");
-		lblHotel.setBounds(628, 51, 328, 25);
-		lblHotel.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 26));
+		lblHotel.setBounds(593, 51, 328, 25);
+		lblHotel.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblHotel);
 		
 		JButton btnReservar = new JButton("Já tem Reserva? Clique aqui!");
-		btnReservar.setBackground(new Color(135, 206, 250));
-		btnReservar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		btnReservar.setBounds(652, 352, 207, 23);
+		btnReservar.setBackground(new Color(0, 0, 128));
+		btnReservar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		btnReservar.setBounds(607, 350, 280, 33);
 		btnReservar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
