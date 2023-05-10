@@ -68,12 +68,12 @@ public class TelaLogin extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email :");
-		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 22));
+		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		lblNewLabel_2.setBounds(457, 236, 100, 34);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Senha :");
-		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 22));
+		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		lblNewLabel_3.setBounds(457, 313, 80, 34);
 		contentPane.add(lblNewLabel_3);
 		

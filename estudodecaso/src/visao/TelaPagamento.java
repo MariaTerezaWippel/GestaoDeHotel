@@ -23,6 +23,7 @@ import javax.swing.JComboBox;
 public class TelaPagamento extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
 	private JTextField textField_1;
 
 	/**
@@ -56,48 +57,56 @@ public class TelaPagamento extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Preço Diária : ");
-		lblNewLabel.setBounds(496, 76, 141, 56);
+		lblNewLabel.setBounds(524, 237, 141, 56);
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblServioDeQuarto = new JLabel("Serviço de Quarto :");
-		lblServioDeQuarto.setBounds(496, 236, 220, 56);
+		lblServioDeQuarto.setBounds(524, 304, 220, 56);
 		lblServioDeQuarto.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblServioDeQuarto);
 		
 		JLabel lblTotalAPagar = new JLabel("Total a pagar : ");
-		lblTotalAPagar.setBounds(496, 382, 153, 56);
-		lblTotalAPagar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 22));
+		lblTotalAPagar.setBounds(524, 429, 244, 56);
+		lblTotalAPagar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblTotalAPagar);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(496, 439, 86, 27);
-		textField_1.setEnabled(false);
-		textField_1.setEditable(false);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
-		
 		JLabel lblFormaPagamento = new JLabel("Forma de pagamento : ");
-		lblFormaPagamento.setBounds(496, 496, 228, 56);
-		lblFormaPagamento.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 22));
+		lblFormaPagamento.setBounds(524, 517, 228, 56);
+		lblFormaPagamento.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblFormaPagamento);
 		
 		JButton btnNewButton_2 = new JButton("Finalizar ");
 		btnNewButton_2.setBackground(new Color(0, 0, 0));
-		btnNewButton_2.setBounds(488, 764, 228, 56);
+		btnNewButton_2.setBounds(584, 768, 228, 56);
 		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
 		contentPane.add(btnNewButton_2);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Sim");
-		rdbtnNewRadioButton.setBounds(506, 310, 68, 34);
+		rdbtnNewRadioButton.setBounds(524, 367, 68, 34);
 		contentPane.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Não");
-		rdbtnNewRadioButton_1.setBounds(614, 312, 68, 31);
+		rdbtnNewRadioButton_1.setBounds(609, 367, 68, 34);
 		contentPane.add(rdbtnNewRadioButton_1);
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(496, 542, 186, 22);
+		comboBox.setBounds(524, 584, 288, 22);
 		contentPane.add(comboBox);
+		
+		textField = new JTextField();
+		textField.setBounds(655, 258, 153, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(655, 450, 153, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
+		lblNewLabel_1.setBounds(432, 11, 492, 236);
+		contentPane.add(lblNewLabel_1);
 	}
 }

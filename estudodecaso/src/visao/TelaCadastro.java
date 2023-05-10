@@ -19,18 +19,24 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import modelo.Hospede;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JProgressBar;
+import javax.swing.JSeparator;
+import javax.swing.ImageIcon;
 
 public class TelaCadastro extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtNome;
-	private JTextField txtCpf;
-	private JTextField txtEmail;
-	private JTextField txtTelefone;
 	private JTextField txtDataNascimento;
 	private JTextField txtCep;
 	private JTable table;
 	private DefaultTableModel dataModel;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -66,66 +72,51 @@ public class TelaCadastro extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("Nome:");
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel.setBounds(171, 189, 75, 21);
+		lblNewLabel.setBounds(171, 259, 75, 21);
 
 		contentPane.add(lblNewLabel);
 
 		txtNome = new JTextField();
 		txtNome.setForeground(new Color(240, 248, 255));
-		txtNome.setBounds(169, 221, 405, 21);
+		txtNome.setBounds(171, 291, 405, 21);
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
 
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_1.setBounds(169, 253, 66, 21);
+		lblNewLabel_1.setBounds(171, 328, 66, 21);
 		contentPane.add(lblNewLabel_1);
 
-		txtCpf = new JTextField();
-		txtCpf.setBounds(169, 315, 186, 21);
-		contentPane.add(txtCpf);
-		txtCpf.setColumns(10);
-
 		JLabel lblNewLabel_2 = new JLabel("Email:");
-		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_2.setBounds(171, 341, 66, 21);
+		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_2.setBounds(171, 391, 66, 21);
 
 		contentPane.add(lblNewLabel_2);
 
-		txtEmail = new JTextField();
-		txtEmail.setBounds(171, 373, 241, 21);
-		contentPane.add(txtEmail);
-		txtEmail.setColumns(10);
-
 		JLabel lblNewLabel_3 = new JLabel("Telefone:");
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_3.setBounds(171, 405, 95, 21);
+		lblNewLabel_3.setBounds(171, 452, 95, 21);
 
 		contentPane.add(lblNewLabel_3);
 
-		txtTelefone = new JTextField();
-		txtTelefone.setBounds(171, 437, 148, 20);
-		contentPane.add(txtTelefone);
-		txtTelefone.setColumns(10);
-
 		JLabel lblNewLabel_4 = new JLabel("Data de Nascimento:");
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_4.setBounds(169, 466, 186, 14);
+		lblNewLabel_4.setBounds(171, 515, 186, 14);
 		contentPane.add(lblNewLabel_4);
 
 		txtDataNascimento = new JTextField();
-		txtDataNascimento.setBounds(171, 491, 98, 20);
+		txtDataNascimento.setBounds(171, 540, 98, 20);
 		contentPane.add(txtDataNascimento);
 		txtDataNascimento.setColumns(10);
 
 		JLabel lblNewLabel_6 = new JLabel("CEP:");
 		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_6.setBounds(171, 522, 46, 14);
+		lblNewLabel_6.setBounds(171, 571, 46, 14);
 
 		contentPane.add(lblNewLabel_6);
 
 		txtCep = new JTextField();
-		txtCep.setBounds(171, 547, 177, 20);
+		txtCep.setBounds(171, 596, 177, 20);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
@@ -181,11 +172,11 @@ public class TelaCadastro extends JFrame {
 
 			}
 		});
-		btnCadastrar.setBounds(540, 781, 157, 42);
+		btnCadastrar.setBounds(505, 781, 157, 42);
 		contentPane.add(btnCadastrar);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(640, 380, 518, 354);
+		scrollPane.setBounds(672, 274, 518, 354);
 		contentPane.add(scrollPane);
 
 		table = new JTable();
@@ -198,6 +189,26 @@ public class TelaCadastro extends JFrame {
 		lblNewLabel_7.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 42));
 		lblNewLabel_7.setBounds(355, 25, 463, 70);
 		contentPane.add(lblNewLabel_7);
+		
+		textField = new JTextField();
+		textField.setBounds(171, 360, 184, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(171, 421, 403, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(171, 484, 184, 20);
+		contentPane.add(textField_2);
+		textField_2.setColumns(10);
+		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
+		lblNewLabel_5.setBounds(317, 90, 323, 83);
+		contentPane.add(lblNewLabel_5);
 
 	}
 }

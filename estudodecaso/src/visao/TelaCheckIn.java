@@ -57,23 +57,23 @@ public class TelaCheckIn extends JFrame {
 		
 		textField = new JTextField();
 		textField.setForeground(new Color(0, 0, 0));
-		textField.setBounds(496, 179, 139, 20);
+		textField.setBounds(494, 179, 139, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(496, 228, 139, 20);
+		textField_1.setBounds(494, 245, 139, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("Número da Reserva");
-		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 12));
-		lblNewLabel_1.setBounds(373, 181, 113, 14);
+		JLabel lblNewLabel_1 = new JLabel("Número da Reserva : ");
+		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_1.setBounds(295, 179, 202, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Nome Hóspede(s)");
-		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 12));
-		lblNewLabel_2.setBounds(373, 231, 103, 14);
+		JLabel lblNewLabel_2 = new JLabel("Nome Hóspede(s) : ");
+		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_2.setBounds(295, 245, 191, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Confimar Check-In");
