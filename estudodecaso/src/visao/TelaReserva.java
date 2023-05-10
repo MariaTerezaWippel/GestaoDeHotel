@@ -31,6 +31,7 @@ import javax.swing.Box;
 import java.awt.Dimension;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
+import java.awt.Label;
 
 public class TelaReserva extends JFrame {
 
@@ -84,7 +85,7 @@ public class TelaReserva extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Reserva da Hospedagem");
-		lblNewLabel_1.setBounds(362, 85, 568, 58);
+		lblNewLabel_1.setBounds(363, 86, 568, 58);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblNewLabel_1);
 		
@@ -175,11 +176,6 @@ public class TelaReserva extends JFrame {
 		DataSaidabox.setEditable(true);
 		DataSaidabox.setBounds(646, 318, 239, 22);
 		contentPane.add(DataSaidabox);
-		
-		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
-		lblNewLabel_7.setBounds(842, -39, 519, 282);
-		contentPane.add(lblNewLabel_7);
 		
 		JButton btnRealizarReserva = new JButton("Realizar Reserva");
 		btnRealizarReserva.setBackground(new Color(0, 0, 128));
