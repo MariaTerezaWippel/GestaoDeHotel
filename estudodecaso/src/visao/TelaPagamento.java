@@ -78,15 +78,9 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblFormaPagamento);
 		
 		JButton btnNewButton_2 = new JButton("Finalizar ");
-
 		btnNewButton_2.setBackground(new Color(0, 0, 0));
-		btnNewButton_2.setBounds(584, 768, 228, 56);
+		btnNewButton_2.setBounds(573, 763, 228, 56);
 		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
-
-		btnNewButton_2.setBackground(new Color(25, 25, 112));
-		btnNewButton_2.setBounds(488, 764, 228, 56);
-		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-
 		contentPane.add(btnNewButton_2);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Sim");
@@ -115,5 +109,11 @@ public class TelaPagamento extends JFrame {
 		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
 		lblNewLabel_1.setBounds(432, 11, 492, 236);
 		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome (2).png"));
+		lblNewLabel_2.setBackground(new Color(0, 204, 255));
+		lblNewLabel_2.setBounds(0, 0, 1244, 881);
+		contentPane.add(lblNewLabel_2);
 	}
 }

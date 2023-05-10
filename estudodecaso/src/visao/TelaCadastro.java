@@ -82,7 +82,7 @@ public class TelaCadastro extends JFrame {
 
 		txtNome = new JTextField();
 		txtNome.setForeground(new Color(240, 248, 255));
-		txtNome.setBounds(171, 291, 405, 21);
+		txtNome.setBounds(171, 296, 405, 21);
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
 
@@ -164,7 +164,7 @@ public class TelaCadastro extends JFrame {
 		JButton btnNewButton = new JButton("CADASTRAR");
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnNewButton.setBounds(516, 722, 148, 38);
+		btnNewButton.setBounds(570, 722, 148, 38);
 		contentPane.add(btnNewButton);
        
 	}

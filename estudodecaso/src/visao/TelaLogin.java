@@ -95,7 +95,7 @@ public class TelaLogin extends JFrame {
 		
 		JButton btnNewButton = new JButton("Login");
 
-		btnNewButton.setBackground(new Color(51, 153, 255));
+		btnNewButton.setBackground(new Color(0, 0, 255));
 
 		btnNewButton.setBackground(new Color(25, 25, 112));
 
@@ -125,7 +125,7 @@ public class TelaLogin extends JFrame {
 		contentPane.add(lblNewLabel_5);
 		
 		JButton btnNewButton_1 = new JButton("Cadastrar! ");
-		btnNewButton_1.setBackground(new Color(25, 25, 112));
+		btnNewButton_1.setBackground(new Color(0, 102, 255));
 		btnNewButton_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 11));
 		btnNewButton_1.setBounds(583, 653, 109, 23);
 		contentPane.add(btnNewButton_1);
@@ -134,5 +134,11 @@ public class TelaLogin extends JFrame {
 		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
 		lblNewLabel_6.setBounds(352, 127, 323, 105);
 		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setBackground(new Color(0, 204, 255));
+		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.jpg"));
+		lblNewLabel_7.setBounds(0, 0, 1244, 881);
+		contentPane.add(lblNewLabel_7);
 	}
 }
