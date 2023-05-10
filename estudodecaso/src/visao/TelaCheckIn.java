@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.ImageIcon;
 
 public class TelaCheckIn extends JFrame {
 
@@ -80,6 +81,11 @@ public class TelaCheckIn extends JFrame {
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD, 12));
 		btnNewButton.setBounds(440, 345, 139, 23);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
+		lblNewLabel_3.setBounds(612, 1, 416, 160);
+		contentPane.add(lblNewLabel_3);
 	}
 
 }
