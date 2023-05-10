@@ -12,6 +12,13 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.Canvas;
+import java.awt.Label;
+import javax.swing.ImageIcon;
+import javax.swing.JTextPane;
+import java.awt.Panel;
 
 public class TelaLogin extends JFrame {
 
@@ -57,7 +64,7 @@ public class TelaLogin extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel(" Hotel");
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 48));
-		lblNewLabel_1.setBounds(545, 11, 211, 91);
+		lblNewLabel_1.setBounds(546, 0, 211, 91);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email :");
@@ -71,6 +78,7 @@ public class TelaLogin extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		txtemail = new JTextField();
+		txtemail.setForeground(new Color(153, 204, 255));
 		txtemail.setBounds(457, 281, 323, 20);
 		contentPane.add(txtemail);
 		txtemail.setColumns(10);
@@ -81,6 +89,7 @@ public class TelaLogin extends JFrame {
 		txtfrasesecreta.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Login");
+		btnNewButton.setBackground(new Color(51, 153, 255));
 		btnNewButton.setForeground(new Color(0, 0, 0));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 30));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -93,7 +102,7 @@ public class TelaLogin extends JFrame {
 		JLabel lblNewLabel_4 = new JLabel("Boulervard");
 		lblNewLabel_4.setForeground(new Color(0, 0, 128));
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 48));
-		lblNewLabel_4.setBounds(505, 81, 251, 44);
+		lblNewLabel_4.setBounds(494, 70, 251, 44);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Cliente ainda não possui uma conta?");
@@ -105,5 +114,10 @@ public class TelaLogin extends JFrame {
 		btnNewButton_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 11));
 		btnNewButton_1.setBounds(583, 653, 109, 23);
 		contentPane.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
+		lblNewLabel_6.setBounds(367, 113, 323, 105);
+		contentPane.add(lblNewLabel_6);
 	}
 }

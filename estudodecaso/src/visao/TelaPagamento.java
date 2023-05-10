@@ -15,13 +15,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
+import javax.swing.JRadioButton;
+import javax.swing.JToggleButton;
+import javax.swing.JTextArea;
+import javax.swing.JComboBox;
 
 public class TelaPagamento extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 	private JTextField textField_1;
-	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -54,35 +56,14 @@ public class TelaPagamento extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Preço Diária : ");
-		lblNewLabel.setBounds(496, 123, 141, 56);
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 22));
+		lblNewLabel.setBounds(496, 76, 141, 56);
+		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setBackground(SystemColor.inactiveCaptionBorder);
-		textField.setBounds(496, 178, 92, 27);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
 		JLabel lblServioDeQuarto = new JLabel("Serviço de Quarto :");
-		lblServioDeQuarto.setBounds(496, 241, 220, 56);
-		lblServioDeQuarto.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 22));
+		lblServioDeQuarto.setBounds(496, 236, 220, 56);
+		lblServioDeQuarto.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblServioDeQuarto);
-		
-		JButton btnNewButton = new JButton("Sim");
-		btnNewButton.setBackground(new Color(0, 0, 0));
-		btnNewButton.setBounds(496, 308, 89, 38);
-		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 11));
-		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Não");
-		btnNewButton_1.setBackground(new Color(0, 0, 0));
-		btnNewButton_1.setBounds(610, 308, 89, 38);
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		contentPane.add(btnNewButton_1);
 		
 		JLabel lblTotalAPagar = new JLabel("Total a pagar : ");
 		lblTotalAPagar.setBounds(496, 382, 153, 56);
@@ -101,16 +82,22 @@ public class TelaPagamento extends JFrame {
 		lblFormaPagamento.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 22));
 		contentPane.add(lblFormaPagamento);
 		
-		textField_2 = new JTextField();
-		textField_2.setBackground(new Color(255, 255, 255));
-		textField_2.setBounds(496, 564, 141, 27);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
-		
 		JButton btnNewButton_2 = new JButton("Finalizar ");
 		btnNewButton_2.setBackground(new Color(0, 0, 0));
 		btnNewButton_2.setBounds(488, 764, 228, 56);
 		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
 		contentPane.add(btnNewButton_2);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Sim");
+		rdbtnNewRadioButton.setBounds(506, 310, 68, 34);
+		contentPane.add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Não");
+		rdbtnNewRadioButton_1.setBounds(614, 312, 68, 31);
+		contentPane.add(rdbtnNewRadioButton_1);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(496, 542, 186, 22);
+		contentPane.add(comboBox);
 	}
 }

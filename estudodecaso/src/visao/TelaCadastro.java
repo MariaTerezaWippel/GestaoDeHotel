@@ -66,66 +66,66 @@ public class TelaCadastro extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("Nome:");
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel.setBounds(169, 121, 75, 21);
+		lblNewLabel.setBounds(171, 189, 75, 21);
 
 		contentPane.add(lblNewLabel);
 
 		txtNome = new JTextField();
 		txtNome.setForeground(new Color(240, 248, 255));
-		txtNome.setBounds(169, 149, 241, 21);
+		txtNome.setBounds(169, 221, 405, 21);
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
 
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_1.setBounds(169, 178, 66, 21);
+		lblNewLabel_1.setBounds(169, 253, 66, 21);
 		contentPane.add(lblNewLabel_1);
 
 		txtCpf = new JTextField();
-		txtCpf.setBounds(169, 204, 186, 21);
+		txtCpf.setBounds(169, 315, 186, 21);
 		contentPane.add(txtCpf);
 		txtCpf.setColumns(10);
 
 		JLabel lblNewLabel_2 = new JLabel("Email:");
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_2.setBounds(169, 236, 66, 21);
+		lblNewLabel_2.setBounds(171, 341, 66, 21);
 
 		contentPane.add(lblNewLabel_2);
 
 		txtEmail = new JTextField();
-		txtEmail.setBounds(169, 268, 241, 21);
+		txtEmail.setBounds(171, 373, 241, 21);
 		contentPane.add(txtEmail);
 		txtEmail.setColumns(10);
 
 		JLabel lblNewLabel_3 = new JLabel("Telefone:");
-		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_3.setBounds(169, 298, 95, 21);
+		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_3.setBounds(171, 405, 95, 21);
 
 		contentPane.add(lblNewLabel_3);
 
 		txtTelefone = new JTextField();
-		txtTelefone.setBounds(169, 327, 148, 20);
+		txtTelefone.setBounds(171, 437, 148, 20);
 		contentPane.add(txtTelefone);
 		txtTelefone.setColumns(10);
 
 		JLabel lblNewLabel_4 = new JLabel("Data de Nascimento:");
-		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_4.setBounds(169, 358, 169, 14);
+		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_4.setBounds(169, 466, 186, 14);
 		contentPane.add(lblNewLabel_4);
 
 		txtDataNascimento = new JTextField();
-		txtDataNascimento.setBounds(169, 383, 98, 20);
+		txtDataNascimento.setBounds(171, 491, 98, 20);
 		contentPane.add(txtDataNascimento);
 		txtDataNascimento.setColumns(10);
 
 		JLabel lblNewLabel_6 = new JLabel("CEP:");
 		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel_6.setBounds(169, 429, 46, 14);
+		lblNewLabel_6.setBounds(171, 522, 46, 14);
 
 		contentPane.add(lblNewLabel_6);
 
 		txtCep = new JTextField();
-		txtCep.setBounds(169, 454, 177, 20);
+		txtCep.setBounds(171, 547, 177, 20);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
@@ -181,11 +181,11 @@ public class TelaCadastro extends JFrame {
 
 			}
 		});
-		btnCadastrar.setBounds(515, 658, 157, 42);
+		btnCadastrar.setBounds(540, 781, 157, 42);
 		contentPane.add(btnCadastrar);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(551, 120, 518, 354);
+		scrollPane.setBounds(640, 380, 518, 354);
 		contentPane.add(scrollPane);
 
 		table = new JTable();
