@@ -84,7 +84,7 @@ public class TelaReserva extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Reserva da Hospedagem");
-		lblNewLabel_1.setBounds(363, 86, 568, 58);
+		lblNewLabel_1.setBounds(366, 25, 568, 58);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblNewLabel_1);
 		
@@ -139,22 +139,6 @@ public class TelaReserva extends JFrame {
 		contentPane.add(txtQuatdPessoas);
 		txtQuatdPessoas.setColumns(10);
 		
-		Component horizontalStrut = Box.createHorizontalStrut(20);
-		horizontalStrut.setBounds(10, 925, 1224, 27);
-		contentPane.add(horizontalStrut);
-		
-		Component verticalStrut = Box.createVerticalStrut(20);
-		verticalStrut.setBounds(0, 34, 26, 880);
-		contentPane.add(verticalStrut);
-		
-		Component horizontalStrut_1 = Box.createHorizontalStrut(20);
-		horizontalStrut_1.setBounds(10, 0, 1224, 27);
-		contentPane.add(horizontalStrut_1);
-		
-		Component verticalStrut_1 = Box.createVerticalStrut(20);
-		verticalStrut_1.setBounds(1217, 34, 17, 880);
-		contentPane.add(verticalStrut_1);
-		
 		JLabel lblNewLabel_6 = new JLabel("Nome Completo:");
 		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel_6.setBounds(126, 186, 188, 20);
@@ -182,5 +166,10 @@ public class TelaReserva extends JFrame {
 		btnRealizarReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnRealizarReserva.setBounds(500, 665, 188, 33);
 		contentPane.add(btnRealizarReserva);
+		
+		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/Design sem nome.png")));
+		lblNewLabel_7.setBounds(415, 0, 434, 301);
+		contentPane.add(lblNewLabel_7);
 	}
 }

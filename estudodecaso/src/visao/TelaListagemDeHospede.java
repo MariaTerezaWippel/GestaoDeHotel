@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
+import java.awt.ScrollPane;
 
 public class TelaListagemDeHospede extends JFrame {
 
@@ -105,5 +106,14 @@ public class TelaListagemDeHospede extends JFrame {
 		txtNumeroReserLista.setBounds(111, 449, 188, 20);
 		contentPane.add(txtNumeroReserLista);
 		txtNumeroReserLista.setColumns(10);
+		
+		ScrollPane scrollPane = new ScrollPane();
+		scrollPane.setBackground(new Color(255, 255, 255));
+		scrollPane.setBounds(535, 176, 527, 344);
+		contentPane.add(scrollPane);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setBounds(131, 111, 46, 14);
+		contentPane.add(lblNewLabel_6);
 	}
 }
