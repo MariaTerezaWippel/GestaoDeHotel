@@ -62,9 +62,9 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(lblHotel);
 		
 		JButton btnReservar = new JButton("Já tem Reserva? Clique aqui!");
+		btnReservar.setBounds(607, 350, 280, 33);
 		btnReservar.setBackground(new Color(0, 0, 128));
 		btnReservar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnReservar.setBounds(607, 350, 280, 33);
 		btnReservar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -77,30 +77,29 @@ public class TelaPrincipal extends JFrame {
 		textPesquisarCampo.setColumns(10);
 		
 		JLabel lblPesquisar = new JLabel("Pesquisar");
-		lblPesquisar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		lblPesquisar.setBounds(579, 250, 110, 25);
+		lblPesquisar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblPesquisar);
 		
 		JButton btnBotaoIr = new JButton("Ir");
+		btnBotaoIr.setBounds(845, 287, 53, 23);
 		btnBotaoIr.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		btnBotaoIr.setBackground(new Color(135, 206, 250));
 		btnBotaoIr.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		btnBotaoIr.setBounds(845, 287, 53, 23);
 		contentPane.add(btnBotaoIr);
 		
 		JTextPane txtTexto = new JTextPane();
+		txtTexto.setBounds(548, 460, 427, 48);
 		txtTexto.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
 		txtTexto.setBackground(new Color(135, 206, 250));
 		txtTexto.setText("Aqui você encontra os melhores preços com qualidade de acomodação e serviço. Faça sua reserva agora!");
-		txtTexto.setBounds(547, 470, 427, 48);
 		contentPane.add(txtTexto);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
-		lblNewLabel.setBounds(494, 87, 404, 152);
+		lblNewLabel.setBounds(476, 216, 46, 14);
 		contentPane.add(lblNewLabel);
 	}
 }

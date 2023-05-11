@@ -11,6 +11,8 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaCheckIn extends JFrame {
 
@@ -41,7 +43,7 @@ public class TelaCheckIn extends JFrame {
 	public TelaCheckIn() {
 		setTitle("Tela Efetuar Check-In");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1000, 600);
+		setBounds(100, 100, 1200, 990);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBackground(new Color(135, 206, 250));
@@ -51,43 +53,42 @@ public class TelaCheckIn extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Efetuar Check-In");
+		lblNewLabel.setBounds(412, 124, 293, 36);
 		lblNewLabel.setForeground(new Color(25, 25, 112));
 		lblNewLabel.setBackground(new Color(240, 240, 240));
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel.setBounds(353, 58, 293, 36);
 		contentPane.add(lblNewLabel);
 		
 		textField = new JTextField();
+		textField.setBounds(592, 393, 153, 23);
 		textField.setForeground(new Color(0, 0, 0));
-		textField.setBounds(494, 179, 139, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(494, 245, 139, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
-		
 		JLabel lblNewLabel_1 = new JLabel("Número da Reserva : ");
+		lblNewLabel_1.setBounds(380, 394, 202, 14);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_1.setBounds(295, 179, 202, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Nome Hóspede(s) : ");
+		lblNewLabel_2.setBounds(380, 460, 191, 20);
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_2.setBounds(295, 245, 191, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Confimar Check-In");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(494, 613, 191, 33);
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnNewButton.setBounds(408, 345, 187, 23);
 		contentPane.add(btnNewButton);
 		
-		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
-		lblNewLabel_3.setBounds(612, 1, 416, 160);
-		contentPane.add(lblNewLabel_3);
+		textField_1 = new JTextField();
+		textField_1.setForeground(Color.BLACK);
+		textField_1.setColumns(10);
+		textField_1.setBounds(592, 462, 153, 23);
+		contentPane.add(textField_1);
 	}
-
 }
