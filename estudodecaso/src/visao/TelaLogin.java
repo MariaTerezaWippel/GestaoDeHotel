@@ -62,38 +62,38 @@ public class TelaLogin extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel(" Hotel");
+		lblNewLabel_1.setBounds(753, 64, 211, 91);
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 48));
-		lblNewLabel_1.setBounds(546, 0, 211, 91);
 
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel_1.setBounds(545, 11, 211, 91);
 
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email :");
+		lblNewLabel_2.setBounds(665, 318, 100, 34);
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_2.setBounds(457, 236, 100, 34);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Senha :");
+		lblNewLabel_3.setBounds(665, 395, 80, 34);
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(457, 313, 80, 34);
 		contentPane.add(lblNewLabel_3);
 		
 		txtemail = new JTextField();
+		txtemail.setBounds(665, 363, 323, 20);
 		txtemail.setForeground(new Color(153, 204, 255));
-		txtemail.setBounds(457, 281, 323, 20);
 		contentPane.add(txtemail);
 		txtemail.setColumns(10);
 		
 		txtfrasesecreta = new JTextField();
-		txtfrasesecreta.setBounds(457, 358, 323, 20);
+		txtfrasesecreta.setBounds(665, 440, 323, 20);
 		contentPane.add(txtfrasesecreta);
 		txtfrasesecreta.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Login");
+		btnNewButton.setBounds(698, 555, 211, 44);
 
 		btnNewButton.setBackground(new Color(0, 0, 128));
 
@@ -105,41 +105,33 @@ public class TelaLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(516, 472, 211, 44);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel_4 = new JLabel("Boulervard");
+		lblNewLabel_4.setBounds(713, 137, 251, 44);
 		lblNewLabel_4.setForeground(new Color(0, 0, 128));
 
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 48));
-		lblNewLabel_4.setBounds(494, 70, 251, 44);
 
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel_4.setBounds(505, 84, 251, 44);
 
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Cliente ainda não possui uma conta?");
+		lblNewLabel_5.setBounds(665, 659, 315, 25);
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_5.setBounds(483, 605, 315, 25);
 		contentPane.add(lblNewLabel_5);
 		
 		JButton btnNewButton_1 = new JButton("Cadastrar! ");
+		btnNewButton_1.setBounds(765, 707, 109, 23);
 		btnNewButton_1.setForeground(new Color(255, 255, 255));
 		btnNewButton_1.setBackground(new Color(0, 0, 128));
 		btnNewButton_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 11));
-		btnNewButton_1.setBounds(583, 653, 109, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
-		lblNewLabel_6.setBounds(352, 127, 323, 105);
+		lblNewLabel_6.setBounds(562, 192, 394, 109);
+		lblNewLabel_6.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/LogoHotel.png")));
 		contentPane.add(lblNewLabel_6);
-		
-		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setBackground(new Color(0, 204, 255));
-		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.jpg"));
-		lblNewLabel_7.setBounds(0, 0, 1244, 881);
-		contentPane.add(lblNewLabel_7);
 	}
 }

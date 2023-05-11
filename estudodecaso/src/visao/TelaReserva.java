@@ -76,7 +76,7 @@ public class TelaReserva extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Data de Entrada:");
-		lblNewLabel.setBounds(283, 293, 158, 14);
+		lblNewLabel.setBounds(345, 371, 158, 14);
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
@@ -85,11 +85,12 @@ public class TelaReserva extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("Reserva da Hospedagem");
 		lblNewLabel_1.setBounds(576, 42, 568, 58);
+		lblNewLabel_1.setBounds(556, 117, 568, 58);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Data de Saída:");
-		lblNewLabel_2.setBounds(980, 293, 128, 14);
+		lblNewLabel_2.setBounds(1042, 371, 128, 14);
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
@@ -97,13 +98,12 @@ public class TelaReserva extends JFrame {
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 48));
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel2 = new JLabel("Data de Saída:");
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Tipo de Quarto:");
-		lblNewLabel_3.setBounds(283, 388, 161, 27);
+		lblNewLabel_3.setBounds(345, 466, 161, 27);
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
@@ -111,12 +111,12 @@ public class TelaReserva extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		txtTipoQuarto = new JTextField();
-		txtTipoQuarto.setBounds(283, 419, 239, 20);
+		txtTipoQuarto.setBounds(345, 497, 239, 20);
 		contentPane.add(txtTipoQuarto);
 		txtTipoQuarto.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Número da Reserva:");
-		lblNewLabel_4.setBounds(980, 394, 201, 14);
+		lblNewLabel_4.setBounds(1042, 472, 201, 14);
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
@@ -124,18 +124,18 @@ public class TelaReserva extends JFrame {
 		contentPane.add(lblNewLabel_4);
 		
 		txtNumReserva = new JTextField();
-		txtNumReserva.setBounds(980, 419, 239, 20);
+		txtNumReserva.setBounds(1042, 497, 239, 20);
 		contentPane.add(txtNumReserva);
 		txtNumReserva.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Quantidade de Pessoas:");
-		lblNewLabel_5.setBounds(283, 494, 233, 27);
+		lblNewLabel_5.setBounds(345, 572, 233, 27);
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		contentPane.add(lblNewLabel_5);
 		
 		txtQuatdPessoas = new JTextField();
-		txtQuatdPessoas.setBounds(283, 532, 239, 20);
+		txtQuatdPessoas.setBounds(345, 610, 239, 20);
 		contentPane.add(txtQuatdPessoas);
 		txtQuatdPessoas.setColumns(10);
 		
@@ -146,6 +146,12 @@ public class TelaReserva extends JFrame {
 		
 		txtNomecomple = new JTextField();
 		txtNomecomple.setBounds(283, 227, 936, 20);
+		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_6.setBounds(345, 271, 188, 20);
+		contentPane.add(lblNewLabel_6);
+		
+		txtNomecomple = new JTextField();
+		txtNomecomple.setBounds(345, 301, 936, 20);
 		contentPane.add(txtNomecomple);
 		txtNomecomple.setColumns(10);
 		
@@ -158,17 +164,21 @@ public class TelaReserva extends JFrame {
 		JComboBox DataSaidabox = new JComboBox();
 		DataSaidabox.setBounds(980, 318, 239, 22);
 		DataSaidabox.setEditable(true);
-		contentPane.add(DataSaidabox);
-		
+		DataEntradabox.setBounds(345, 396, 239, 22);
+		contentPane.add(DataEntradabox);
+
 		JButton btnRealizarReserva = new JButton("Realizar Reserva");
 		btnRealizarReserva.setBounds(743, 641, 188, 33);
 		btnRealizarReserva.setForeground(new Color(255, 255, 255));
 		btnRealizarReserva.setBackground(new Color(0, 0, 128));
 		btnRealizarReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		contentPane.add(btnRealizarReserva);
+		btnRealizarReserva.setBounds(708, 717, 188, 33);
+		contentPane.add(btnRealizarReserva);
 		
-		JLabel lblNewLabel_8 = new JLabel("New label");
-		lblNewLabel_8.setBounds(204, 149, 46, 14);
-		contentPane.add(lblNewLabel_8);
+		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/LogoHotel.png")));
+		lblNewLabel_7.setBounds(556, 176, 350, 115);
+		contentPane.add(lblNewLabel_7);
 	}
 }
