@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -15,6 +17,7 @@ import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import java.awt.ScrollPane;
+import java.awt.Point;
 
 public class TelaListagemDeHospede extends JFrame {
 
@@ -22,6 +25,8 @@ public class TelaListagemDeHospede extends JFrame {
 	private JTextField txtNomeLista;
 	private JTextField txtTelefoneLista;
 	private JTextField txtNumeroReserLista;
+	private JTable table;
+	private DefaultTableModel dataModel;
 
 	/**
 	 * Launch the application.
@@ -46,7 +51,7 @@ public class TelaListagemDeHospede extends JFrame {
 	public TelaListagemDeHospede() {
 		setTitle("Tela Listagem de Hóspede");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1260, 991);
+		setBounds(100, 100, 1405, 1057);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(135, 206, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -57,7 +62,7 @@ public class TelaListagemDeHospede extends JFrame {
 		JLabel lblNewLabel = new JLabel("Listagem de Hóspede");
 		lblNewLabel.setForeground(new Color(25, 25, 112));
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel.setBounds(437, 61, 390, 40);
+		lblNewLabel.setBounds(772, 59, 390, 40);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
@@ -67,49 +72,63 @@ public class TelaListagemDeHospede extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("Data de Entrada e Saída");
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_2.setBounds(111, 230, 211, 40);
+		lblNewLabel_2.setBounds(344, 356, 211, 40);
 		contentPane.add(lblNewLabel_2);
 		
 		JComboBox cmbDataEntraSaida = new JComboBox();
 		cmbDataEntraSaida.setForeground(new Color(25, 25, 112));
 		cmbDataEntraSaida.setEditable(true);
-		cmbDataEntraSaida.setBounds(111, 270, 316, 22);
+		cmbDataEntraSaida.setBounds(344, 407, 316, 22);
 		contentPane.add(cmbDataEntraSaida);
 		
 		JLabel lblNewLabel_3 = new JLabel("Nome:");
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_3.setBounds(111, 159, 188, 29);
+		lblNewLabel_3.setBounds(344, 236, 188, 29);
 		contentPane.add(lblNewLabel_3);
 		
 		txtNomeLista = new JTextField();
 		txtNomeLista.setBackground(new Color(255, 255, 255));
-		txtNomeLista.setBounds(111, 199, 316, 20);
+		txtNomeLista.setBounds(344, 276, 316, 20);
 		contentPane.add(txtNomeLista);
 		txtNomeLista.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Telefone:");
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_4.setBounds(111, 337, 98, 22);
+		lblNewLabel_4.setBounds(344, 555, 98, 22);
 		contentPane.add(lblNewLabel_4);
 		
 		txtTelefoneLista = new JTextField();
-		txtTelefoneLista.setBounds(108, 372, 191, 20);
+		txtTelefoneLista.setBounds(344, 588, 191, 20);
 		contentPane.add(txtTelefoneLista);
 		txtTelefoneLista.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Número da Reserva:");
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_5.setBounds(111, 424, 188, 14);
+		lblNewLabel_5.setBounds(347, 632, 188, 22);
 		contentPane.add(lblNewLabel_5);
 		
 		txtNumeroReserLista = new JTextField();
-		txtNumeroReserLista.setBounds(111, 449, 188, 20);
+		txtNumeroReserLista.setBounds(344, 665, 188, 20);
 		contentPane.add(txtNumeroReserLista);
 		txtNumeroReserLista.setColumns(10);
 		
 		ScrollPane scrollPane = new ScrollPane();
+		scrollPane.setFont(null);
+		scrollPane.setForeground(new Color(0, 0, 0));
+		scrollPane.setScrollPosition(new Point(0, 0));
 		scrollPane.setBackground(new Color(255, 255, 255));
-		scrollPane.setBounds(535, 176, 527, 344);
+		scrollPane.setBounds(722, 236, 657, 449);
 		contentPane.add(scrollPane);
+		
+		table = new JTable();
+		table.setBounds(796, 297, 1, 1);
+		contentPane.add(table);
+		
+		table = new JTable();
+		dataModel = new DefaultTableModel(new Object[][] {}, new String[] { "Nome", "Data de Entrada e Saída", "Telefone", "Número da Reserva" });
+		table.setModel(dataModel);
+		
+		
+		
 	}
 }

@@ -148,11 +148,6 @@ public class TelaExclusaoHospede extends JFrame {
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnNewButton.setBounds(486, 742, 314, 35);
 		contentPane.add(btnNewButton);
-		
-		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome (1).png"));
-		lblNewLabel_9.setBounds(880, 15, 418, 150);
-		contentPane.add(lblNewLabel_9);
 	}
 
 }

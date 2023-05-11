@@ -84,7 +84,7 @@ public class TelaReserva extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Reserva da Hospedagem");
-		lblNewLabel_1.setBounds(494, 39, 568, 58);
+		lblNewLabel_1.setBounds(576, 42, 568, 58);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblNewLabel_1);
 		
@@ -140,36 +140,35 @@ public class TelaReserva extends JFrame {
 		txtQuatdPessoas.setColumns(10);
 		
 		JLabel lblNewLabel_6 = new JLabel("Nome Completo:");
-		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel_6.setBounds(283, 193, 188, 20);
+		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblNewLabel_6);
 		
 		txtNomecomple = new JTextField();
-		txtNomecomple.setBounds(283, 223, 936, 20);
+		txtNomecomple.setBounds(283, 227, 936, 20);
 		contentPane.add(txtNomecomple);
 		txtNomecomple.setColumns(10);
 		
 		JComboBox DataEntradabox = new JComboBox();
+		DataEntradabox.setBounds(283, 318, 239, 22);
 		DataEntradabox.setEditable(true);
 		DataEntradabox.setBackground(new Color(255, 255, 255));
-		DataEntradabox.setBounds(283, 318, 239, 22);
 		contentPane.add(DataEntradabox);
 		
 		JComboBox DataSaidabox = new JComboBox();
-		DataSaidabox.setEditable(true);
 		DataSaidabox.setBounds(980, 318, 239, 22);
+		DataSaidabox.setEditable(true);
 		contentPane.add(DataSaidabox);
 		
 		JButton btnRealizarReserva = new JButton("Realizar Reserva");
+		btnRealizarReserva.setBounds(743, 641, 188, 33);
 		btnRealizarReserva.setForeground(new Color(255, 255, 255));
 		btnRealizarReserva.setBackground(new Color(0, 0, 128));
 		btnRealizarReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnRealizarReserva.setBounds(646, 639, 188, 33);
 		contentPane.add(btnRealizarReserva);
 		
-		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/Design sem nome.png")));
-		lblNewLabel_7.setBounds(494, 11, 434, 301);
-		contentPane.add(lblNewLabel_7);
+		JLabel lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8.setBounds(204, 149, 46, 14);
+		contentPane.add(lblNewLabel_8);
 	}
 }

@@ -154,11 +154,6 @@ public class TelaCadastro extends JFrame {
 		textField_2.setBounds(171, 484, 184, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
-		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
-		lblNewLabel_5.setBounds(317, 90, 323, 83);
-		contentPane.add(lblNewLabel_5);
 
 		JButton btnNewButton = new JButton("CADASTRAR");
 		btnNewButton.setForeground(new Color(255, 255, 255));
