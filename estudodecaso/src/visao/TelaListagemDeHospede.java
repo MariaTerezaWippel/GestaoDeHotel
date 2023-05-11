@@ -78,12 +78,12 @@ public class TelaListagemDeHospede extends JFrame {
 		
 		JLabel lblNewLabel_3 = new JLabel("Nome:");
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_3.setBounds(111, 156, 188, 29);
+		lblNewLabel_3.setBounds(111, 159, 188, 29);
 		contentPane.add(lblNewLabel_3);
 		
 		txtNomeLista = new JTextField();
 		txtNomeLista.setBackground(new Color(255, 255, 255));
-		txtNomeLista.setBounds(111, 182, 316, 20);
+		txtNomeLista.setBounds(111, 199, 316, 20);
 		contentPane.add(txtNomeLista);
 		txtNomeLista.setColumns(10);
 		
@@ -111,9 +111,5 @@ public class TelaListagemDeHospede extends JFrame {
 		scrollPane.setBackground(new Color(255, 255, 255));
 		scrollPane.setBounds(535, 176, 527, 344);
 		contentPane.add(scrollPane);
-		
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(131, 111, 46, 14);
-		contentPane.add(lblNewLabel_6);
 	}
 }

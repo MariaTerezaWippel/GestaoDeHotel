@@ -95,11 +95,11 @@ public class TelaLogin extends JFrame {
 		
 		JButton btnNewButton = new JButton("Login");
 
-		btnNewButton.setBackground(new Color(0, 0, 255));
+		btnNewButton.setBackground(new Color(0, 0, 128));
 
 		btnNewButton.setBackground(new Color(25, 25, 112));
 
-		btnNewButton.setForeground(new Color(0, 0, 0));
+		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -125,7 +125,8 @@ public class TelaLogin extends JFrame {
 		contentPane.add(lblNewLabel_5);
 		
 		JButton btnNewButton_1 = new JButton("Cadastrar! ");
-		btnNewButton_1.setBackground(new Color(0, 102, 255));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setBackground(new Color(0, 0, 128));
 		btnNewButton_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 11));
 		btnNewButton_1.setBounds(583, 653, 109, 23);
 		contentPane.add(btnNewButton_1);

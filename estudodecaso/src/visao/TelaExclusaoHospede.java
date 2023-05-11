@@ -143,7 +143,8 @@ public class TelaExclusaoHospede extends JFrame {
 		txtNumeroReserva.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Excluir Hóspede");
-		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnNewButton.setBounds(486, 742, 314, 35);
 		contentPane.add(btnNewButton);

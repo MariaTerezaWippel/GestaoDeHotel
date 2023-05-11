@@ -76,6 +76,7 @@ public class TelaCancelarReserva extends JFrame {
 		txtNumeroDaReserva.setColumns(10);
 		
 		JButton btnCancelarReserva = new JButton("Cancelar Reserva");
+		btnCancelarReserva.setForeground(new Color(255, 255, 255));
 
 		btnCancelarReserva.setBackground(new Color(0, 0, 128));
 

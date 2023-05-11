@@ -78,7 +78,8 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblFormaPagamento);
 		
 		JButton btnNewButton_2 = new JButton("Finalizar ");
-		btnNewButton_2.setBackground(new Color(0, 0, 0));
+		btnNewButton_2.setForeground(new Color(255, 255, 255));
+		btnNewButton_2.setBackground(new Color(0, 0, 128));
 		btnNewButton_2.setBounds(573, 763, 228, 56);
 		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
 		contentPane.add(btnNewButton_2);

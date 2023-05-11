@@ -62,6 +62,7 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(lblHotel);
 		
 		JButton btnReservar = new JButton("Já tem Reserva? Clique aqui!");
+		btnReservar.setForeground(new Color(255, 255, 255));
 		btnReservar.setBounds(607, 350, 280, 33);
 		btnReservar.setBackground(new Color(0, 0, 128));
 		btnReservar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));

@@ -161,6 +161,7 @@ public class TelaCadastro extends JFrame {
 		contentPane.add(lblNewLabel_5);
 
 		JButton btnNewButton = new JButton("CADASTRAR");
+		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnNewButton.setBounds(570, 722, 148, 38);
