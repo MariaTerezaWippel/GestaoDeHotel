@@ -164,7 +164,7 @@ public class TelaReserva extends JFrame {
 		btnRealizarReserva.setForeground(new Color(255, 255, 255));
 		btnRealizarReserva.setBackground(new Color(0, 0, 128));
 		btnRealizarReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnRealizarReserva.setBounds(500, 665, 188, 33);
+		btnRealizarReserva.setBounds(563, 663, 188, 33);
 		contentPane.add(btnRealizarReserva);
 		
 		JLabel lblNewLabel_7 = new JLabel("New label");
