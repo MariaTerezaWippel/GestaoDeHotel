@@ -31,7 +31,7 @@ public class TelaExclusaoHospede extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaCadastro frame = new TelaCadastro();
+					TelaExclusaoHospede frame = new TelaExclusaoHospede();
 					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -143,7 +143,7 @@ public class TelaExclusaoHospede extends JFrame {
 		txtNumeroReserva.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Excluir Hóspede");
-		btnNewButton.setBackground(new Color(25, 25, 112));
+		btnNewButton.setBackground(new Color(255, 255, 255));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnNewButton.setBounds(486, 742, 314, 35);
 		contentPane.add(btnNewButton);

@@ -177,6 +177,7 @@ public class TelaReserva extends JFrame {
 		contentPane.add(DataSaidabox);
 		
 		JButton btnRealizarReserva = new JButton("Realizar Reserva");
+		btnRealizarReserva.setForeground(new Color(255, 255, 255));
 		btnRealizarReserva.setBackground(new Color(0, 0, 128));
 		btnRealizarReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnRealizarReserva.setBounds(500, 665, 188, 33);
