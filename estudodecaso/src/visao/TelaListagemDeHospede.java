@@ -109,12 +109,22 @@ public class TelaListagemDeHospede extends JFrame {
 		contentPane.add(txtNumeroReserLista);
 		txtNumeroReserLista.setColumns(10);
 		
+
 		ScrollPane scrollPane = new ScrollPane();
 		scrollPane.setFont(null);
 		scrollPane.setForeground(new Color(0, 0, 0));
 		scrollPane.setBackground(new Color(255, 255, 255));
 		scrollPane.setBounds(846, 211, 657, 449);
 		contentPane.add(scrollPane);
+
+		ScrollPane scrollPaneLista = new ScrollPane();
+		scrollPaneLista.setFont(null);
+		scrollPaneLista.setForeground(new Color(0, 0, 0));
+		scrollPaneLista.setScrollPosition(new Point(0, 0));
+		scrollPaneLista.setBackground(new Color(255, 255, 255));
+		scrollPaneLista.setBounds(722, 236, 657, 449);
+		contentPane.add(scrollPaneLista);
+
 		
 		table = new JTable();
 		table.setBounds(652, 239, 1, 1);

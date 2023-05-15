@@ -23,8 +23,8 @@ import java.awt.Panel;
 public class TelaLogin extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtemail;
-	private JTextField txtfrasesecreta;
+	private JTextField txtEmail;
+	private JTextField txtFraseSecreta;
 
 	/**
 	 * Launch the application.
@@ -81,19 +81,22 @@ public class TelaLogin extends JFrame {
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblNewLabel_3);
 		
-		txtemail = new JTextField();
-		txtemail.setBounds(645, 382, 323, 20);
-		txtemail.setForeground(new Color(153, 204, 255));
-		contentPane.add(txtemail);
-		txtemail.setColumns(10);
+
+		txtEmail = new JTextField();
+		txtEmail.setBounds(645, 382, 323, 20);
+		txtEmail.setForeground(new Color(153, 204, 255));
+		contentPane.add(txtEmail);
+		txtEmail.setColumns(10);
 		
-		txtfrasesecreta = new JTextField();
-		txtfrasesecreta.setBounds(645, 459, 323, 20);
-		contentPane.add(txtfrasesecreta);
-		txtfrasesecreta.setColumns(10);
+		txtFraseSecreta = new JTextField();
+		txtFraseSecreta.setBounds(645, 459, 323, 20);
+		contentPane.add(txtFraseSecreta);
+		txtFraseSecreta.setColumns(10);
 		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setBounds(678, 524, 211, 44);
+		
+
 
 		btnLogin.setBackground(new Color(0, 0, 128));
 
@@ -118,16 +121,18 @@ public class TelaLogin extends JFrame {
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Cliente ainda não possui uma conta?");
-		lblNewLabel_5.setBounds(634, 600, 315, 25);
+		lblNewLabel_5.setBounds(620, 698, 315, 25);
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5);
 		
+
 		JButton btnCadasrtar = new JButton("Cadastrar! ");
-		btnCadasrtar.setBounds(678, 655, 211, 44);
+		btnCadasrtar.setBounds(678, 754, 211, 44);
 		btnCadasrtar.setForeground(new Color(255, 255, 255));
 		btnCadasrtar.setBackground(new Color(0, 0, 128));
 		btnCadasrtar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(btnCadasrtar);
+
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setBounds(518, 217, 394, 109);

@@ -24,7 +24,7 @@ import javax.swing.JTabbedPane;
 public class TelaPagamento extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textPrecoDiaria;
 	private JTextField textField_1;
 
 	/**
@@ -79,31 +79,31 @@ public class TelaPagamento extends JFrame {
 		lblFormaPagamento.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
 		contentPane.add(lblFormaPagamento);
 		
-		JButton btnNewButton_2 = new JButton("Finalizar ");
-		btnNewButton_2.setForeground(new Color(255, 255, 255));
-		btnNewButton_2.setBackground(new Color(0, 0, 128));
-		btnNewButton_2.setBounds(719, 750, 228, 56);
-		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
-		contentPane.add(btnNewButton_2);
+		JButton btnFinalizar = new JButton("Finalizar ");
+		btnFinalizar.setForeground(new Color(255, 255, 255));
+		btnFinalizar.setBackground(new Color(0, 0, 128));
+		btnFinalizar.setBounds(719, 750, 228, 56);
+		btnFinalizar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
+		contentPane.add(btnFinalizar);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Sim");
-		rdbtnNewRadioButton.setBackground(new Color(135, 206, 250));
-		rdbtnNewRadioButton.setBounds(693, 427, 68, 34);
-		contentPane.add(rdbtnNewRadioButton);
+		JRadioButton rdbtnSim = new JRadioButton("Sim");
+		rdbtnSim.setBackground(new Color(135, 206, 250));
+		rdbtnSim.setBounds(693, 427, 68, 34);
+		contentPane.add(rdbtnSim);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Não");
-		rdbtnNewRadioButton_1.setBackground(new Color(135, 206, 250));
-		rdbtnNewRadioButton_1.setBounds(778, 427, 68, 34);
-		contentPane.add(rdbtnNewRadioButton_1);
+		JRadioButton rdbtnNao = new JRadioButton("Não");
+		rdbtnNao.setBackground(new Color(135, 206, 250));
+		rdbtnNao.setBounds(778, 427, 68, 34);
+		contentPane.add(rdbtnNao);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(693, 644, 288, 22);
-		contentPane.add(comboBox);
+		JComboBox comboBoxFormaPagamento = new JComboBox();
+		comboBoxFormaPagamento.setBounds(693, 644, 288, 22);
+		contentPane.add(comboBoxFormaPagamento);
 		
-		textField = new JTextField();
-		textField.setBounds(824, 318, 153, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textPrecoDiaria = new JTextField();
+		textPrecoDiaria.setBounds(824, 318, 153, 20);
+		contentPane.add(textPrecoDiaria);
+		textPrecoDiaria.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setBounds(824, 510, 153, 20);
