@@ -69,7 +69,7 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblHotel = new JLabel("HotelBoulevard.com");
-		lblHotel.setBounds(830, 167, 328, 25);
+		lblHotel.setBounds(813, 167, 328, 25);
 		lblHotel.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblHotel);
 		
@@ -122,6 +122,16 @@ public class TelaPrincipal extends JFrame {
 		mnNewMenu.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 16));
 		mnNewMenu.setBounds(84, 72, 125, 48);
 		contentPane.add(mnNewMenu);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/icon.png")));
+		lblNewLabel_1.setBounds(-618, 468, 1253, 433);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/icon.png")));
+		lblNewLabel_3.setBounds(-659, 72, 1376, 474);
+		contentPane.add(lblNewLabel_3);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
