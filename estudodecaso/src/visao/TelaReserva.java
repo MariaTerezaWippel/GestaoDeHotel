@@ -86,7 +86,7 @@ public class TelaReserva extends JFrame {
 		contentPaneTela.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Data de Entrada:");
-		lblNewLabel.setBounds(345, 371, 158, 14);
+		lblNewLabel.setBounds(345, 374, 175, 20);
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
@@ -94,12 +94,12 @@ public class TelaReserva extends JFrame {
 		contentPaneTela.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Reserva da Hospedagem");
-		lblNewLabel_1.setBounds(511, 134, 568, 58);
-		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel_1.setBounds(496, 153, 589, 58);
+		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 36));
 		contentPaneTela.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Data de Saída:");
-		lblNewLabel_2.setBounds(1040, 371, 128, 26);
+		lblNewLabel_2.setBounds(1040, 371, 139, 26);
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
@@ -192,7 +192,7 @@ public class TelaReserva extends JFrame {
 		contentPaneTela.add(btnRealizarReserva);
 
 		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setBounds(543, 182, 350, 115);
+		lblNewLabel_7.setBounds(543, 201, 350, 115);
 		lblNewLabel_7.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/LogoHotel.png")));
 
 		contentPaneTela.add(lblNewLabel_7);

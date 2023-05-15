@@ -68,7 +68,7 @@ public class TelaCheckIn extends JFrame {
 
 		
 		JLabel lblNewLabel_1 = new JLabel("Número da Reserva : ");
-		lblNewLabel_1.setBounds(610, 419, 202, 14);
+		lblNewLabel_1.setBounds(597, 419, 215, 22);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 		contentPaneTela.add(lblNewLabel_1);
 		
@@ -78,7 +78,7 @@ public class TelaCheckIn extends JFrame {
 		contentPaneTela.add(lblNewLabel_2);
 		
 		JButton btnConfirmar = new JButton("Confimar Check-In");
-		btnConfirmar.setBounds(696, 583, 191, 33);
+		btnConfirmar.setBounds(696, 583, 203, 33);
 		btnConfirmar.setForeground(new Color(255, 255, 255));
 		btnConfirmar.addActionListener(new ActionListener() {
 

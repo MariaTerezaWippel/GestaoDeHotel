@@ -73,12 +73,12 @@ public class TelaLogin extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("Email :");
 		lblNewLabel_2.setBounds(645, 337, 100, 34);
-		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPaneTela.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Frase secreta :");
 		lblNewLabel_3.setBounds(645, 414, 148, 34);
-		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPaneTela.add(lblNewLabel_3);
 		
 
@@ -103,7 +103,7 @@ public class TelaLogin extends JFrame {
 		btnLogin.setBackground(new Color(25, 25, 112));
 
 		btnLogin.setForeground(new Color(255, 255, 255));
-		btnLogin.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		btnLogin.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -121,8 +121,8 @@ public class TelaLogin extends JFrame {
 		contentPaneTela.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Cliente ainda não possui uma conta?");
-		lblNewLabel_5.setBounds(645, 674, 315, 25);
-		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		lblNewLabel_5.setBounds(645, 674, 323, 25);
+		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
 		contentPaneTela.add(lblNewLabel_5);
 		
 
@@ -134,7 +134,7 @@ public class TelaLogin extends JFrame {
 		btnCadasrtar.setBounds(690, 710, 211, 44);
 		btnCadasrtar.setForeground(new Color(255, 255, 255));
 		btnCadasrtar.setBackground(new Color(0, 0, 128));
-		btnCadasrtar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		btnCadasrtar.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPaneTela.add(btnCadasrtar);
 
 		

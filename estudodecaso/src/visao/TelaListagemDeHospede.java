@@ -68,7 +68,7 @@ public class TelaListagemDeHospede extends JFrame {
 		contentPaneTela.add(lblNewLabel);
 		
 		JLabel lblNewLabel_2 = new JLabel("Data de Entrada:");
-		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
 		lblNewLabel_2.setBounds(500, 310, 211, 40);
 		contentPaneTela.add(lblNewLabel_2);
 		
@@ -79,7 +79,7 @@ public class TelaListagemDeHospede extends JFrame {
 		contentPaneTela.add(cmbDataEntraSaida);
 		
 		JLabel lblNewLabel_3 = new JLabel("Nome:");
-		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
 		lblNewLabel_3.setBounds(500, 211, 188, 29);
 		contentPaneTela.add(lblNewLabel_3);
 		
@@ -90,7 +90,7 @@ public class TelaListagemDeHospede extends JFrame {
 		txtNomeLista.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Telefone:");
-		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		lblNewLabel_4.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
 		lblNewLabel_4.setBounds(500, 522, 98, 22);
 		contentPaneTela.add(lblNewLabel_4);
 		
@@ -100,7 +100,7 @@ public class TelaListagemDeHospede extends JFrame {
 		txtTelefoneLista.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Número da Reserva:");
-		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
 		lblNewLabel_5.setBounds(500, 600, 188, 22);
 		contentPaneTela.add(lblNewLabel_5);
 		
@@ -123,7 +123,7 @@ public class TelaListagemDeHospede extends JFrame {
 		contentPaneTela.add(table);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Data de Saída:");
-		lblNewLabel_2_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		lblNewLabel_2_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
 		lblNewLabel_2_1.setBounds(500, 408, 211, 40);
 		contentPaneTela.add(lblNewLabel_2_1);
 		
@@ -150,7 +150,7 @@ public class TelaListagemDeHospede extends JFrame {
 		
 		JButton btnListar = new JButton("Listar");
 		btnListar.setForeground(new Color(255, 255, 255));
-		btnListar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		btnListar.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnListar.setBackground(new Color(0, 0, 128));
 		btnListar.setBounds(810, 752, 156, 40);
 		contentPaneTela.add(btnListar);

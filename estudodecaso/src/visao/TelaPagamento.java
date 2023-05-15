@@ -61,22 +61,22 @@ public class TelaPagamento extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Preço Diária : ");
 		lblNewLabel.setBounds(664, 279, 141, 56);
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblServioDeQuarto = new JLabel("Serviço de Quarto :");
 		lblServioDeQuarto.setBounds(664, 346, 220, 56);
-		lblServioDeQuarto.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblServioDeQuarto.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblServioDeQuarto);
 		
 		JLabel lblTotalAPagar = new JLabel("Total a pagar : ");
 		lblTotalAPagar.setBounds(664, 471, 244, 56);
-		lblTotalAPagar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblTotalAPagar.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblTotalAPagar);
 		
 		JLabel lblFormaPagamento = new JLabel("Forma de pagamento : ");
 		lblFormaPagamento.setBounds(664, 559, 228, 56);
-		lblFormaPagamento.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblFormaPagamento.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblFormaPagamento);
 		
 		textPrecoDiaria = new JTextField();
@@ -87,17 +87,17 @@ public class TelaPagamento extends JFrame {
 		btnNewButton_2.setForeground(new Color(255, 255, 255));
 		btnNewButton_2.setBackground(new Color(0, 0, 128));
 		btnNewButton_2.setBounds(690, 712, 228, 56);
-		btnNewButton_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 24));
+		btnNewButton_2.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 24));
 		contentPane.add(btnNewButton_2);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Sim");
-		rdbtnNewRadioButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD, 13));
+		rdbtnNewRadioButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 13));
 		rdbtnNewRadioButton.setBackground(new Color(135, 206, 250));
 		rdbtnNewRadioButton.setBounds(664, 409, 68, 34);
 		contentPane.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Não");
-		rdbtnNewRadioButton_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD, 13));
+		rdbtnNewRadioButton_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 13));
 		rdbtnNewRadioButton_1.setBackground(new Color(135, 206, 250));
 		rdbtnNewRadioButton_1.setBounds(749, 409, 68, 34);
 		contentPane.add(rdbtnNewRadioButton_1);
@@ -116,7 +116,7 @@ public class TelaPagamento extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaPagamento.class.getResource("/Imagens/LogoHotel.png")));
-		lblNewLabel_1.setBounds(531, 181, 364, 82);
+		lblNewLabel_1.setBounds(528, 181, 364, 82);
 		contentPane.add(lblNewLabel_1);
 		
 		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
@@ -158,8 +158,9 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setFont(new Font("Sylfaen", Font.BOLD | Font.ITALIC, 11));
 		lblNewLabel_4.setIcon(new ImageIcon(TelaPagamento.class.getResource("/Imagens/Design sem nome (2).png")));
-		lblNewLabel_4.setBounds(380, -95, 1293, 520);
+		lblNewLabel_4.setBounds(448, 0, 1087, 425);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("New label");
@@ -169,8 +170,8 @@ public class TelaPagamento extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("Pagamento");
 		lblNewLabel_6.setForeground(new Color(0, 0, 128));
-		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 36));
-		lblNewLabel_6.setBounds(702, 94, 192, 66);
+		lblNewLabel_6.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel_6.setBounds(690, 104, 216, 66);
 		contentPane.add(lblNewLabel_6);
 	}
 }

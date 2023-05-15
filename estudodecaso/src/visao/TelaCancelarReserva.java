@@ -67,15 +67,15 @@ public class TelaCancelarReserva extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
 		lblNewLabel_1.setBounds(670, 391, 46, 39);
-		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPaneTela.add(lblNewLabel_1);
 		contentPaneTela.add(lblNewLabel);
 
 		
 		JLabel lblNewLabel_2 = new JLabel("Número da Reserva:");
-		lblNewLabel_2.setBounds(671, 506, 184, 21);
+		lblNewLabel_2.setBounds(671, 506, 211, 21);
 		lblNewLabel_2.setBackground(new Color(135, 206, 250));
-		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPaneTela.add(lblNewLabel_2);
 		contentPaneTela.add(lblNewLabel_2);
 		
