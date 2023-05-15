@@ -22,7 +22,7 @@ import java.awt.Panel;
 
 public class TelaLogin extends JFrame {
 
-	private JPanel contentPane;
+	private JPanel contentPaneTela;
 	private JTextField txtEmail;
 	private JTextField txtFraseSecreta;
 
@@ -30,7 +30,7 @@ public class TelaLogin extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
+	EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					TelaLogin frame = new TelaLogin();
@@ -50,51 +50,51 @@ public class TelaLogin extends JFrame {
 		setTitle("Tela Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1658, 991);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(135, 206, 250));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPaneTela = new JPanel();
+		contentPaneTela.setBackground(new Color(135, 206, 250));
+		contentPaneTela.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		setContentPane(contentPaneTela);
+		contentPaneTela.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setBounds(197, 246, 100, -150);
-		contentPane.add(lblNewLabel);
+		contentPaneTela.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel(" Hotel");
-		lblNewLabel_1.setBounds(718, 123, 211, 44);
+		lblNewLabel_1.setBounds(735, 123, 211, 44);
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 48));
 
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 
-		contentPane.add(lblNewLabel_1);
+		contentPaneTela.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email :");
 		lblNewLabel_2.setBounds(645, 337, 100, 34);
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		contentPane.add(lblNewLabel_2);
+		contentPaneTela.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Frase secreta :");
 		lblNewLabel_3.setBounds(645, 414, 148, 34);
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		contentPane.add(lblNewLabel_3);
+		contentPaneTela.add(lblNewLabel_3);
 		
 
 		txtEmail = new JTextField();
 		txtEmail.setBounds(645, 382, 323, 20);
 		txtEmail.setForeground(new Color(153, 204, 255));
-		contentPane.add(txtEmail);
+		contentPaneTela.add(txtEmail);
 		txtEmail.setColumns(10);
 		
 		txtFraseSecreta = new JTextField();
 		txtFraseSecreta.setBounds(645, 459, 323, 20);
-		contentPane.add(txtFraseSecreta);
+		contentPaneTela.add(txtFraseSecreta);
 		txtFraseSecreta.setColumns(10);
 		
 		JButton btnLogin = new JButton("Login");
-		btnLogin.setBounds(678, 524, 211, 44);
+		btnLogin.setBounds(690, 517, 211, 44);
 		
 
 
@@ -108,55 +108,59 @@ public class TelaLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		contentPane.add(btnLogin);
+		contentPaneTela.add(btnLogin);
 		
 		JLabel lblNewLabel_4 = new JLabel("Boulervard");
-		lblNewLabel_4.setBounds(678, 159, 251, 46);
+		lblNewLabel_4.setBounds(706, 160, 251, 46);
 		lblNewLabel_4.setForeground(new Color(0, 0, 128));
 
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 48));
 
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 
-		contentPane.add(lblNewLabel_4);
+		contentPaneTela.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Cliente ainda não possui uma conta?");
-		lblNewLabel_5.setBounds(620, 698, 315, 25);
+		lblNewLabel_5.setBounds(645, 674, 315, 25);
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		contentPane.add(lblNewLabel_5);
+		contentPaneTela.add(lblNewLabel_5);
 		
 
 		JButton btnCadasrtar = new JButton("Cadastrar! ");
-		btnCadasrtar.setBounds(678, 754, 211, 44);
+		btnCadasrtar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCadasrtar.setBounds(690, 710, 211, 44);
 		btnCadasrtar.setForeground(new Color(255, 255, 255));
 		btnCadasrtar.setBackground(new Color(0, 0, 128));
 		btnCadasrtar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		contentPane.add(btnCadasrtar);
+		contentPaneTela.add(btnCadasrtar);
 
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(518, 217, 394, 109);
+		lblNewLabel_6.setBounds(541, 217, 394, 109);
 		lblNewLabel_6.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/LogoHotel.png")));
-		contentPane.add(lblNewLabel_6);
+		contentPaneTela.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Icon.png")));
 		lblNewLabel_7.setBounds(-622, -95, 1293, 520);
-		contentPane.add(lblNewLabel_7);
+		contentPaneTela.add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_8 = new JLabel("New label");
 		lblNewLabel_8.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (2).png")));
 		lblNewLabel_8.setBounds(380, -95, 1293, 520);
-		contentPane.add(lblNewLabel_8);
+		contentPaneTela.add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_9 = new JLabel("New label");
 		lblNewLabel_9.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (1).png")));
 		lblNewLabel_9.setBounds(-622, 408, 1232, 425);
-		contentPane.add(lblNewLabel_9);
+		contentPaneTela.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("New label");
 		lblNewLabel_10.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome.png")));
 		lblNewLabel_10.setBounds(380, 408, 1185, 425);
-		contentPane.add(lblNewLabel_10);
+		contentPaneTela.add(lblNewLabel_10);
 	}
 }

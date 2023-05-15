@@ -57,135 +57,123 @@ public class TelaExclusaoHospede extends JFrame {
 		contentPaneTela.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Excluir Hóspede");
+		lblNewLabel.setBounds(692, 137, 446, 28);
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setBackground(new Color(240, 240, 240));
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel.setBounds(484, 93, 446, 28);
 		contentPaneTela.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nome:");
+		lblNewLabel_1.setBounds(571, 311, 60, 14);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(323, 311, 60, 14);
 		contentPaneTela.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("CPF:");
+		lblNewLabel_2.setBounds(909, 311, 46, 14);
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_2.setBounds(776, 311, 46, 14);
 		contentPaneTela.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Email:");
+		lblNewLabel_3.setBounds(571, 408, 60, 14);
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(323, 411, 60, 14);
 		contentPaneTela.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Telefone:");
+		lblNewLabel_4.setBounds(909, 408, 90, 14);
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_4.setBounds(776, 411, 90, 14);
 		contentPaneTela.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Data de Nascimento:");
+		lblNewLabel_5.setBounds(571, 495, 185, 14);
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_5.setBounds(323, 511, 185, 14);
 		contentPaneTela.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("Quantidade de Hóspedes:");
+		lblNewLabel_6.setBounds(909, 495, 230, 14);
 		lblNewLabel_6.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_6.setBounds(776, 511, 230, 14);
 		contentPaneTela.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("CEP:");
+		lblNewLabel_7.setBounds(571, 586, 46, 14);
 		lblNewLabel_7.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_7.setBounds(323, 611, 46, 14);
 		contentPaneTela.add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_8 = new JLabel("Numero da Reserva:");
+		lblNewLabel_8.setBounds(909, 574, 185, 14);
 		lblNewLabel_8.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_8.setBounds(776, 611, 185, 14);
 		contentPaneTela.add(lblNewLabel_8);
 		
 		txtNome = new JTextField();
-		txtNome.setBounds(323, 336, 216, 20);
+		txtNome.setBounds(571, 336, 216, 20);
 		contentPaneTela.add(txtNome);
 		txtNome.setColumns(10);
 		
 		txtCPF = new JTextField();
-		txtCPF.setBounds(777, 336, 151, 20);
+		txtCPF.setBounds(909, 336, 151, 20);
 		contentPaneTela.add(txtCPF);
 		txtCPF.setColumns(10);
 		
 		txtEmail = new JTextField();
-		txtEmail.setBounds(323, 436, 191, 20);
+		txtEmail.setBounds(571, 425, 191, 20);
 		contentPaneTela.add(txtEmail);
 		txtEmail.setColumns(10);
 		
 		txtTelefone = new JTextField();
-		txtTelefone.setBounds(776, 436, 127, 20);
+		txtTelefone.setBounds(909, 425, 127, 20);
 		contentPaneTela.add(txtTelefone);
 		txtTelefone.setColumns(10);
 		
 		txtDataNascimento = new JTextField();
-		txtDataNascimento.setBounds(323, 536, 86, 20);
+		txtDataNascimento.setBounds(571, 520, 86, 20);
 		contentPaneTela.add(txtDataNascimento);
 		txtDataNascimento.setColumns(10);
 		
 		txtQuantidadeHospedes = new JTextField();
-		txtQuantidadeHospedes.setBounds(776, 536, 46, 20);
+		txtQuantidadeHospedes.setBounds(909, 520, 46, 20);
 		contentPaneTela.add(txtQuantidadeHospedes);
 		txtQuantidadeHospedes.setColumns(10);
 		
 		txtCEP = new JTextField();
-		txtCEP.setBounds(323, 637, 136, 20);
+		txtCEP.setBounds(571, 611, 136, 20);
 		contentPaneTela.add(txtCEP);
 		txtCEP.setColumns(10);
 		
 		txtNumeroReserva = new JTextField();
-		txtNumeroReserva.setBounds(776, 637, 37, 20);
+		txtNumeroReserva.setBounds(909, 599, 37, 20);
 		contentPaneTela.add(txtNumeroReserva);
 		txtNumeroReserva.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Excluir Hóspede");
+		btnNewButton.setBounds(655, 709, 314, 35);
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnNewButton.setBounds(473, 736, 314, 35);
 		contentPaneTela.add(btnNewButton);
-
-		lblNewLabel.setBounds(858, 140, 446, 28);
 		contentPaneTela.add(lblNewLabel);
-		
-		JButton btnExcluirHospede = new JButton("Excluir Hóspede");
-		btnExcluirHospede.setForeground(new Color(255, 255, 255));
-		btnExcluirHospede.setBackground(new Color(0, 0, 128));
-		btnExcluirHospede.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnExcluirHospede.setBounds(884, 839, 314, 35);
-		contentPaneTela.add(btnExcluirHospede);
 
 
 		
 		JLabel lblNewLabel_9 = new JLabel("New label");
+		lblNewLabel_9.setBounds(577, 185, 328, 96);
 		lblNewLabel_9.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/LogoHotel.png")));
-
-		lblNewLabel_9.setBounds(361, 167, 328, 96);
 		contentPaneTela.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/Design sem nome (2).png")));
 		lblNewLabel_10.setBounds(380, -95, 1293, 520);
+		lblNewLabel_10.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/Design sem nome (2).png")));
 		contentPaneTela.add(lblNewLabel_10);
 		
 		JLabel lblNewLabel_12 = new JLabel("");
-		lblNewLabel_12.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/Design sem nome.png")));
 		lblNewLabel_12.setBounds(380, 408, 1185, 425);
+		lblNewLabel_12.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/Design sem nome.png")));
 		contentPaneTela.add(lblNewLabel_12);
-
-		lblNewLabel_9.setBounds(735, 214, 328, 96);
 		contentPaneTela.add(lblNewLabel_9);
 		
 		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
 		tabbedPaneMenu.setForeground(new Color(255, 255, 255));
 		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
 		tabbedPaneMenu.setBackground(new Color(25, 25, 112));
-		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
 		contentPaneTela.add(tabbedPaneMenu);
 		
 		JPanel panel = new JPanel();

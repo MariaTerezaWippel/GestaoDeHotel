@@ -60,43 +60,38 @@ public class TelaCancelarReserva extends JFrame {
 		contentPaneTela.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Cancelar Reserva");
+		lblNewLabel.setBounds(626, 199, 386, 32);
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-
-		lblNewLabel.setBounds(638, 172, 386, 32);
 		contentPaneTela.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
+		lblNewLabel_1.setBounds(670, 391, 46, 39);
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(883, 446, 46, 39);
 		contentPaneTela.add(lblNewLabel_1);
-
-		lblNewLabel.setBounds(833, 225, 386, 32);
 		contentPaneTela.add(lblNewLabel);
 
 		
 		JLabel lblNewLabel_2 = new JLabel("Número da Reserva:");
+		lblNewLabel_2.setBounds(671, 506, 184, 21);
 		lblNewLabel_2.setBackground(new Color(135, 206, 250));
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
-
-		lblNewLabel_2.setBounds(688, 508, 184, 21);
 		contentPaneTela.add(lblNewLabel_2);
-
-		lblNewLabel_2.setBounds(883, 561, 184, 21);
 		contentPaneTela.add(lblNewLabel_2);
 		
 		txtCpf = new JTextField();
-		txtCpf.setBounds(883, 496, 156, 20);
+		txtCpf.setBounds(670, 441, 156, 20);
 		contentPaneTela.add(txtCpf);
 		txtCpf.setColumns(10);
 		
 		txtNumeroDaReserva = new JTextField();
-		txtNumeroDaReserva.setBounds(884, 617, 86, 20);
+		txtNumeroDaReserva.setBounds(670, 538, 86, 20);
 		contentPaneTela.add(txtNumeroDaReserva);
 
 		txtNumeroDaReserva.setColumns(10);
 		
 		JButton btnCancelarReserva = new JButton("Cancelar Reserva");
+		btnCancelarReserva.setBounds(625, 611, 305, 41);
 		btnCancelarReserva.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -106,34 +101,30 @@ public class TelaCancelarReserva extends JFrame {
 		btnCancelarReserva.setBackground(new Color(0, 0, 128));
 
 		btnCancelarReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-
-		btnCancelarReserva.setBounds(638, 677, 305, 41);
 		contentPaneTela.add(btnCancelarReserva);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setBounds(520, 225, 386, 167);
 		lblNewLabel_3.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/LogoHotel.png")));
-		lblNewLabel_3.setBounds(727, 230, 386, 167);
 		contentPaneTela.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setBounds(-622, -95, 1293, 520);
 		lblNewLabel_4.setLabelFor(this);
 		lblNewLabel_4.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/icon.png")));
-		lblNewLabel_4.setBounds(-622, -95, 1293, 520);
 		contentPaneTela.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome (2).png")));
 		lblNewLabel_5.setBounds(380, -95, 1293, 520);
+		lblNewLabel_5.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome (2).png")));
 		contentPaneTela.add(lblNewLabel_5);
-
-		btnCancelarReserva.setBounds(833, 730, 305, 41);
 		contentPaneTela.add(btnCancelarReserva);
 		
 		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
 		tabbedPaneMenu.setForeground(new Color(255, 255, 255));
 		tabbedPaneMenu.setBackground(new Color(0, 0, 153));
 		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
 		contentPaneTela.add(tabbedPaneMenu);
 		
 		JPanel panel = new JPanel();
@@ -163,27 +154,23 @@ public class TelaCancelarReserva extends JFrame {
 
 		
 		JTabbedPane tabbedPaneCancelar = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPaneCancelar.setBounds(0, 0, 5000, 25);
 		tabbedPaneCancelar.setForeground(new Color(255, 255, 255));
 		tabbedPaneCancelar.setBackground(new Color(0, 0, 153));
 		tabbedPaneCancelar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneCancelar.setBounds(0, 0, 5000, 25);
 		contentPaneTela.add(tabbedPaneCancelar);
 		
  
-		tabbedPaneCancelar.addTab("PAGAMENTO", null, panel_6, null);
 		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome (1).png")));
 		lblNewLabel_6.setBounds(-622, 408, 1232, 425);
+		lblNewLabel_6.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome (1).png")));
 		contentPaneTela.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome.png")));
 		lblNewLabel_7.setBounds(380, 408, 1185, 425);
-		contentPaneTela.add(lblNewLabel_7);
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
+		lblNewLabel_7.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome.png")));
 		contentPaneTela.add(lblNewLabel_7);
 
-		tabbedPaneCancelar.addTab("PAGAMENTO", null, panel_6, null);
 
 	}
 }
