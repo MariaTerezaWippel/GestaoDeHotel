@@ -108,32 +108,32 @@ public class TelaCheckIn extends JFrame {
 		lblNewLabel_5.setBounds(380, -95, 1293, 520);
 		contentPane.add(lblNewLabel_5);
 		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setForeground(new Color(255, 255, 255));
-		tabbedPane.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPane.setBackground(new Color(25, 25, 112));
-		tabbedPane.setBounds(0, 0, 5000, 25);
-		contentPane.add(tabbedPane);
+		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPaneMenu.setForeground(new Color(255, 255, 255));
+		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
+		tabbedPaneMenu.setBackground(new Color(25, 25, 112));
+		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
+		contentPane.add(tabbedPaneMenu);
 		
 		JPanel panel = new JPanel();
-		tabbedPane.addTab("INÍCIO", null, panel, null);
+		tabbedPaneMenu.addTab("INÍCIO", null, panel, null);
 		
 		JPanel panel_1 = new JPanel();
-		tabbedPane.addTab("RESERVA", null, panel_1, null);
+		tabbedPaneMenu.addTab("RESERVA", null, panel_1, null);
 		
 		JPanel panel_2 = new JPanel();
-		tabbedPane.addTab("CANCELAR RESERVA", null, panel_2, null);
+		tabbedPaneMenu.addTab("CANCELAR RESERVA", null, panel_2, null);
 		
 		JPanel panel_3 = new JPanel();
-		tabbedPane.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
+		tabbedPaneMenu.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
 		
 		JPanel panel_4 = new JPanel();
-		tabbedPane.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
+		tabbedPaneMenu.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
 		
 		JPanel panel_5 = new JPanel();
-		tabbedPane.addTab("CHECK-IN", null, panel_5, null);
+		tabbedPaneMenu.addTab("CHECK-IN", null, panel_5, null);
 		
 		JPanel panel_6 = new JPanel();
-		tabbedPane.addTab("PAGAMENTO", null, panel_6, null);
+		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
 	}
 }

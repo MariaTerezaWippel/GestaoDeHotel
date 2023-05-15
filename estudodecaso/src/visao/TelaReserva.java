@@ -31,6 +31,7 @@ import java.awt.Dimension;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
 import java.awt.Label;
+import javax.swing.JTabbedPane;
 
 public class TelaReserva extends JFrame {
 
@@ -184,6 +185,7 @@ public class TelaReserva extends JFrame {
 		comboBox.setEditable(true);
 		contentPane.add(comboBox);
 		
+
 		JLabel lblNewLabel_8 = new JLabel("New label");
 		lblNewLabel_8.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/Design sem nome (2).png")));
 		lblNewLabel_8.setBounds(380, -95, 1293, 520);
@@ -193,5 +195,37 @@ public class TelaReserva extends JFrame {
 		lblNewLabel_9.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/Design sem nome.png")));
 		lblNewLabel_9.setBounds(380, 408, 1185, 425);
 		contentPane.add(lblNewLabel_9);
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBounds(215, 117, -54, -40);
+		contentPane.add(tabbedPane);
+		
+		JTabbedPane tabbedPane_1Menu = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane_1Menu.setBackground(new Color(25, 25, 112));
+		tabbedPane_1Menu.setForeground(Color.WHITE);
+		tabbedPane_1Menu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
+		tabbedPane_1Menu.setBounds(0, 0, 5000, 25);
+		contentPane.add(tabbedPane_1Menu);
+		
+		JPanel panel = new JPanel();
+		tabbedPane_1Menu.addTab("INÍCIO", null, panel, null);
+		
+		JPanel panel_1 = new JPanel();
+		tabbedPane_1Menu.addTab("RESERVA", null, panel_1, null);
+		
+		JPanel panel_2 = new JPanel();
+		tabbedPane_1Menu.addTab("CANCELAR RESERVA", null, panel_2, null);
+		
+		JPanel panel_3 = new JPanel();
+		tabbedPane_1Menu.addTab("LISTAGEM DE HÓSPEDE", null, panel_3, null);
+		
+		JPanel panel_4 = new JPanel();
+		tabbedPane_1Menu.addTab("EXCLUSÃO DE HÓSPEDE", null, panel_4, null);
+		
+		JPanel panel_5 = new JPanel();
+		tabbedPane_1Menu.addTab("CHECK-IN", null, panel_5, null);
+		
+		JPanel panel_6 = new JPanel();
+		tabbedPane_1Menu.addTab("PAGAMENTO", null, panel_6, null);
+
 	}
 }

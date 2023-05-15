@@ -109,35 +109,36 @@ public class TelaCancelarReserva extends JFrame {
 		lblNewLabel_5.setBounds(380, -95, 1293, 520);
 		contentPane.add(lblNewLabel_5);
 		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setForeground(new Color(255, 255, 255));
-		tabbedPane.setBackground(new Color(0, 0, 153));
-		tabbedPane.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPane.setBounds(0, 0, 5000, 25);
-		contentPane.add(tabbedPane);
+		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPaneMenu.setForeground(new Color(255, 255, 255));
+		tabbedPaneMenu.setBackground(new Color(0, 0, 153));
+		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
+		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
+		contentPane.add(tabbedPaneMenu);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(25, 25, 112));
-		tabbedPane.addTab("INÍCIO", null, panel, null);
+		tabbedPaneMenu.addTab("INÍCIO", null, panel, null);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(25, 25, 112));
-		tabbedPane.addTab("RESERVA", null, panel_1, null);
+		tabbedPaneMenu.addTab("RESERVA", null, panel_1, null);
 		
 		JPanel panel_2 = new JPanel();
-		tabbedPane.addTab("CANCELAR RESERVA", null, panel_2, null);
+		tabbedPaneMenu.addTab("CANCELAR RESERVA", null, panel_2, null);
 		
 		JPanel panel_3 = new JPanel();
-		tabbedPane.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
+		tabbedPaneMenu.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
 		
 		JPanel panel_4 = new JPanel();
-		tabbedPane.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
+		tabbedPaneMenu.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
 		
 		JPanel panel_5 = new JPanel();
-		tabbedPane.addTab("CHECK-IN", null, panel_5, null);
+		tabbedPaneMenu.addTab("CHECK-IN", null, panel_5, null);
 		
 		JPanel panel_6 = new JPanel();
-		tabbedPane.addTab("PAGAMENTO", null, panel_6, null);
+		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
+		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome (1).png")));
 		lblNewLabel_6.setBounds(-622, 408, 1232, 425);
@@ -147,5 +148,6 @@ public class TelaCancelarReserva extends JFrame {
 		lblNewLabel_7.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome.png")));
 		lblNewLabel_7.setBounds(380, 408, 1185, 425);
 		contentPane.add(lblNewLabel_7);
+		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
 	}
 }
