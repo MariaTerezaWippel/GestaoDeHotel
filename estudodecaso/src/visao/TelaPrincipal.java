@@ -24,6 +24,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JTabbedPane;
 
 public class TelaPrincipal extends JFrame {
 
@@ -94,13 +95,6 @@ public class TelaPrincipal extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/LogoHotel.png")));
 		contentPane.add(lblNewLabel);
 		
-		JMenu mnNewMenu = new JMenu("     Menu");
-		mnNewMenu.setForeground(new Color(0, 0, 128));
-		mnNewMenu.setBackground(new Color(0, 0, 0));
-		mnNewMenu.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 16));
-		mnNewMenu.setBounds(84, 72, 125, 48);
-		contentPane.add(mnNewMenu);
-		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Icon.png")));
 		lblNewLabel_1.setBounds(-623, 508, 1253, 433);
@@ -117,6 +111,35 @@ public class TelaPrincipal extends JFrame {
 		btnNoTemReserva.setBackground(new Color(0, 0, 128));
 		btnNoTemReserva.setBounds(842, 444, 280, 33);
 		contentPane.add(btnNoTemReserva);
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBackground(new Color(0, 0, 153));
+		tabbedPane.setForeground(new Color(255, 255, 255));
+		tabbedPane.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
+		tabbedPane.setBounds(0, 0, 5000, 24);
+		contentPane.add(tabbedPane);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(100, 149, 237));
+		tabbedPane.addTab("INÍCIO", null, panel, null);
+		
+		JPanel panel_1 = new JPanel();
+		tabbedPane.addTab("RESERVA", null, panel_1, null);
+		
+		JPanel panel_2 = new JPanel();
+		tabbedPane.addTab("CANCELAR RESERVA", null, panel_2, null);
+		
+		JPanel panel_3 = new JPanel();
+		tabbedPane.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
+		
+		JPanel panel_4 = new JPanel();
+		tabbedPane.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
+		
+		JPanel panel_5 = new JPanel();
+		tabbedPane.addTab("CHECK-IN", null, panel_5, null);
+		
+		JPanel panel_6 = new JPanel();
+		tabbedPane.addTab("PAGAMENTO", null, panel_6, null);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
