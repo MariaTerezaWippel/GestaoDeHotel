@@ -35,7 +35,6 @@ import java.awt.Label;
 public class TelaReserva extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtTipoQuarto;
 	private JTextField txtNumReserva;
 	private JTextField txtQuatdPessoas;
 	private JTextField txtNomecomple;
@@ -110,11 +109,6 @@ public class TelaReserva extends JFrame {
 
 		contentPane.add(lblNewLabel_3);
 		
-		txtTipoQuarto = new JTextField();
-		txtTipoQuarto.setBounds(345, 497, 239, 20);
-		contentPane.add(txtTipoQuarto);
-		txtTipoQuarto.setColumns(10);
-		
 		JLabel lblNewLabel_4 = new JLabel("Número da Reserva:");
 		lblNewLabel_4.setBounds(1042, 472, 201, 14);
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
@@ -180,5 +174,16 @@ public class TelaReserva extends JFrame {
 		lblNewLabel_7.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/LogoHotel.png")));
 		lblNewLabel_7.setBounds(556, 176, 350, 115);
 		contentPane.add(lblNewLabel_7);
+		
+		JComboBox DataSaidabox_1 = new JComboBox();
+		DataSaidabox_1.setEditable(true);
+		DataSaidabox_1.setBackground(Color.WHITE);
+		DataSaidabox_1.setBounds(1042, 396, 239, 22);
+		contentPane.add(DataSaidabox_1);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setEditable(true);
+		comboBox.setBounds(345, 504, 239, 22);
+		contentPane.add(comboBox);
 	}
 }
