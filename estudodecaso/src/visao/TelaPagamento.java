@@ -86,10 +86,12 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Sim");
+		rdbtnNewRadioButton.setBackground(new Color(135, 206, 250));
 		rdbtnNewRadioButton.setBounds(693, 427, 68, 34);
 		contentPane.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Não");
+		rdbtnNewRadioButton_1.setBackground(new Color(135, 206, 250));
 		rdbtnNewRadioButton_1.setBounds(778, 427, 68, 34);
 		contentPane.add(rdbtnNewRadioButton_1);
 		

@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTabbedPane;
 
 public class TelaCheckIn extends JFrame {
 
@@ -106,5 +107,33 @@ public class TelaCheckIn extends JFrame {
 		lblNewLabel_5.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/Icon.png")));
 		lblNewLabel_5.setBounds(663, -38, 1175, 463);
 		contentPane.add(lblNewLabel_5);
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setForeground(new Color(255, 255, 255));
+		tabbedPane.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
+		tabbedPane.setBackground(new Color(25, 25, 112));
+		tabbedPane.setBounds(0, 0, 5000, 25);
+		contentPane.add(tabbedPane);
+		
+		JPanel panel = new JPanel();
+		tabbedPane.addTab("INÍCIO", null, panel, null);
+		
+		JPanel panel_1 = new JPanel();
+		tabbedPane.addTab("RESERVA", null, panel_1, null);
+		
+		JPanel panel_2 = new JPanel();
+		tabbedPane.addTab("CANCELAR RESERVA", null, panel_2, null);
+		
+		JPanel panel_3 = new JPanel();
+		tabbedPane.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
+		
+		JPanel panel_4 = new JPanel();
+		tabbedPane.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
+		
+		JPanel panel_5 = new JPanel();
+		tabbedPane.addTab("CHECK-IN", null, panel_5, null);
+		
+		JPanel panel_6 = new JPanel();
+		tabbedPane.addTab("PAGAMENTO", null, panel_6, null);
 	}
 }
