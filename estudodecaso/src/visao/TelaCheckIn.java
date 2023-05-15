@@ -96,5 +96,15 @@ public class TelaCheckIn extends JFrame {
 		lblNewLabel_3.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/LogoHotel.png")));
 		lblNewLabel_3.setBounds(715, 239, 433, 100);
 		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/icon.png")));
+		lblNewLabel_4.setBounds(-615, 505, 1376, 435);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/icon.png")));
+		lblNewLabel_5.setBounds(653, -38, 1175, 463);
+		contentPane.add(lblNewLabel_5);
 	}
 }
