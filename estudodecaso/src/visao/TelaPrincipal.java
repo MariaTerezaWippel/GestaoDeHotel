@@ -28,7 +28,6 @@ import javax.swing.JRadioButtonMenuItem;
 public class TelaPrincipal extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textPesquisarCampo;
 
 	/**
 	 * Launch the application.
@@ -53,15 +52,12 @@ public class TelaPrincipal extends JFrame {
 	public TelaPrincipal() {
 		setTitle("Tela Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1260, 991);
+		setBounds(100, 100, 1392, 991);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(135, 206, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		
-		JPopupMenu popupMenu = new JPopupMenu();
-		addPopup(contentPane, popupMenu);
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
@@ -69,6 +65,8 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblHotel = new JLabel("HotelBoulevard.com");
+		lblHotel.setForeground(new Color(0, 0, 128));
+		lblHotel.setBackground(new Color(255, 255, 255));
 		lblHotel.setBounds(813, 167, 328, 25);
 		lblHotel.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblHotel);
@@ -84,26 +82,6 @@ public class TelaPrincipal extends JFrame {
 		});
 		contentPane.add(btnReservar);
 		
-		textPesquisarCampo = new JTextField();
-		textPesquisarCampo.setBounds(813, 469, 256, 25);
-		contentPane.add(textPesquisarCampo);
-		textPesquisarCampo.setColumns(10);
-		
-		JLabel lblPesquisar = new JLabel("Pesquisar");
-		lblPesquisar.setBounds(812, 433, 110, 25);
-		lblPesquisar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
-		contentPane.add(lblPesquisar);
-		
-		JButton btnBotaoIr = new JButton("Ir");
-		btnBotaoIr.setBounds(1079, 471, 53, 23);
-		btnBotaoIr.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnBotaoIr.setBackground(new Color(135, 206, 250));
-		btnBotaoIr.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		contentPane.add(btnBotaoIr);
-		
 		JTextPane txtTexto = new JTextPane();
 		txtTexto.setBounds(785, 728, 427, 48);
 		txtTexto.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 16));
@@ -112,7 +90,7 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(txtTexto);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(744, 218, 325, 111);
+		lblNewLabel.setBounds(731, 219, 325, 111);
 		lblNewLabel.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/LogoHotel.png")));
 		contentPane.add(lblNewLabel);
 		
@@ -124,14 +102,21 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(mnNewMenu);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/icon.png")));
-		lblNewLabel_1.setBounds(-618, 468, 1253, 433);
+		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Icon.png")));
+		lblNewLabel_1.setBounds(-623, 508, 1253, 433);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/icon.png")));
+		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Icon.png")));
 		lblNewLabel_3.setBounds(-659, 72, 1376, 474);
 		contentPane.add(lblNewLabel_3);
+		
+		JButton btnNoTemReserva = new JButton("Não tem reserva? Clique aqui!\r\n");
+		btnNoTemReserva.setForeground(Color.WHITE);
+		btnNoTemReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		btnNoTemReserva.setBackground(new Color(0, 0, 128));
+		btnNoTemReserva.setBounds(842, 444, 280, 33);
+		contentPane.add(btnNoTemReserva);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {

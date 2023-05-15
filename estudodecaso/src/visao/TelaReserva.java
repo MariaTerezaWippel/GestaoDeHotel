@@ -65,7 +65,7 @@ public class TelaReserva extends JFrame {
 		setBackground(new Color(255, 255, 255));
 		setTitle("Tela Reserva");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1260, 991);
+		setBounds(100, 100, 1334, 991);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBackground(new Color(135, 206, 250));
