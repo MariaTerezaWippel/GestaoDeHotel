@@ -18,6 +18,7 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import java.awt.ScrollPane;
 import java.awt.Point;
+import javax.swing.JButton;
 
 public class TelaListagemDeHospede extends JFrame {
 
@@ -62,67 +63,94 @@ public class TelaListagemDeHospede extends JFrame {
 		JLabel lblNewLabel = new JLabel("Listagem de Hóspede");
 		lblNewLabel.setForeground(new Color(25, 25, 112));
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel.setBounds(772, 59, 390, 40);
+		lblNewLabel.setBounds(689, 31, 390, 40);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Aluno\\Downloads\\Design sem nome.png"));
-		lblNewLabel_1.setBounds(832, 0, 430, 170);
-		contentPane.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_2 = new JLabel("Data de Entrada e Saída");
+		JLabel lblNewLabel_2 = new JLabel("Data de Entrada:");
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_2.setBounds(344, 356, 211, 40);
+		lblNewLabel_2.setBounds(500, 331, 211, 40);
 		contentPane.add(lblNewLabel_2);
 		
 		JComboBox cmbDataEntraSaida = new JComboBox();
 		cmbDataEntraSaida.setForeground(new Color(25, 25, 112));
 		cmbDataEntraSaida.setEditable(true);
-		cmbDataEntraSaida.setBounds(344, 407, 316, 22);
+		cmbDataEntraSaida.setBounds(500, 382, 316, 22);
 		contentPane.add(cmbDataEntraSaida);
 		
 		JLabel lblNewLabel_3 = new JLabel("Nome:");
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_3.setBounds(344, 236, 188, 29);
+		lblNewLabel_3.setBounds(500, 211, 188, 29);
 		contentPane.add(lblNewLabel_3);
 		
 		txtNomeLista = new JTextField();
 		txtNomeLista.setBackground(new Color(255, 255, 255));
-		txtNomeLista.setBounds(344, 276, 316, 20);
+		txtNomeLista.setBounds(500, 251, 316, 20);
 		contentPane.add(txtNomeLista);
 		txtNomeLista.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Telefone:");
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_4.setBounds(344, 555, 98, 22);
+		lblNewLabel_4.setBounds(500, 530, 98, 22);
 		contentPane.add(lblNewLabel_4);
 		
 		txtTelefoneLista = new JTextField();
-		txtTelefoneLista.setBounds(344, 588, 191, 20);
+		txtTelefoneLista.setBounds(500, 563, 191, 20);
 		contentPane.add(txtTelefoneLista);
 		txtTelefoneLista.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Número da Reserva:");
 		lblNewLabel_5.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
-		lblNewLabel_5.setBounds(347, 632, 188, 22);
+		lblNewLabel_5.setBounds(503, 607, 188, 22);
 		contentPane.add(lblNewLabel_5);
 		
 		txtNumeroReserLista = new JTextField();
-		txtNumeroReserLista.setBounds(344, 665, 188, 20);
+		txtNumeroReserLista.setBounds(500, 640, 188, 20);
 		contentPane.add(txtNumeroReserLista);
 		txtNumeroReserLista.setColumns(10);
 		
 		ScrollPane scrollPane = new ScrollPane();
 		scrollPane.setFont(null);
 		scrollPane.setForeground(new Color(0, 0, 0));
-		scrollPane.setScrollPosition(new Point(0, 0));
 		scrollPane.setBackground(new Color(255, 255, 255));
-		scrollPane.setBounds(722, 236, 657, 449);
+		scrollPane.setBounds(846, 211, 657, 449);
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
-		table.setBounds(796, 297, 1, 1);
+		table.setBounds(652, 239, 1, 1);
 		contentPane.add(table);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("Data de Saída:");
+		lblNewLabel_2_1.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 18));
+		lblNewLabel_2_1.setBounds(500, 418, 211, 40);
+		contentPane.add(lblNewLabel_2_1);
+		
+		JComboBox cmbDataSaida = new JComboBox();
+		cmbDataSaida.setForeground(new Color(25, 25, 112));
+		cmbDataSaida.setEditable(true);
+		cmbDataSaida.setBounds(500, 469, 316, 22);
+		contentPane.add(cmbDataSaida);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaListagemDeHospede.class.getResource("/Imagens/icon.png")));
+		lblNewLabel_1.setBounds(-622, -95, 1293, 520);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon(TelaListagemDeHospede.class.getResource("/Imagens/Design sem nome (1).png")));
+		lblNewLabel_6.setBounds(-622, 408, 1232, 425);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("New label");
+		lblNewLabel_7.setIcon(new ImageIcon(TelaListagemDeHospede.class.getResource("/Imagens/LogoHotel.png")));
+		lblNewLabel_7.setBounds(621, 43, 345, 178);
+		contentPane.add(lblNewLabel_7);
+		
+		JButton btnListar = new JButton("Listar");
+		btnListar.setForeground(new Color(255, 255, 255));
+		btnListar.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 20));
+		btnListar.setBackground(new Color(0, 0, 128));
+		btnListar.setBounds(810, 752, 156, 40);
+		contentPane.add(btnListar);
 		
 		table = new JTable();
 		dataModel = new DefaultTableModel(new Object[][] {}, new String[] { "Nome", "Data de Entrada e Saída", "Telefone", "Número da Reserva" });

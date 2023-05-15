@@ -54,7 +54,7 @@ public class TelaPrincipal extends JFrame {
 	public TelaPrincipal() {
 		setTitle("Tela Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1392, 991);
+		setBounds(100, 100, 1300, 990);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(135, 206, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -69,12 +69,12 @@ public class TelaPrincipal extends JFrame {
 		JLabel lblHotel = new JLabel("HotelBoulevard.com");
 		lblHotel.setForeground(new Color(0, 0, 128));
 		lblHotel.setBackground(new Color(255, 255, 255));
-		lblHotel.setBounds(813, 167, 328, 25);
+		lblHotel.setBounds(610, 128, 328, 25);
 		lblHotel.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 		contentPane.add(lblHotel);
 		
 		JButton btnReservar = new JButton("Já tem Reserva? Clique aqui!");
-		btnReservar.setBounds(842, 559, 280, 33);
+		btnReservar.setBounds(639, 520, 280, 33);
 		btnReservar.setForeground(new Color(255, 255, 255));
 		btnReservar.setBackground(new Color(0, 0, 128));
 		btnReservar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
@@ -85,32 +85,32 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(btnReservar);
 		
 		JTextPane txtTexto = new JTextPane();
-		txtTexto.setBounds(785, 728, 427, 48);
+		txtTexto.setBounds(582, 689, 427, 48);
 		txtTexto.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 16));
 		txtTexto.setBackground(new Color(135, 206, 250));
 		txtTexto.setText("Aqui você encontra os melhores preços com qualidade de acomodação e serviço. Faça sua reserva agora!");
 		contentPane.add(txtTexto);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(731, 219, 325, 111);
+		lblNewLabel.setBounds(528, 180, 325, 111);
 		lblNewLabel.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/LogoHotel.png")));
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Icon.png")));
-		lblNewLabel_1.setBounds(-623, 508, 1253, 433);
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome (1).png")));
+		lblNewLabel_1.setBounds(-622, 408, 1232, 425);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_3 = new JLabel("New label");
+		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Icon.png")));
-		lblNewLabel_3.setBounds(-659, 72, 1376, 474);
+		lblNewLabel_3.setBounds(-622, -95, 1293, 520);
 		contentPane.add(lblNewLabel_3);
 		
 		JButton btnNoTemReserva = new JButton("Não tem reserva? Clique aqui!\r\n");
 		btnNoTemReserva.setForeground(Color.WHITE);
 		btnNoTemReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnNoTemReserva.setBackground(new Color(0, 0, 128));
-		btnNoTemReserva.setBounds(842, 444, 280, 33);
+		btnNoTemReserva.setBounds(639, 405, 280, 33);
 		contentPane.add(btnNoTemReserva);
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -141,6 +141,16 @@ public class TelaPrincipal extends JFrame {
 		
 		JPanel panel_6 = new JPanel();
 		tabbedPane.addTab("PAGAMENTO", null, panel_6, null);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome (2).png")));
+		lblNewLabel_4.setBounds(380, -95, 1293, 520);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome.png")));
+		lblNewLabel_5.setBounds(380, 408, 1185, 425);
+		contentPane.add(lblNewLabel_5);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {

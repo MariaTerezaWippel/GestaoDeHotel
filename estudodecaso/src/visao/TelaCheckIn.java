@@ -99,13 +99,13 @@ public class TelaCheckIn extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/Icon.png")));
-		lblNewLabel_4.setBounds(-615, 505, 1376, 435);
+		lblNewLabel_4.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/Design sem nome.png")));
+		lblNewLabel_4.setBounds(380, 408, 1185, 425);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/Icon.png")));
-		lblNewLabel_5.setBounds(663, -38, 1175, 463);
+		lblNewLabel_5.setBounds(380, -95, 1293, 520);
 		contentPane.add(lblNewLabel_5);
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
