@@ -57,10 +57,10 @@ public class TelaExclusaoHospede extends JFrame {
 		contentPaneTela.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Excluir Hóspede");
-		lblNewLabel.setBounds(692, 137, 446, 28);
+		lblNewLabel.setBounds(692, 111, 446, 54);
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setBackground(new Color(240, 240, 240));
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 36));
 		contentPaneTela.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nome:");

@@ -54,10 +54,10 @@ public class TelaCheckIn extends JFrame {
 		contentPaneTela.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Efetuar Check-In");
-		lblNewLabel.setBounds(642, 169, 293, 36);
+		lblNewLabel.setBounds(640, 178, 335, 48);
 		lblNewLabel.setForeground(new Color(25, 25, 112));
 		lblNewLabel.setBackground(new Color(240, 240, 240));
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 38));
 		contentPaneTela.add(lblNewLabel);
 		
 		textNumeroReserva = new JTextField();
@@ -98,6 +98,7 @@ public class TelaCheckIn extends JFrame {
 		
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblNewLabel_3.setBounds(542, 237, 433, 100);
 		lblNewLabel_3.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/LogoHotel.png")));
 		contentPaneTela.add(lblNewLabel_3);

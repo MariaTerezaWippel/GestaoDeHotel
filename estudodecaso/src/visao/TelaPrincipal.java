@@ -157,6 +157,13 @@ public class TelaPrincipal extends JFrame {
 		contentPaneTela.add(lblNewLabel_5);
 
 		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
+		
+		JButton btnSair = new JButton("Sair");
+		btnSair.setForeground(new Color(255, 255, 255));
+		btnSair.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 11));
+		btnSair.setBackground(new Color(0, 0, 128));
+		btnSair.setBounds(788, 633, 89, 23);
+		contentPaneTela.add(btnSair);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {

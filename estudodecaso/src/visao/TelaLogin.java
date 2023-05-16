@@ -65,7 +65,7 @@ public class TelaLogin extends JFrame {
 		lblNewLabel_1.setBounds(735, 123, 211, 44);
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 
-		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 48));
+		lblNewLabel_1.setFont(new Font("Sitka Small", Font.BOLD | Font.ITALIC, 48));
 
 		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 
@@ -114,7 +114,7 @@ public class TelaLogin extends JFrame {
 		lblNewLabel_4.setBounds(706, 160, 251, 46);
 		lblNewLabel_4.setForeground(new Color(0, 0, 128));
 
-		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.PLAIN, 48));
+		lblNewLabel_4.setFont(new Font("Sitka Small", Font.PLAIN, 48));
 
 		lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 
@@ -127,11 +127,11 @@ public class TelaLogin extends JFrame {
 		
 
 		JButton btnCadasrtar = new JButton("Cadastrar! ");
+		btnCadasrtar.setBounds(690, 710, 211, 44);
 		btnCadasrtar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnCadasrtar.setBounds(690, 710, 211, 44);
 		btnCadasrtar.setForeground(new Color(255, 255, 255));
 		btnCadasrtar.setBackground(new Color(0, 0, 128));
 		btnCadasrtar.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
@@ -144,23 +144,23 @@ public class TelaLogin extends JFrame {
 		contentPaneTela.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Icon.png")));
 		lblNewLabel_7.setBounds(-622, -95, 1293, 520);
+		lblNewLabel_7.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Icon.png")));
 		contentPaneTela.add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_8 = new JLabel("New label");
-		lblNewLabel_8.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (2).png")));
 		lblNewLabel_8.setBounds(380, -95, 1293, 520);
+		lblNewLabel_8.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (2).png")));
 		contentPaneTela.add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (1).png")));
 		lblNewLabel_9.setBounds(-622, 408, 1232, 425);
+		lblNewLabel_9.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (1).png")));
 		contentPaneTela.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("New label");
-		lblNewLabel_10.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome.png")));
 		lblNewLabel_10.setBounds(380, 408, 1185, 425);
+		lblNewLabel_10.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome.png")));
 		contentPaneTela.add(lblNewLabel_10);
 	}
 }

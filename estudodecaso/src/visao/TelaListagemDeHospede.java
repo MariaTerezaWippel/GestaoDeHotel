@@ -63,8 +63,8 @@ public class TelaListagemDeHospede extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Listagem de Hóspede");
 		lblNewLabel.setForeground(new Color(25, 25, 112));
-		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel.setBounds(688, 50, 390, 40);
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel.setBounds(681, 61, 410, 40);
 		contentPaneTela.add(lblNewLabel);
 		
 		JLabel lblNewLabel_2 = new JLabel("Data de Entrada:");

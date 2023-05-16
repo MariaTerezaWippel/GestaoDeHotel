@@ -135,8 +135,8 @@ public class TelaCadastro extends JFrame {
 
 		JLabel lblNewLabel_7 = new JLabel(" Cadastro do Hóspede");
 		lblNewLabel_7.setForeground(new Color(0, 0, 128));
-		lblNewLabel_7.setFont(new Font("Sitka Display", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel_7.setBounds(721, 70, 395, 48);
+		lblNewLabel_7.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 36));
+		lblNewLabel_7.setBounds(721, 70, 424, 48);
 		contentPaneTela.add(lblNewLabel_7);
 		
 
