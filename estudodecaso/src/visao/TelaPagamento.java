@@ -70,7 +70,7 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblServioDeQuarto);
 		
 		JLabel lblTotalAPagar = new JLabel("Total a pagar : ");
-		lblTotalAPagar.setBounds(664, 471, 244, 56);
+		lblTotalAPagar.setBounds(664, 470, 153, 56);
 		lblTotalAPagar.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblTotalAPagar);
 		
@@ -80,7 +80,7 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(lblFormaPagamento);
 		
 		textPrecoDiaria = new JTextField();
-		textPrecoDiaria.setBounds(795, 300, 153, 20);
+		textPrecoDiaria.setBounds(811, 301, 153, 20);
 		contentPane.add(textPrecoDiaria);
 		textPrecoDiaria.setColumns(10);
 		JButton btnNewButton_2 = new JButton("Finalizar ");
@@ -110,7 +110,7 @@ public class TelaPagamento extends JFrame {
 		
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(795, 492, 153, 20);
+		textField_1.setBounds(811, 492, 153, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
