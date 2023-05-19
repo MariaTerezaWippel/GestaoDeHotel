@@ -20,6 +20,7 @@ import java.awt.ScrollPane;
 import java.awt.Point;
 import javax.swing.JButton;
 import javax.swing.JTabbedPane;
+import com.toedter.calendar.JDateChooser;
 
 public class TelaListagemDeHospede extends JFrame {
 
@@ -72,12 +73,6 @@ public class TelaListagemDeHospede extends JFrame {
 		lblNewLabel_2.setBounds(500, 310, 211, 40);
 		contentPaneTela.add(lblNewLabel_2);
 		
-		JComboBox cmbDataEntraSaida = new JComboBox();
-		cmbDataEntraSaida.setForeground(new Color(25, 25, 112));
-		cmbDataEntraSaida.setEditable(true);
-		cmbDataEntraSaida.setBounds(500, 361, 316, 22);
-		contentPaneTela.add(cmbDataEntraSaida);
-		
 		JLabel lblNewLabel_3 = new JLabel("Nome:");
 		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
 		lblNewLabel_3.setBounds(500, 211, 188, 29);
@@ -127,12 +122,6 @@ public class TelaListagemDeHospede extends JFrame {
 		lblNewLabel_2_1.setBounds(500, 408, 211, 40);
 		contentPaneTela.add(lblNewLabel_2_1);
 		
-		JComboBox cmbDataSaida = new JComboBox();
-		cmbDataSaida.setForeground(new Color(25, 25, 112));
-		cmbDataSaida.setEditable(true);
-		cmbDataSaida.setBounds(500, 459, 316, 22);
-		contentPaneTela.add(cmbDataSaida);
-		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaListagemDeHospede.class.getResource("/Imagens/icon.png")));
 		lblNewLabel_1.setBounds(-622, -95, 1293, 520);
@@ -181,6 +170,14 @@ public class TelaListagemDeHospede extends JFrame {
 		
 		JPanel panel_6 = new JPanel();
 		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
+		
+		JDateChooser Calendario1List = new JDateChooser();
+		Calendario1List.setBounds(500, 453, 316, 20);
+		contentPaneTela.add(Calendario1List);
+		
+		JDateChooser Calendario2List = new JDateChooser();
+		Calendario2List.setBounds(500, 361, 316, 20);
+		contentPaneTela.add(Calendario2List);
 		
 		table = new JTable();
 		dataModel = new DefaultTableModel(new Object[][] {}, new String[] { "Nome", "Data de Entrada e Saída", "Telefone", "Número da Reserva" });
