@@ -117,7 +117,7 @@ public class TelaReserva extends JFrame {
 		lblNewLabel_3.setBounds(345, 478, 161, 27);
 		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
-		lblNewLabel_3.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
+
 
 		contentPaneTela_1.add(lblNewLabel_3);
 		
@@ -234,8 +234,10 @@ public class TelaReserva extends JFrame {
 		tabbedPane_1Menu.addTab("PAGAMENTO", null, panel_6, null);
 		contentPaneTela_1.add(lblNewLabel_9);
 		
-		JComboBox comboBoxTipoQuarto = new JComboBox();
+		JComboBox<Object> comboBoxTipoQuarto = new JComboBox<Object>();
 		comboBoxTipoQuarto.setBounds(345, 504, 239, 22);
+		JComboBox<String> jComboBox = new JComboBox<String>();
+		jComboBox.addItem("      -SELECIONE-     ");
 		comboBoxTipoQuarto.setEditable(true);
 		contentPaneTela_1.add(comboBoxTipoQuarto);
 		
@@ -246,6 +248,12 @@ public class TelaReserva extends JFrame {
 		JDateChooser Calendario2reserva = new JDateChooser();
 		Calendario2reserva.setBounds(1036, 405, 245, 20);
 		contentPaneTela_1.add(Calendario2reserva);
+		
+		//ArrayList<String>opcoes = dao.listarTodos();
+		//For (String opcao; opcoes){
+		//	comboBox.addItem(opcao);
+		//}
+		//contentPaneTela.add(comboBoxTipoQuarto);
 
 	}
 }

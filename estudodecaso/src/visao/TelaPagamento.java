@@ -12,6 +12,7 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
@@ -105,6 +106,11 @@ public class TelaPagamento extends JFrame {
 		JComboBox comboBox = new JComboBox();
 		comboBox.setEditable(true);
 		comboBox.setBounds(664, 626, 288, 22);
+		comboBox.addItem("                                  -SELECIONE-     ");
+		//ArrayList<String>opcoes = dao.listarTodos();
+		//For (String opcao; opcoes){
+		//	comboBox.addItem(opcao);
+		//}
 		contentPane.add(comboBox);
 		
 		
