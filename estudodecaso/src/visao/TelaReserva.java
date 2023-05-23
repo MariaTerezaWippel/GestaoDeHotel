@@ -249,6 +249,7 @@ public class TelaReserva extends JFrame {
 		Calendario2reserva.setBounds(1036, 405, 245, 20);
 		contentPaneTela_1.add(Calendario2reserva);
 		
+		
 		//ArrayList<String>opcoes = dao.listarTodos();
 		//For (String opcao; opcoes){
 		//	comboBox.addItem(opcao);
