@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -17,6 +18,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
 
 import modelo.Hospede;
 
@@ -37,15 +39,15 @@ public class TelaCadastro extends JFrame {
 	private JTextField txtCep;
 	private JTable table;
 	private DefaultTableModel dataModel;
-	private JTextField textField;
+	private JTextField txtCpf;
 	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField txtTelefone;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-	EventQueue.invokeLater(new Runnable() {
+		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					TelaCadastro frame = new TelaCadastro();
@@ -59,7 +61,7 @@ public class TelaCadastro extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * CONSTRUTOR DA CLASSE
 	 */
 	public TelaCadastro() {
 		setTitle("Tela Cadastro");
@@ -107,7 +109,15 @@ public class TelaCadastro extends JFrame {
 		lblNewLabel_4.setBounds(495, 509, 205, 21);
 		contentPaneTela.add(lblNewLabel_4);
 
-		txtDataNascimento = new JTextField();
+		/**********/
+		MaskFormatter mascaraDataNasc = null;
+		try {
+			mascaraDataNasc = new MaskFormatter("##/##/####");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtDataNascimento = new JFormattedTextField(mascaraDataNasc);
+		/**********/
 		txtDataNascimento.setBounds(495, 534, 98, 20);
 		contentPaneTela.add(txtDataNascimento);
 		txtDataNascimento.setColumns(10);
@@ -118,11 +128,19 @@ public class TelaCadastro extends JFrame {
 
 		contentPaneTela.add(lblNewLabel_6);
 
-		txtCep = new JTextField();
+		/**********/
+		MaskFormatter mascaraCep = null;
+		try {
+			mascaraCep = new MaskFormatter("#####-###");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCep = new JFormattedTextField(mascaraCep);
+		/**********/
+		
 		txtCep.setBounds(495, 590, 177, 20);
 		contentPaneTela.add(txtCep);
 		txtCep.setColumns(10);
-
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(928, 252, 518, 354);
@@ -138,22 +156,39 @@ public class TelaCadastro extends JFrame {
 		lblNewLabel_7.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 36));
 		lblNewLabel_7.setBounds(721, 70, 424, 48);
 		contentPaneTela.add(lblNewLabel_7);
-		
 
-		textField = new JTextField();
-		textField.setBounds(495, 354, 184, 20);
-		contentPaneTela.add(textField);
-		textField.setColumns(10);
+		/**********/
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCpf = new JFormattedTextField(mascaraCpf);
+		/**********/
 		
+		txtCpf.setBounds(495, 354, 184, 20);
+		contentPaneTela.add(txtCpf);
+		txtCpf.setColumns(10);
+
 		textField_1 = new JTextField();
 		textField_1.setBounds(495, 415, 403, 20);
 		contentPaneTela.add(textField_1);
 		textField_1.setColumns(10);
+        
+		/**********/
+		MaskFormatter mascaraTel = null;
+		 try {
+		      mascaraTel = new MaskFormatter("(##) ####-####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		txtTelefone = new JFormattedTextField(mascaraTel);
+		/**********/
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(495, 478, 184, 20);
-		contentPaneTela.add(textField_2);
-		textField_2.setColumns(10);
+		txtTelefone.setBounds(495, 478, 184, 20);
+		contentPaneTela.add(txtTelefone);
+		txtTelefone.setColumns(10);
 
 		JButton btnNewButton = new JButton("Cadastrar");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -165,21 +200,21 @@ public class TelaCadastro extends JFrame {
 		btnNewButton.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
 		btnNewButton.setBounds(832, 670, 148, 38);
 		contentPaneTela.add(btnNewButton);
-		
+
 		JLabel lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon(TelaCadastro.class.getResource("/Imagens/LogoHotel.png")));
 		lblNewLabel_5.setBounds(646, 143, 334, 79);
 		contentPaneTela.add(lblNewLabel_5);
-		
+
 		JLabel lblNewLabel_8 = new JLabel("");
 		lblNewLabel_8.setIcon(new ImageIcon(TelaCadastro.class.getResource("/Imagens/icon.png")));
 		lblNewLabel_8.setBounds(-622, -110, 1183, 550);
 		contentPaneTela.add(lblNewLabel_8);
-		
+
 		JLabel lblNewLabel_9 = new JLabel("New label");
 		lblNewLabel_9.setIcon(new ImageIcon(TelaCadastro.class.getResource("/Imagens/Design sem nome (1).png")));
 		lblNewLabel_9.setBounds(-622, 408, 1232, 425);
 		contentPaneTela.add(lblNewLabel_9);
-       
+
 	}
 }

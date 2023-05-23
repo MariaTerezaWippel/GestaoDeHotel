@@ -20,7 +20,7 @@ import java.awt.ScrollPane;
 import java.awt.Point;
 import javax.swing.JButton;
 import javax.swing.JTabbedPane;
-import com.toedter.calendar.JDateChooser;
+
 
 public class TelaListagemDeHospede extends JFrame {
 
@@ -171,13 +171,6 @@ public class TelaListagemDeHospede extends JFrame {
 		JPanel panel_6 = new JPanel();
 		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
 		
-		JDateChooser Calendario1List = new JDateChooser();
-		Calendario1List.setBounds(500, 453, 316, 20);
-		contentPaneTela.add(Calendario1List);
-		
-		JDateChooser Calendario2List = new JDateChooser();
-		Calendario2List.setBounds(500, 361, 316, 20);
-		contentPaneTela.add(Calendario2List);
 		
 		table = new JTable();
 		dataModel = new DefaultTableModel(new Object[][] {}, new String[] { "Nome", "Data de Entrada e Saída", "Telefone", "Número da Reserva" });

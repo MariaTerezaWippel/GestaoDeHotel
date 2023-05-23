@@ -32,7 +32,7 @@ import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
 import java.awt.Label;
 import javax.swing.JTabbedPane;
-import com.toedter.calendar.JDateChooser;
+
 
 public class TelaReserva extends JFrame {
 
@@ -241,13 +241,6 @@ public class TelaReserva extends JFrame {
 		comboBoxTipoQuarto.setEditable(true);
 		contentPaneTela_1.add(comboBoxTipoQuarto);
 		
-		JDateChooser Calendario1reserva = new JDateChooser();
-		Calendario1reserva.setBounds(345, 405, 239, 20);
-		contentPaneTela_1.add(Calendario1reserva);
-		
-		JDateChooser Calendario2reserva = new JDateChooser();
-		Calendario2reserva.setBounds(1036, 405, 245, 20);
-		contentPaneTela_1.add(Calendario2reserva);
 		
 		
 		//ArrayList<String>opcoes = dao.listarTodos();
