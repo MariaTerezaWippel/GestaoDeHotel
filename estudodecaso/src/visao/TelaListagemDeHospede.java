@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
 
 import java.awt.Color;
 import javax.swing.JLabel;
@@ -15,8 +16,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JList;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import java.awt.ScrollPane;
+import java.text.ParseException;
 import java.awt.Point;
 import javax.swing.JButton;
 import javax.swing.JTabbedPane;
@@ -89,7 +92,16 @@ public class TelaListagemDeHospede extends JFrame {
 		lblNewLabel_4.setBounds(500, 522, 98, 22);
 		contentPaneTela.add(lblNewLabel_4);
 		
-		txtTelefoneLista = new JTextField();
+		/**********/
+		MaskFormatter mascaraTele = null;
+		 try {
+		      mascaraTele = new MaskFormatter("(##) ####-####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		 txtTelefoneLista = new JFormattedTextField(mascaraTele);
+		/**********/
+		
 		txtTelefoneLista.setBounds(497, 557, 191, 20);
 		contentPaneTela.add(txtTelefoneLista);
 		txtTelefoneLista.setColumns(10);
