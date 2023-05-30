@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -16,12 +17,14 @@ import javax.swing.JDesktopPane;
 import javax.swing.JCheckBox;
 import javax.swing.JToggleButton;
 import javax.swing.JEditorPane;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTree;
 import javax.swing.JSpinner;
 import java.awt.Canvas;
 import java.awt.Checkbox;
 import java.awt.Button;
 import java.awt.SystemColor;
+import java.text.ParseException;
 import java.awt.Scrollbar;
 import java.awt.ScrollPane;
 import javax.swing.JRadioButton;
@@ -142,7 +145,15 @@ public class TelaReserva extends JFrame {
 
 		contentPaneTela_1.add(lblNewLabel_5);
 		
-		txtQuatdPessoas = new JTextField();
+		/**********/
+		MaskFormatter mascaraQuantdPessoa = null;
+		try {
+			mascaraQuantdPessoa = new MaskFormatter("#######");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtQuatdPessoas = new JFormattedTextField(mascaraQuantdPessoa);
+		/**********/
 		txtQuatdPessoas.setBounds(345, 610, 239, 20);
 		contentPaneTela_1.add(txtQuatdPessoas);
 		contentPaneTela_1.add(txtQuatdPessoas);

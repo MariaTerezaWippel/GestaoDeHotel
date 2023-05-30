@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
+
 import java.awt.Color;
 import java.awt.CardLayout;
 import javax.swing.JLabel;
@@ -12,6 +14,7 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -20,13 +23,14 @@ import javax.swing.JRadioButton;
 import javax.swing.JToggleButton;
 import javax.swing.JTextArea;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTabbedPane;
 
 public class TelaPagamento extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textPrecoDiaria;
-	private JTextField textField_1;
+	private JTextField textTotalapagar;
 
 	/**
 	 * Launch the application.
@@ -80,7 +84,16 @@ public class TelaPagamento extends JFrame {
 		lblFormaPagamento.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		contentPane.add(lblFormaPagamento);
 		
-		textPrecoDiaria = new JTextField();
+		/**********/
+		MaskFormatter mascaraPrecoDiaria = null;
+		try {
+			mascaraPrecoDiaria = new MaskFormatter("#######");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		textPrecoDiaria = new JFormattedTextField(mascaraPrecoDiaria);
+		/**********/
+		
 		textPrecoDiaria.setBounds(811, 301, 153, 20);
 		contentPane.add(textPrecoDiaria);
 		textPrecoDiaria.setColumns(10);
@@ -114,11 +127,18 @@ public class TelaPagamento extends JFrame {
 		contentPane.add(comboBox);
 		
 		
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(811, 492, 153, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		/**********/
+		MaskFormatter mascaraTotalapagar = null;
+		try {
+			mascaraTotalapagar = new MaskFormatter("#######");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		textTotalapagar = new JFormattedTextField(mascaraTotalapagar);
+		/**********/
+		textTotalapagar.setBounds(811, 492, 153, 20);
+		contentPane.add(textTotalapagar);
+		textTotalapagar.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaPagamento.class.getResource("/Imagens/LogoHotel.png")));
