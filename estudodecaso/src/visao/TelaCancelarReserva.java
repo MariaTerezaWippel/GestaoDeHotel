@@ -5,15 +5,21 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 import javax.swing.JLabel;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.JTabbedPane;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class TelaCancelarReserva extends JFrame {
 
@@ -79,18 +85,41 @@ public class TelaCancelarReserva extends JFrame {
 		contentPaneTela.add(lblNewLabel_2);
 		contentPaneTela.add(lblNewLabel_2);
 		
-		txtCpf = new JTextField();
-		txtCpf.setBounds(670, 441, 156, 20);
+		/**********/
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCpf = new JFormattedTextField(mascaraCpf);
+		/**********/
+		
+		txtCpf.setBounds(670, 436, 184, 20);
 		contentPaneTela.add(txtCpf);
 		txtCpf.setColumns(10);
 		
 		txtNumeroDaReserva = new JTextField();
+		
+		/**********/
+		MaskFormatter mascaraNumeroDaReserva = null;
+		try {
+			mascaraNumeroDaReserva = new MaskFormatter("###");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtNumeroDaReserva = new JFormattedTextField(mascaraNumeroDaReserva);
+		/**********/
+		
 		txtNumeroDaReserva.setBounds(670, 538, 86, 20);
 		contentPaneTela.add(txtNumeroDaReserva);
 
 		txtNumeroDaReserva.setColumns(10);
 		
 		JButton btnCancelarReserva = new JButton("Cancelar Reserva");
+		btnCancelarReserva.addKeyListener(new KeyAdapter() {
+			
+		});
 		btnCancelarReserva.setBounds(625, 611, 305, 41);
 		btnCancelarReserva.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -159,12 +188,6 @@ public class TelaCancelarReserva extends JFrame {
 		tabbedPaneCancelar.setBackground(new Color(0, 0, 153));
 		tabbedPaneCancelar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
 		contentPaneTela.add(tabbedPaneCancelar);
-		
- 
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(-622, 408, 1232, 425);
-		lblNewLabel_6.setIcon(new ImageIcon(TelaCancelarReserva.class.getResource("/Imagens/Design sem nome (1).png")));
-		contentPaneTela.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("New label");
 		lblNewLabel_7.setBounds(380, 408, 1185, 425);

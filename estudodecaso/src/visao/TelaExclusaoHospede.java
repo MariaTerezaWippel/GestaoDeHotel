@@ -5,11 +5,14 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.text.ParseException;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.ImageIcon;
 import javax.swing.JTabbedPane;
 
@@ -20,8 +23,7 @@ public class TelaExclusaoHospede extends JFrame {
 	private JTextField txtCPF;
 	private JTextField txtEmail;
 	private JTextField txtTelefone;
-	private JTextField txtDataNascimento;
-	private JTextField txtQuantidadeHospedes;
+	private JTextField txtQuatdPessoas;
 	private JTextField txtCEP;
 	private JTextField txtNumeroReserva;
 
@@ -108,7 +110,18 @@ public class TelaExclusaoHospede extends JFrame {
 		contentPaneTela.add(txtNome);
 		txtNome.setColumns(10);
 		
+		
+		
 		txtCPF = new JTextField();
+		/**********/
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCPF = new JFormattedTextField(mascaraCpf);
+		/**********/
 		txtCPF.setBounds(909, 336, 151, 20);
 		contentPaneTela.add(txtCPF);
 		txtCPF.setColumns(10);
@@ -119,26 +132,57 @@ public class TelaExclusaoHospede extends JFrame {
 		txtEmail.setColumns(10);
 		
 		txtTelefone = new JTextField();
+		/**********/
+		MaskFormatter mascaraTel = null;
+		 try {
+		      mascaraTel = new MaskFormatter("(##) ####-####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		txtTelefone = new JFormattedTextField(mascaraTel);
+		/**********/
 		txtTelefone.setBounds(909, 425, 127, 20);
 		contentPaneTela.add(txtTelefone);
 		txtTelefone.setColumns(10);
 		
-		txtDataNascimento = new JTextField();
-		txtDataNascimento.setBounds(571, 520, 86, 20);
-		contentPaneTela.add(txtDataNascimento);
-		txtDataNascimento.setColumns(10);
-		
-		txtQuantidadeHospedes = new JTextField();
-		txtQuantidadeHospedes.setBounds(909, 520, 46, 20);
-		contentPaneTela.add(txtQuantidadeHospedes);
-		txtQuantidadeHospedes.setColumns(10);
+		txtQuatdPessoas = new JTextField();
+		/**********/
+		MaskFormatter mascaraQuantdPessoa = null;
+		try {
+			mascaraQuantdPessoa = new MaskFormatter("#######");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtQuatdPessoas = new JFormattedTextField(mascaraQuantdPessoa);
+		/**********/
+		txtQuatdPessoas.setBounds(909, 520, 46, 20);
+		contentPaneTela.add(txtQuatdPessoas);
+		txtQuatdPessoas.setColumns(10);
 		
 		txtCEP = new JTextField();
+		/**********/
+		MaskFormatter mascaraCep = null;
+		try {
+			mascaraCep = new MaskFormatter("#####-###");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCEP = new JFormattedTextField(mascaraCep);
+		/**********/
 		txtCEP.setBounds(569, 599, 136, 20);
 		contentPaneTela.add(txtCEP);
 		txtCEP.setColumns(10);
 		
 		txtNumeroReserva = new JTextField();
+		/**********/
+		MaskFormatter mascaraNumeroReserva = null;
+		try {
+			mascaraNumeroReserva = new MaskFormatter("###");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtNumeroReserva = new JFormattedTextField(mascaraNumeroReserva);
+		/**********/
 		txtNumeroReserva.setBounds(909, 599, 37, 20);
 		contentPaneTela.add(txtNumeroReserva);
 		txtNumeroReserva.setColumns(10);
