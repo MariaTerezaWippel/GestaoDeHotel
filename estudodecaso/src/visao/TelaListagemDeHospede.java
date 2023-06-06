@@ -155,33 +155,6 @@ public class TelaListagemDeHospede extends JFrame {
 		btnListar.setBackground(new Color(0, 0, 128));
 		btnListar.setBounds(810, 752, 156, 40);
 		contentPaneTela.add(btnListar);
-		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPaneMenu.setBackground(new Color(25, 25, 112));
-		tabbedPaneMenu.setForeground(Color.WHITE);
-		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
-		contentPaneTela.add(tabbedPaneMenu);
-		
-		JPanel panel = new JPanel();
-		tabbedPaneMenu.addTab("INÍCIO", null, panel, null);
-		
-		JPanel panel_1 = new JPanel();
-		tabbedPaneMenu.addTab("RESERVA", null, panel_1, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPaneMenu.addTab("CANCELAR RESERVA", null, panel_2, null);
-		
-		JPanel panel_3 = new JPanel();
-		tabbedPaneMenu.addTab("LISTAGEM DE HÓPEDES", null, panel_3, null);
-		
-		JPanel panel_4 = new JPanel();
-		tabbedPaneMenu.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
-		
-		JPanel panel_5 = new JPanel();
-		tabbedPaneMenu.addTab("CHECK-IN", null, panel_5, null);
-		
-		JPanel panel_6 = new JPanel();
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
 		
 		
 		table = new JTable();

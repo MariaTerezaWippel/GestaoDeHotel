@@ -31,7 +31,7 @@ import javax.swing.ImageIcon;
 
 import java.awt.Button;
 
-public class TelaCadastro extends JFrame {
+public class TelaCadastroFuncionario extends JFrame {
 
 	private JPanel contentPaneTela;
 	private JTextField txtNome;
@@ -50,7 +50,7 @@ public class TelaCadastro extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaCadastro frame = new TelaCadastro();
+					TelaCadastroFuncionario frame = new TelaCadastroFuncionario();
 					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -63,7 +63,7 @@ public class TelaCadastro extends JFrame {
 	/**
 	 * CONSTRUTOR DA CLASSE
 	 */
-	public TelaCadastro() {
+	public TelaCadastroFuncionario() {
 		setTitle("Tela Cadastro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1260, 991);
@@ -202,17 +202,17 @@ public class TelaCadastro extends JFrame {
 		contentPaneTela.add(btnNewButton);
 
 		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon(TelaCadastro.class.getResource("/Imagens/LogoHotel.png")));
+		lblNewLabel_5.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/LogoHotel.png")));
 		lblNewLabel_5.setBounds(646, 143, 334, 79);
 		contentPaneTela.add(lblNewLabel_5);
 
 		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon(TelaCadastro.class.getResource("/Imagens/icon.png")));
+		lblNewLabel_8.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/icon.png")));
 		lblNewLabel_8.setBounds(-622, -110, 1183, 550);
 		contentPaneTela.add(lblNewLabel_8);
 
 		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setIcon(new ImageIcon(TelaCadastro.class.getResource("/Imagens/Design sem nome (1).png")));
+		lblNewLabel_9.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/Design sem nome (1).png")));
 		lblNewLabel_9.setBounds(-622, 408, 1232, 425);
 		contentPaneTela.add(lblNewLabel_9);
 

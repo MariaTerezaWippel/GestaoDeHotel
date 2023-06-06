@@ -145,34 +145,6 @@ public class TelaPagamento extends JFrame {
 		lblNewLabel_1.setBounds(528, 181, 364, 82);
 		contentPane.add(lblNewLabel_1);
 		
-		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPaneMenu.setBackground(new Color(25, 25, 112));
-		tabbedPaneMenu.setForeground(Color.WHITE);
-		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
-		contentPane.add(tabbedPaneMenu);
-		
-		JPanel panel = new JPanel();
-		tabbedPaneMenu.addTab("INÍCIO", null, panel, null);
-		
-		JPanel panel_1 = new JPanel();
-		tabbedPaneMenu.addTab("RESERVA", null, panel_1, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPaneMenu.addTab("CANCELAR RESERVA", null, panel_2, null);
-		
-		JPanel panel_3 = new JPanel();
-		tabbedPaneMenu.addTab("LISTAGEM DE HÓSPEDE", null, panel_3, null);
-		
-		JPanel panel_4 = new JPanel();
-		tabbedPaneMenu.addTab("EXCLUSÃO DE HÓSPEDE", null, panel_4, null);
-		
-		JPanel panel_5 = new JPanel();
-		tabbedPaneMenu.addTab("CHECK-IN", null, panel_5, null);
-		
-		JPanel panel_6 = new JPanel();
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon(TelaPagamento.class.getResource("/Imagens/icon.png")));
 		lblNewLabel_2.setBounds(-622, -95, 1293, 520);

@@ -20,7 +20,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JTextPane;
 import java.awt.Panel;
 
-public class TelaLogin extends JFrame {
+public class TelaLoginFuncionario extends JFrame {
 
 	private JPanel contentPaneTela;
 	private JTextField txtEmail;
@@ -33,7 +33,7 @@ public class TelaLogin extends JFrame {
 	EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaLogin frame = new TelaLogin();
+					TelaLoginFuncionario frame = new TelaLoginFuncionario();
 					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -46,7 +46,7 @@ public class TelaLogin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaLogin() {
+	public TelaLoginFuncionario() {
 		setTitle("Tela Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1658, 991);
@@ -140,27 +140,27 @@ public class TelaLogin extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setBounds(541, 217, 394, 109);
-		lblNewLabel_6.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/LogoHotel.png")));
+		lblNewLabel_6.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LogoHotel.png")));
 		contentPaneTela.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
 		lblNewLabel_7.setBounds(-622, -95, 1293, 520);
-		lblNewLabel_7.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Icon.png")));
+		lblNewLabel_7.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/Icon.png")));
 		contentPaneTela.add(lblNewLabel_7);
 		
 		JLabel lblNewLabel_8 = new JLabel("New label");
 		lblNewLabel_8.setBounds(380, -95, 1293, 520);
-		lblNewLabel_8.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (2).png")));
+		lblNewLabel_8.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/Design sem nome (2).png")));
 		contentPaneTela.add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_9 = new JLabel("New label");
 		lblNewLabel_9.setBounds(-622, 408, 1232, 425);
-		lblNewLabel_9.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome (1).png")));
+		lblNewLabel_9.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/Design sem nome (1).png")));
 		contentPaneTela.add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("New label");
 		lblNewLabel_10.setBounds(380, 408, 1185, 425);
-		lblNewLabel_10.setIcon(new ImageIcon(TelaLogin.class.getResource("/Imagens/Design sem nome.png")));
+		lblNewLabel_10.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/Design sem nome.png")));
 		contentPaneTela.add(lblNewLabel_10);
 	}
 }

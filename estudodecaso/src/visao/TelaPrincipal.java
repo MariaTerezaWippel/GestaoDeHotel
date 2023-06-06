@@ -115,36 +115,6 @@ public class TelaPrincipal extends JFrame {
 		btnNoTemReserva.setBackground(new Color(0, 0, 128));
 		btnNoTemReserva.setBounds(671, 393, 312, 33);
 		contentPaneTela.add(btnNoTemReserva);
-
-		
-		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPaneMenu.setBackground(new Color(0, 0, 153));
-		tabbedPaneMenu.setForeground(new Color(255, 255, 255));
-		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneMenu.setBounds(0, 0, 5000, 24);
-		contentPaneTela.add(tabbedPaneMenu);
-		
-		JPanel panel = new JPanel();
-		panel.setBackground(new Color(100, 149, 237));
-		tabbedPaneMenu.addTab("INÍCIO", null, panel, null);
-		
-		JPanel panel_1 = new JPanel();
-		tabbedPaneMenu.addTab("RESERVA", null, panel_1, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPaneMenu.addTab("CANCELAR RESERVA", null, panel_2, null);
-		
-		JPanel panel_3 = new JPanel();
-		tabbedPaneMenu.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
-		
-		JPanel panel_4 = new JPanel();
-		tabbedPaneMenu.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
-		
-		JPanel panel_5 = new JPanel();
-		tabbedPaneMenu.addTab("CHECK-IN", null, panel_5, null);
-		
-		JPanel panel_6 = new JPanel();
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome (2).png")));
@@ -155,8 +125,6 @@ public class TelaPrincipal extends JFrame {
 		lblNewLabel_5.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome.png")));
 		lblNewLabel_5.setBounds(380, 408, 1185, 425);
 		contentPaneTela.add(lblNewLabel_5);
-
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
 		
 		JButton btnSair = new JButton("Sair");
 		btnSair.setForeground(new Color(255, 255, 255));

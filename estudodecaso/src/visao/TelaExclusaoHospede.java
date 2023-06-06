@@ -15,17 +15,17 @@ import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.ImageIcon;
 import javax.swing.JTabbedPane;
+import java.awt.SystemColor;
 
 public class TelaExclusaoHospede extends JFrame {
 
 	private JPanel contentPaneTela;
-	private JTextField txtNome;
 	private JTextField txtCPF;
-	private JTextField txtEmail;
 	private JTextField txtTelefone;
 	private JTextField txtQuatdPessoas;
 	private JTextField txtCEP;
 	private JTextField txtNumeroReserva;
+	private JTextField txtCpf1;
 
 	/**
 	 * Launch the application.
@@ -35,7 +35,6 @@ public class TelaExclusaoHospede extends JFrame {
 			public void run() {
 				try {
 					TelaExclusaoHospede frame = new TelaExclusaoHospede();
-					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,9 +47,11 @@ public class TelaExclusaoHospede extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaExclusaoHospede() {
+		setForeground(new Color(255, 255, 255));
+		setBackground(new Color(0, 0, 0));
 		setTitle("Tela Exclusão de Hóspede");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1987, 991);
+		setBounds(100, 100, 400, 200);
 		contentPaneTela = new JPanel();
 		contentPaneTela.setBackground(new Color(135, 206, 250));
 		contentPaneTela.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -58,188 +59,43 @@ public class TelaExclusaoHospede extends JFrame {
 		setContentPane(contentPaneTela);
 		contentPaneTela.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Excluir Hóspede");
-		lblNewLabel.setBounds(692, 111, 446, 54);
-		lblNewLabel.setForeground(new Color(0, 0, 128));
-		lblNewLabel.setBackground(new Color(240, 240, 240));
-		lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 36));
-		contentPaneTela.add(lblNewLabel);
+	
+		JLabel lblNewLabel_11 = new JLabel("Para excluir hóspede, digite seu CPF:");
+		lblNewLabel_11.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 13));
+		lblNewLabel_11.setBounds(72, 11, 231, 20);
+		contentPaneTela.add(lblNewLabel_11);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nome:");
-		lblNewLabel_1.setBounds(571, 311, 86, 28);
-		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_1);
+		JLabel CPF1 = new JLabel("CPF:");
+		CPF1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD, 12));
+		CPF1.setBounds(100, 62, 37, 14);
+		contentPaneTela.add(CPF1);
 		
-		JLabel lblNewLabel_2 = new JLabel("CPF:");
-		lblNewLabel_2.setBounds(909, 311, 46, 20);
-		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_3 = new JLabel("Email:");
-		lblNewLabel_3.setBounds(571, 402, 60, 20);
-		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("Telefone:");
-		lblNewLabel_4.setBounds(909, 402, 90, 20);
-		lblNewLabel_4.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_5 = new JLabel("Data de Nascimento:");
-		lblNewLabel_5.setBounds(571, 492, 202, 21);
-		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_5);
-		
-		JLabel lblNewLabel_6 = new JLabel("Quantidade de Hóspedes:");
-		lblNewLabel_6.setBounds(909, 488, 244, 28);
-		lblNewLabel_6.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_6);
-		
-		JLabel lblNewLabel_7 = new JLabel("CEP:");
-		lblNewLabel_7.setBounds(571, 574, 60, 26);
-		lblNewLabel_7.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_7);
-		
-		JLabel lblNewLabel_8 = new JLabel("Numero da Reserva:");
-		lblNewLabel_8.setBounds(909, 573, 202, 28);
-		lblNewLabel_8.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_8);
-		
-		txtNome = new JTextField();
-		txtNome.setBounds(571, 336, 216, 20);
-		contentPaneTela.add(txtNome);
-		txtNome.setColumns(10);
-		
-		
-		
-		txtCPF = new JTextField();
+		txtCpf1 = new JTextField();
 		/**********/
-		MaskFormatter mascaraCpf = null;
+		MaskFormatter mascaraCPF1 = null;
 		try {
-			mascaraCpf = new MaskFormatter("###.###.###-##");
+			mascaraCPF1 = new MaskFormatter("###.###.###-##");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		txtCPF = new JFormattedTextField(mascaraCpf);
+		txtCpf1 = new JFormattedTextField(mascaraCPF1);
 		/**********/
-		txtCPF.setBounds(909, 336, 151, 20);
-		contentPaneTela.add(txtCPF);
-		txtCPF.setColumns(10);
 		
-		txtEmail = new JTextField();
-		txtEmail.setBounds(571, 425, 191, 20);
-		contentPaneTela.add(txtEmail);
-		txtEmail.setColumns(10);
+		txtCpf1.setBounds(132, 60, 163, 20);
+		contentPaneTela.add(txtCpf1);
+		txtCpf1.setColumns(10);
 		
-		txtTelefone = new JTextField();
-		/**********/
-		MaskFormatter mascaraTel = null;
-		 try {
-		      mascaraTel = new MaskFormatter("(##) ####-####");
-		 } catch (ParseException e) {
-		      e.printStackTrace();
-		 }
-		txtTelefone = new JFormattedTextField(mascaraTel);
-		/**********/
-		txtTelefone.setBounds(909, 425, 127, 20);
-		contentPaneTela.add(txtTelefone);
-		txtTelefone.setColumns(10);
+		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.setForeground(new Color(255, 255, 255));
+		btnConfirmar.setBackground(new Color(0, 0, 128));
+		btnConfirmar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 12));
+		btnConfirmar.setBounds(72, 106, 104, 23);
+		contentPaneTela.add(btnConfirmar);
 		
-		txtQuatdPessoas = new JTextField();
-		/**********/
-		MaskFormatter mascaraQuantdPessoa = null;
-		try {
-			mascaraQuantdPessoa = new MaskFormatter("#######");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		txtQuatdPessoas = new JFormattedTextField(mascaraQuantdPessoa);
-		/**********/
-		txtQuatdPessoas.setBounds(909, 520, 46, 20);
-		contentPaneTela.add(txtQuatdPessoas);
-		txtQuatdPessoas.setColumns(10);
-		
-		txtCEP = new JTextField();
-		/**********/
-		MaskFormatter mascaraCep = null;
-		try {
-			mascaraCep = new MaskFormatter("#####-###");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		txtCEP = new JFormattedTextField(mascaraCep);
-		/**********/
-		txtCEP.setBounds(569, 599, 136, 20);
-		contentPaneTela.add(txtCEP);
-		txtCEP.setColumns(10);
-		
-		txtNumeroReserva = new JTextField();
-		/**********/
-		MaskFormatter mascaraNumeroReserva = null;
-		try {
-			mascaraNumeroReserva = new MaskFormatter("###");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		txtNumeroReserva = new JFormattedTextField(mascaraNumeroReserva);
-		/**********/
-		txtNumeroReserva.setBounds(909, 599, 37, 20);
-		contentPaneTela.add(txtNumeroReserva);
-		txtNumeroReserva.setColumns(10);
-		
-		JButton btnNewButton = new JButton("Excluir Hóspede");
-		btnNewButton.setBounds(655, 709, 314, 35);
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(0, 0, 128));
-		btnNewButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 18));
-		contentPaneTela.add(btnNewButton);
-		contentPaneTela.add(lblNewLabel);
-
-
-		
-		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setBounds(577, 185, 328, 96);
-		lblNewLabel_9.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/LogoHotel.png")));
-		contentPaneTela.add(lblNewLabel_9);
-		
-		JLabel lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setBounds(380, -95, 1293, 520);
-		lblNewLabel_10.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/Design sem nome (2).png")));
-		contentPaneTela.add(lblNewLabel_10);
-		
-		JLabel lblNewLabel_12 = new JLabel("");
-		lblNewLabel_12.setBounds(380, 408, 1185, 425);
-		lblNewLabel_12.setIcon(new ImageIcon(TelaExclusaoHospede.class.getResource("/Imagens/Design sem nome.png")));
-		contentPaneTela.add(lblNewLabel_12);
-		contentPaneTela.add(lblNewLabel_9);
-		
-		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
-		tabbedPaneMenu.setForeground(new Color(255, 255, 255));
-		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneMenu.setBackground(new Color(25, 25, 112));
-		contentPaneTela.add(tabbedPaneMenu);
-		
-		JPanel panel = new JPanel();
-		tabbedPaneMenu.addTab("INÍCIO", null, panel, null);
-		
-		JPanel panel_1 = new JPanel();
-		tabbedPaneMenu.addTab("RESERVA", null, panel_1, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPaneMenu.addTab("CANCELAR RESERVA", null, panel_2, null);
-		
-		JPanel panel_3 = new JPanel();
-		tabbedPaneMenu.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
-		
-		JPanel panel_4 = new JPanel();
-		tabbedPaneMenu.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
-		
-		JPanel panel_5 = new JPanel();
-		tabbedPaneMenu.addTab("CHECK-IN", null, panel_5, null);
-		
-		JPanel panel_6 = new JPanel();
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 12));
+		btnVoltar.setBounds(201, 106, 104, 23);
+		contentPaneTela.add(btnVoltar);
 
 
 	}

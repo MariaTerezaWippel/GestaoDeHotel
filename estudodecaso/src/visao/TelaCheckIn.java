@@ -103,45 +103,6 @@ public class TelaCheckIn extends JFrame {
 		lblNewLabel_3.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/LogoHotel.png")));
 		contentPaneTela.add(lblNewLabel_3);
 		
-
-		
-		JTabbedPane tabbedPaneMenu = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPaneMenu.setBounds(0, 0, 5000, 25);
-		tabbedPaneMenu.setForeground(new Color(255, 255, 255));
-		tabbedPaneMenu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneMenu.setBackground(new Color(25, 25, 112));
-		contentPaneTela.add(tabbedPaneMenu);
-		
-		JPanel panel = new JPanel();
-		tabbedPaneMenu.addTab("INÍCIO", null, panel, null);
-		
-		JPanel panel_1 = new JPanel();
-		tabbedPaneMenu.addTab("RESERVA", null, panel_1, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPaneMenu.addTab("CANCELAR RESERVA", null, panel_2, null);
-		
-		JPanel panel_3 = new JPanel();
-		tabbedPaneMenu.addTab("LISTAGEM DE HÓSPEDES", null, panel_3, null);
-		
-		JPanel panel_4 = new JPanel();
-		tabbedPaneMenu.addTab("EXCLUSÃO DE HÓSPEDES", null, panel_4, null);
-		
-		JPanel panel_5 = new JPanel();
-		tabbedPaneMenu.addTab("CHECK-IN", null, panel_5, null);
-		
-		JPanel panel_6 = new JPanel();
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
-		JTabbedPane tabbedPaneCheckIn = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPaneCheckIn.setBounds(0, 0, 5000, 25);
-		tabbedPaneCheckIn.setForeground(new Color(255, 255, 255));
-		tabbedPaneCheckIn.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		tabbedPaneCheckIn.setBackground(new Color(25, 25, 112));
-		contentPaneTela.add(tabbedPaneCheckIn);
-		
-		
-		tabbedPaneMenu.addTab("PAGAMENTO", null, panel_6, null);
-		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setBounds(-622, -95, 1293, 520);
 		lblNewLabel_6.setIcon(new ImageIcon(TelaCheckIn.class.getResource("/Imagens/icon.png")));

@@ -212,37 +212,6 @@ public class TelaReserva extends JFrame {
 		lblNewLabel_9.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/Design sem nome.png")));
 
 		contentPaneTela_1.add(lblNewLabel_9);
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(215, 117, -54, -40);
-		contentPaneTela_1.add(tabbedPane);
-		
-		JTabbedPane tabbedPane_1Menu = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane_1Menu.setBounds(0, 0, 5000, 25);
-		tabbedPane_1Menu.setBackground(new Color(25, 25, 112));
-		tabbedPane_1Menu.setForeground(Color.WHITE);
-		tabbedPane_1Menu.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 14));
-		contentPaneTela_1.add(tabbedPane_1Menu);
-		
-		JPanel panel = new JPanel();
-		tabbedPane_1Menu.addTab("INÍCIO", null, panel, null);
-		
-		JPanel panel_1 = new JPanel();
-		tabbedPane_1Menu.addTab("RESERVA", null, panel_1, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPane_1Menu.addTab("CANCELAR RESERVA", null, panel_2, null);
-		
-		JPanel panel_3 = new JPanel();
-		tabbedPane_1Menu.addTab("LISTAGEM DE HÓSPEDE", null, panel_3, null);
-		
-		JPanel panel_4 = new JPanel();
-		tabbedPane_1Menu.addTab("EXCLUSÃO DE HÓSPEDE", null, panel_4, null);
-		
-		JPanel panel_5 = new JPanel();
-		tabbedPane_1Menu.addTab("CHECK-IN", null, panel_5, null);
-		
-		JPanel panel_6 = new JPanel();
-		tabbedPane_1Menu.addTab("PAGAMENTO", null, panel_6, null);
 		contentPaneTela_1.add(lblNewLabel_9);
 		
 		JComboBox<Object> comboBoxTipoQuarto = new JComboBox<Object>();
