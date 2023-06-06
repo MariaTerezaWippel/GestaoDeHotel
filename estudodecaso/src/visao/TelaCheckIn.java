@@ -5,13 +5,17 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.JTabbedPane;
 
@@ -58,7 +62,16 @@ public class TelaCheckIn extends JFrame {
 		lblNewLabel.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 34));
 		contentPaneTela.add(lblNewLabel);
 		
-		textNumeroReserva = new JTextField();
+		/**********/
+		MaskFormatter mascaraNReserva = null;
+		try {
+			mascaraNReserva = new MaskFormatter("###");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		textNumeroReserva = new JFormattedTextField(mascaraNReserva);
+		/**********/
+		
 		textNumeroReserva.setBounds(238, 89, 153, 23);
 		textNumeroReserva.setForeground(new Color(0, 0, 0));
 		contentPaneTela.add(textNumeroReserva);
