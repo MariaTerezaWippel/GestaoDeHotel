@@ -1,6 +1,7 @@
 package visao;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -46,6 +47,8 @@ public class TelaCadastroFuncionario extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	ArrayList<Hospede> hospede = new ArrayList<>();
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -193,6 +196,21 @@ public class TelaCadastroFuncionario extends JFrame {
 		JButton btnNewButton = new JButton("Cadastrar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				String nome = txtNome.getText();
+				String datanascimento = txtDataNascimento.getText();
+				String cep = txtCep.getText();
+				String cpf = txtCpf.getText();
+				String telefone = txtTelefone.getText();
+				
+				Hospede h = new Hospede();
+				h.setCpf(cpf);
+				h.setNome(nome);
+				h.setDataNascimento(datanascimento);
+
+				
+				hospede.add(h);
+					
 			}
 		});
 		btnNewButton.setForeground(new Color(255, 255, 255));

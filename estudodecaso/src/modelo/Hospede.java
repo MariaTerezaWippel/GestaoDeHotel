@@ -2,18 +2,26 @@ package modelo;
 
 public class Hospede {
 	
-	private Long cpf;
+	private String cpf;
 	private String nome;
 	private String dataNascimento;
 	private Long telefone;
 	private Long cep;
 	private String email;
 	private Integer numeroPessoas;
+	private String Nomecomple_1;
+	private Integer NumReserva;
 	
 	
+	public String getNomecomple_1() {
+		return Nomecomple_1;
+	}
+	public void setNomecomple_1(String nomecomple_1) {
+		Nomecomple_1 = nomecomple_1;
+	}
 	public Hospede() {
 	}
-	public Hospede(Long cpf, String nome, String dataNascimento, Long telefone, Long cep, String email,
+	public Hospede(String cpf, String nome, String dataNascimento, Long telefone, Long cep, String email,
 			Integer numeroPessoas) {
 		super();
 		this.cpf = cpf;
@@ -24,10 +32,10 @@ public class Hospede {
 		this.email = email;
 		this.numeroPessoas = numeroPessoas;
 	}
-	public Long getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(Long cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	public String getNome() {
@@ -71,6 +79,8 @@ public class Hospede {
 		return "Hospedagem [cpf=" + cpf + ", nome=" + nome + ", dataNascimento=" + dataNascimento + ", telefone="
 				+ telefone + ", cep=" + cep + ", email=" + email + ", numeroPessoas=" + numeroPessoas + "]";
 	}
+
+	
 	
 	
 	

@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
+
+import modelo.Hospede;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -25,6 +28,7 @@ import java.awt.Checkbox;
 import java.awt.Button;
 import java.awt.SystemColor;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.awt.Scrollbar;
 import java.awt.ScrollPane;
 import javax.swing.JRadioButton;
@@ -35,6 +39,8 @@ import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
 import java.awt.Label;
 import javax.swing.JTabbedPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 public class TelaReserva extends JFrame {
@@ -49,7 +55,10 @@ public class TelaReserva extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	ArrayList<Hospede> hospede = new ArrayList<>();
 	public static void main(String[] args) {
+		
+		
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -183,6 +192,21 @@ public class TelaReserva extends JFrame {
 
 
 		JButton btnRealizarReserva = new JButton("Realizar Reserva");
+		btnRealizarReserva.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String nomecompleto = txtNomecomple_1.getText();
+				String numeroreserva = txtNumReserva.getText();
+				String quantaspesssoas = txtQuatdPessoas.getText();
+				
+				Hospede h = new Hospede();
+				h.setNomecomple_1(nomecompleto);
+
+				
+				hospede.add(h);
+				
+			}
+		});
 		btnRealizarReserva.setBounds(707, 692, 188, 33);
 		btnRealizarReserva.setForeground(new Color(255, 255, 255));
 		btnRealizarReserva.setBackground(new Color(0, 0, 128));
