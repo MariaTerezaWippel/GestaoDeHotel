@@ -6,7 +6,7 @@ Estudo de Caso Gestão de Hotéis
 
 O sistema permitirá ao usuário (funcionário) as seguintes funcionalidades: cadastro de um cliente/hóspede; listagem de hóspedes; alteração de dados do hóspede; exclusão de um hóspede. Além disso, o sistema permitirá a realização de uma reserva de quarto (ou quartos) e também o cancelamento desta reserva se necessário. Por fim, o sistema permitirá fazer check-in e check-out, envolvendo neste último o pagamento desta estadia. 
 
-2. Diagrama de Caso de Uso:
+2. Diagrama de Casos de Uso:
 ![Diagrama](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/dfb99759-0958-44c6-9e3d-6b0aaaee0773)
 
 3. Descrição do Fluxo de Telas do Sistema:
