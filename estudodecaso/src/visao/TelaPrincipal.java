@@ -70,11 +70,6 @@ public class TelaPrincipal extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/LogoHotel.png")));
 		contentPaneTela.add(lblNewLabel);
 		
-		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setForeground(new Color(0, 0, 128));
-		lblNewLabel_4.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome (2).png")));
-		lblNewLabel_4.setBounds(394, -95, 1293, 520);
-		contentPaneTela.add(lblNewLabel_4);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(209, 292, 690, 476);
@@ -154,6 +149,19 @@ public class TelaPrincipal extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel("Reservas ");
 		lblNewLabel_1.setBounds(435, 258, 325, 14);
 		contentPaneTela.add(lblNewLabel_1);
+		
+		JButton btnVoltarPricipal = new JButton("Voltar");
+		btnVoltarPricipal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLoginFuncionario telaLoginFuncionario = new TelaLoginFuncionario();
+				telaLoginFuncionario.setLocationRelativeTo(null);
+				telaLoginFuncionario.setVisible(true);
+				dispose();
+			}
+		});
+		btnVoltarPricipal.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 15));
+		btnVoltarPricipal.setBounds(1017, 760, 119, 41);
+		contentPaneTela.add(btnVoltarPricipal);
 		atualizarTabela();
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {

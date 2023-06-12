@@ -161,36 +161,5 @@ public class TelaLoginFuncionario extends JFrame {
 		lblNewLabel_6.setBounds(541, 217, 394, 109);
 		lblNewLabel_6.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LogoHotel.png")));
 		contentPaneTela.add(lblNewLabel_6);
-
-		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(-622, -95, 1293, 520);
-		lblNewLabel_7.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/Icon.png")));
-		contentPaneTela.add(lblNewLabel_7);
-
-		JLabel lblNewLabel_8 = new JLabel("New label");
-		lblNewLabel_8.setBounds(380, -95, 1293, 520);
-		lblNewLabel_8
-				.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/Design sem nome (2).png")));
-		contentPaneTela.add(lblNewLabel_8);
-
-		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setBounds(-622, 408, 1232, 425);
-		lblNewLabel_9
-				.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/Design sem nome (1).png")));
-		contentPaneTela.add(lblNewLabel_9);
-
-		JButton btnNewButton = new JButton("Alterar");
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(0, 0, 255));
-		btnNewButton.setFont(new Font("Sitka Subheading", Font.BOLD, 17));
-		btnNewButton.setBounds(677, 642, 105, 34);
-		contentPaneTela.add(btnNewButton);
-
-		JButton btnNewButton_1 = new JButton("Excluir");
-		btnNewButton_1.setForeground(new Color(0, 0, 255));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		btnNewButton_1.setFont(new Font("Sitka Subheading", Font.BOLD, 17));
-		btnNewButton_1.setBounds(821, 642, 105, 34);
-		contentPaneTela.add(btnNewButton_1);
 	}
 }
