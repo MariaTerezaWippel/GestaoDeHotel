@@ -215,12 +215,12 @@ public class TelaCadastroFuncionario extends JFrame {
 
 		JLabel lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/LogoHotel.png")));
-		lblNewLabel_5.setBounds(646, 143, 334, 79);
+		lblNewLabel_5.setBounds(646, 178, 334, 79);
 		contentPaneTela.add(lblNewLabel_5);
 
 		JLabel lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/icon.png")));
-		lblNewLabel_8.setBounds(-622, -110, 1183, 550);
+		lblNewLabel_8.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/Fundo CDF.png")));
+		lblNewLabel_8.setBounds(0, 0, 1924, 1061);
 		contentPaneTela.add(lblNewLabel_8);
 
 		JLabel lblNewLabel_9 = new JLabel("New label");
@@ -392,6 +392,10 @@ public class TelaCadastroFuncionario extends JFrame {
 		JLabel lblNewLabel_3 = new JLabel("fraseSecreta");
 		lblNewLabel_3.setBounds(512, 532, 134, 14);
 		contentPaneTela.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setBounds(311, 175, 46, 14);
+		contentPaneTela.add(lblNewLabel_4);
 
 	}
 
@@ -424,5 +428,4 @@ public class TelaCadastroFuncionario extends JFrame {
 		txtCargo.setText(funcionarioSelecionado.getCargo());
 		txtFraseSecreta.setText(funcionarioSelecionado.getFraseSecreta());
 	}
-
 }
