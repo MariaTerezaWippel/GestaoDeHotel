@@ -1,88 +1,75 @@
 package modelo;
 
-public class Hospede {
-	
-	private String cpf;
-	private String nome;
+import java.util.ArrayList;
+
+public class Hospede extends Pessoa {
+
 	private String dataNascimento;
 	private Long telefone;
-	private Long cep;
-	private String email;
-	private Integer numeroPessoas;
-	private String Nomecomple_1;
-	private Integer NumReserva;
+	private Endereco endereco;
+	private ArrayList<Reserva> listReserva;
 	
 	
-	public String getNomecomple_1() {
-		return Nomecomple_1;
-	}
-	public void setNomecomple_1(String nomecomple_1) {
-		Nomecomple_1 = nomecomple_1;
-	}
+	
 	public Hospede() {
+		
 	}
-	public Hospede(String cpf, String nome, String dataNascimento, Long telefone, Long cep, String email,
-			Integer numeroPessoas) {
-		super();
-		this.cpf = cpf;
-		this.nome = nome;
+
+	public Hospede(String string, long l, String string2, int i, long m, Endereco endereco2) {
+
+	}
+	
+
+	public Hospede(String nome, Long cpf, String email, String dataNascimento, Long telefone, Endereco endereco) {
+		super(nome, cpf, email);
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
-		this.cep = cep;
-		this.email = email;
-		this.numeroPessoas = numeroPessoas;
+		this.endereco = endereco;
 	}
-	public String getCpf() {
-		return cpf;
+
+
+	public Hospede(String nome, Long cpf, String email, String dataNascimento, Long telefone,
+			Endereco endereco, ArrayList<Reserva> listReserva) {
+		super( nome, cpf, email);
+		this.dataNascimento = dataNascimento;
+		this.telefone = telefone;
+		this.endereco = endereco;
+		this.listReserva = listReserva;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+
+
+
+
 	public String getDataNascimento() {
 		return dataNascimento;
 	}
+
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+
 	public Long getTelefone() {
 		return telefone;
 	}
+
 	public void setTelefone(Long telefone) {
 		this.telefone = telefone;
 	}
-	public Long getCep() {
-		return cep;
-	}
-	public void setCep(Long cep) {
-		this.cep = cep;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Integer getNumeroPessoas() {
-		return numeroPessoas;
-	}
-	public void setNumeroPessoas(Integer numeroPessoas) {
-		this.numeroPessoas = numeroPessoas;
-	}
-	@Override
-	public String toString() {
-		return "Hospedagem [cpf=" + cpf + ", nome=" + nome + ", dataNascimento=" + dataNascimento + ", telefone="
-				+ telefone + ", cep=" + cep + ", email=" + email + ", numeroPessoas=" + numeroPessoas + "]";
+
+	public Endereco getEndereco() {
+		return endereco;
 	}
 
-	
-	
-	
-	
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public ArrayList<Reserva> getListReserva() {
+		return listReserva;
+	}
+
+	public void setListReserva(ArrayList<Reserva> listReserva) {
+		this.listReserva = listReserva;
+	}
 
 }

@@ -47,7 +47,7 @@ public class TelaCadastroFuncionario extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	ArrayList<Hospede> hospede = new ArrayList<>();
+
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -203,13 +203,7 @@ public class TelaCadastroFuncionario extends JFrame {
 				String cpf = txtCpf.getText();
 				String telefone = txtTelefone.getText();
 				
-				Hospede h = new Hospede();
-				h.setCpf(cpf);
-				h.setNome(nome);
-				h.setDataNascimento(datanascimento);
 
-				
-				hospede.add(h);
 					
 			}
 		});

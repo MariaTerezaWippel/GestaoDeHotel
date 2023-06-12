@@ -199,12 +199,8 @@ public class TelaReserva extends JFrame {
 				String numeroreserva = txtNumReserva.getText();
 				String quantaspesssoas = txtQuatdPessoas.getText();
 				
-				Hospede h = new Hospede();
-				h.setNomecomple_1(nomecompleto);
 
-				
-				hospede.add(h);
-				
+
 			}
 		});
 		btnRealizarReserva.setBounds(707, 692, 188, 33);
