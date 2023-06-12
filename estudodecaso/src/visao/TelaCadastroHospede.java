@@ -217,7 +217,7 @@ public class TelaCadastroHospede extends JFrame {
 				String erros = "";
 
 				if (position == -1) {
-					JOptionPane.showMessageDialog(null, "Nenhum paciente selecionado");
+					JOptionPane.showMessageDialog(null, "Nenhum hóspede selecionado");
 					return;
 				}
 
@@ -287,11 +287,11 @@ public class TelaCadastroHospede extends JFrame {
 						hospedeDao.getIntancia();
 						boolean retorno = hospedeDao.alterarHospede(hospede);
 						if (retorno == true) {
-							JOptionPane.showMessageDialog(null, "Hospede Alterado ");
+							JOptionPane.showMessageDialog(null, "Hóspede Alterado ");
 							atualizarTabela();
 							limparDados();
 						} else {
-							JOptionPane.showMessageDialog(null, "Erro, hospede não alterado");
+							JOptionPane.showMessageDialog(null, "Erro, hóspede não alterado");
 							atualizarTabela();
 							limparDados();
 						}
@@ -331,7 +331,7 @@ public class TelaCadastroHospede extends JFrame {
 				String erros = "";
 
 				if (position == -1) {
-					JOptionPane.showMessageDialog(null, "Nenhum paciente selecionado");
+					JOptionPane.showMessageDialog(null, "Nenhum hóspede selecionado");
 					return;
 				}
 
@@ -346,11 +346,11 @@ public class TelaCadastroHospede extends JFrame {
 				if (n == JOptionPane.YES_OPTION) {
 					boolean retorno = hospedeDao.deletarHospede(hospedeSelecionado);
 					if (retorno == true) {
-						JOptionPane.showMessageDialog(null, "Funcionario deletado ");
+						JOptionPane.showMessageDialog(null, "Funcionário deletado ");
 						atualizarTabela();
 						limparDados();
 					} else {
-						JOptionPane.showMessageDialog(null, "Erro, funcionario não deletado");
+						JOptionPane.showMessageDialog(null, "Erro, funcionário não deletado");
 						atualizarTabela();
 						limparDados();
 					}
