@@ -22,39 +22,30 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTabbedPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import Controle.ReservaDao;
+import modelo.Reserva;
+
+import java.awt.SystemColor;
 
 public class TelaPrincipal extends JFrame {
 
 	private JPanel contentPaneTela;
+	private JTable table;
+	private ArrayList<Reserva> listaReserva;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		
-	EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TelaPrincipal frame = new TelaPrincipal();
-					frame.setExtendedState(MAXIMIZED_BOTH);
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public TelaPrincipal() {
 		setTitle("Tela Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1300, 990);
+		setBounds(100, 100, 2000, 1500);
 		contentPaneTela = new JPanel();
 		contentPaneTela.setBackground(new Color(135, 206, 250));
 		contentPaneTela.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -69,28 +60,9 @@ public class TelaPrincipal extends JFrame {
 		JLabel lblHotel = new JLabel("HotelBoulevard.com");
 		lblHotel.setForeground(new Color(0, 0, 128));
 		lblHotel.setBackground(new Color(255, 255, 255));
-		lblHotel.setBounds(637, 154, 396, 33);
-		lblHotel.setFont(new Font("Source Sans Pro Semibold", Font.BOLD | Font.ITALIC, 36));
+		lblHotel.setBounds(637, 146, 396, 41);
+		lblHotel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 36));
 		contentPaneTela.add(lblHotel);
-		
-		JButton btnReservar = new JButton("Já tem Reserva? Clique aqui!");
-		btnReservar.setBounds(671, 484, 312, 33);
-		btnReservar.setForeground(new Color(255, 255, 255));
-		btnReservar.setBackground(new Color(0, 0, 128));
-		btnReservar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnReservar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		contentPaneTela.add(btnReservar);
-		
-
-		JTextPane txtTexto = new JTextPane();
-		txtTexto.setBounds(606, 687, 427, 48);
-		txtTexto.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 16));
-		txtTexto.setBackground(new Color(135, 206, 250));
-		txtTexto.setText("Aqui você encontra os melhores preços com qualidade de acomodação e serviço. Faça sua reserva agora!");
-		contentPaneTela.add(txtTexto);
 
 		
 		JLabel lblNewLabel = new JLabel("New label");
@@ -98,40 +70,91 @@ public class TelaPrincipal extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/LogoHotel.png")));
 		contentPaneTela.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome (1).png")));
-		lblNewLabel_1.setBounds(-622, 408, 1232, 425);
-		contentPaneTela.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Icon.png")));
-		lblNewLabel_3.setBounds(-622, -95, 1293, 520);
-		contentPaneTela.add(lblNewLabel_3);
-		
-
-		JButton btnNoTemReserva = new JButton("Não tem reserva? Clique aqui!\r\n");
-		btnNoTemReserva.setForeground(Color.WHITE);
-		btnNoTemReserva.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-		btnNoTemReserva.setBackground(new Color(0, 0, 128));
-		btnNoTemReserva.setBounds(671, 393, 312, 33);
-		contentPaneTela.add(btnNoTemReserva);
-		
 		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setForeground(new Color(0, 0, 128));
 		lblNewLabel_4.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome (2).png")));
 		lblNewLabel_4.setBounds(394, -95, 1293, 520);
 		contentPaneTela.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/Design sem nome.png")));
-		lblNewLabel_5.setBounds(380, 408, 1185, 425);
-		contentPaneTela.add(lblNewLabel_5);
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(209, 292, 690, 476);
+		contentPaneTela.add(scrollPane);
 		
-		JButton btnSair = new JButton("Sair");
-		btnSair.setForeground(new Color(255, 255, 255));
-		btnSair.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 11));
-		btnSair.setBackground(new Color(0, 0, 128));
-		btnSair.setBounds(788, 633, 89, 23);
-		contentPaneTela.add(btnSair);
+		table = new JTable();
+		table.setBackground(new Color(255, 255, 255));
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"Quantidade de dias", "Serviço de quarto", "Diaria",  "Hospede"
+			}
+		));
+		table.getColumnModel().getColumn(0).setPreferredWidth(105);
+		table.getColumnModel().getColumn(1).setPreferredWidth(106);
+		table.getColumnModel().getColumn(2).setPreferredWidth(56);
+		table.getColumnModel().getColumn(3).setPreferredWidth(98);
+		scrollPane.setViewportView(table);
+		
+		JButton btncadastrarHospede = new JButton("Cadastrar Hóspede");
+		btncadastrarHospede.setForeground(new Color(0, 0, 128));
+		btncadastrarHospede.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastroHospede telaCadastroHospede = new TelaCadastroHospede();
+				telaCadastroHospede.setLocationRelativeTo(null);
+				telaCadastroHospede.setVisible(true);
+				dispose();
+			}
+		});
+		btncadastrarHospede.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+		btncadastrarHospede.setBounds(957, 380, 239, 47);
+		contentPaneTela.add(btncadastrarHospede);
+		
+		JButton btnCadastrarFuncionrio = new JButton("Cadastrar Funcionário");
+		btnCadastrarFuncionrio.setForeground(new Color(0, 0, 128));
+		btnCadastrarFuncionrio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastroFuncionario telaCadastroFuncionario = new TelaCadastroFuncionario();
+				telaCadastroFuncionario.setLocationRelativeTo(null);
+				telaCadastroFuncionario.setVisible(true);
+				dispose();
+			}
+		});
+		btnCadastrarFuncionrio.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 19));
+		btnCadastrarFuncionrio.setBounds(957, 482, 239, 47);
+		contentPaneTela.add(btnCadastrarFuncionrio);
+		
+		JButton btnReserva = new JButton("Reserva de Hóspede");
+		btnReserva.setForeground(new Color(0, 0, 128));
+		btnReserva.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaReserva telaReserva = new TelaReserva();
+				telaReserva.setLocationRelativeTo(null);
+				telaReserva.setVisible(true);
+				dispose();
+			}
+		});
+		btnReserva.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 19));
+		btnReserva.setBounds(957, 583, 239, 47);
+		contentPaneTela.add(btnReserva);
+		
+		JButton btnEndereço = new JButton("Cadastrar Endereço");
+		btnEndereço.setForeground(new Color(0, 0, 128));
+		btnEndereço.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CadastrarEndereco telaCadastrarEndereco = new CadastrarEndereco();
+				telaCadastrarEndereco.setLocationRelativeTo(null);
+				telaCadastrarEndereco.setVisible(true);
+				dispose();
+			}
+		});
+		btnEndereço.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+		btnEndereço.setBounds(957, 680, 239, 47);
+		contentPaneTela.add(btnEndereço);
+		
+		JLabel lblNewLabel_1 = new JLabel("Reservas ");
+		lblNewLabel_1.setBounds(435, 258, 325, 14);
+		contentPaneTela.add(lblNewLabel_1);
+		atualizarTabela();
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
@@ -149,5 +172,22 @@ public class TelaPrincipal extends JFrame {
 				popup.show(e.getComponent(), e.getX(), e.getY());
 			}
 		});
+	}
+	
+	private void atualizarTabela() {
+		var reservaDao  = new ReservaDao();
+		DefaultTableModel tabela = new DefaultTableModel(new Object[][] {},
+				new String[] { "Quantidade de dias", "Serviço de quarto", "Diaria",  "Hospede" });
+
+		if (reservaDao.listaReserva() != null) {
+			listaReserva = reservaDao.listaReserva();
+			for (int i = 0; i < listaReserva.size(); i++) {
+				Reserva reserva = listaReserva.get(i);
+				tabela.addRow(new Object[] { reserva.getQuantidadeDedias(),reserva.getServicoQuarto(),reserva.getDiaria(),reserva.getHospede().getNome()});
+
+			}
+			table.setModel(tabela);
+		}
+
 	}
 }
