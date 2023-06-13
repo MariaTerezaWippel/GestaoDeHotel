@@ -93,7 +93,7 @@ public class TelaLoginFuncionario extends JFrame {
 
 		txtEmail = new JTextField();
 		txtEmail.setBounds(645, 382, 323, 20);
-		txtEmail.setForeground(new Color(153, 204, 255));
+		txtEmail.setForeground(Color.BLACK);
 		contentPaneTela.add(txtEmail);
 		txtEmail.setColumns(10);
 
