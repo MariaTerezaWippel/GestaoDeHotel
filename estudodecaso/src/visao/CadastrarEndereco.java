@@ -1,6 +1,6 @@
 package visao;
 
-import java.awt.Color;
+import java.awt.Color; 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +17,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
 import Controle.EnderecoDao;
+import Controle.HospedeDao;
 import modelo.Endereco;
+import modelo.Hospede;
 
 public class CadastrarEndereco extends JFrame {
 
@@ -42,7 +44,7 @@ public class CadastrarEndereco extends JFrame {
 		JLabel lblNewLabel = new JLabel("Cadastrar Endereço");
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 24));
-		lblNewLabel.setBounds(209, 23, 223, 32);
+		lblNewLabel.setBounds(209, 23, 248, 32);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("CEP:");
@@ -52,22 +54,22 @@ public class CadastrarEndereco extends JFrame {
 
 		JLabel lblNewLabel_2 = new JLabel("Estado:");
 		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_2.setBounds(144, 144, 66, 27);
+		lblNewLabel_2.setBounds(142, 133, 68, 32);
 		contentPane.add(lblNewLabel_2);
 
 		JLabel lblNewLabel_3 = new JLabel("Cidade:");
 		lblNewLabel_3.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_3.setBounds(144, 197, 66, 27);
+		lblNewLabel_3.setBounds(142, 188, 68, 32);
 		contentPane.add(lblNewLabel_3);
 
 		JLabel lblNewLabel_4 = new JLabel("Bairro:");
 		lblNewLabel_4.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_4.setBounds(148, 245, 66, 27);
+		lblNewLabel_4.setBounds(150, 238, 60, 32);
 		contentPane.add(lblNewLabel_4);
 
 		JLabel lblNewLabel_5 = new JLabel("Rua:");
 		lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_5.setBounds(168, 297, 39, 27);
+		lblNewLabel_5.setBounds(164, 290, 46, 32);
 		contentPane.add(lblNewLabel_5);
 
 		/**********/
@@ -160,7 +162,7 @@ public class CadastrarEndereco extends JFrame {
 		btnEndereco.setBackground(new Color(0, 0, 128));
 		btnEndereco.setForeground(new Color(255, 255, 255));
 		btnEndereco.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-		btnEndereco.setBounds(486, 132, 129, 32);
+		btnEndereco.setBounds(486, 87, 129, 32);
 		contentPane.add(btnEndereco);
 
 		JButton btnEditarEnde = new JButton("Editar");
@@ -218,7 +220,7 @@ public class CadastrarEndereco extends JFrame {
 		btnEditarEnde.setBackground(new Color(0, 0, 255));
 		btnEditarEnde.setForeground(new Color(255, 255, 255));
 		btnEditarEnde.setFont(new Font("Sitka Subheading", Font.BOLD, 16));
-		btnEditarEnde.setBounds(486, 174, 132, 32);
+		btnEditarEnde.setBounds(483, 144, 132, 32);
 		contentPane.add(btnEditarEnde);
 
 		JButton btnExcluirEnde = new JButton("Excluir");
@@ -251,12 +253,8 @@ public class CadastrarEndereco extends JFrame {
 		});
 		btnExcluirEnde.setForeground(new Color(0, 0, 255));
 		btnExcluirEnde.setFont(new Font("Sitka Subheading", Font.BOLD, 17));
-		btnExcluirEnde.setBounds(489, 217, 129, 37);
+		btnExcluirEnde.setBounds(486, 199, 129, 37);
 		contentPane.add(btnExcluirEnde);
-
-		JButton btnNewButton = new JButton("Buscar");
-		btnNewButton.setBounds(486, 83, 129, 32);
-		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Voltar");
 		btnNewButton_1.addActionListener(new ActionListener() {

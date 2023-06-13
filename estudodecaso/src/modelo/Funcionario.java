@@ -8,9 +8,6 @@ public class Funcionario extends Pessoa {
 		
 	}
 
-	
-
-
 	public Funcionario(String nome, Long cpf, String email, String cargo, String fraseSecreta) {
 		super(nome, cpf, email);
 		this.cargo = cargo;

@@ -438,7 +438,7 @@ public class TelaReserva extends JFrame {
 		txtCpf.setBounds(113, 253, 310, 20);
 		contentPaneTela_1.add(txtCpf);
 
-		JButton btnNewButton_1 = new JButton("Bucar Hospede");
+		JButton btnNewButton_1 = new JButton("Buscar Hospede");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
