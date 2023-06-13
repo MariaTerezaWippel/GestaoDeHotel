@@ -61,7 +61,7 @@ public class TelaCadastroFuncionario extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 2000, 1500);
 		contentPaneTela = new JPanel();
-		contentPaneTela.setBackground(new Color(135, 206, 250));
+		contentPaneTela.setBackground(new Color(100, 149, 237));
 		contentPaneTela.setForeground(new Color(0, 0, 0));
 		contentPaneTela.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -69,7 +69,7 @@ public class TelaCadastroFuncionario extends JFrame {
 		contentPaneTela.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Nome:");
-		lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
 		lblNewLabel.setBounds(495, 253, 75, 21);
 
 		contentPaneTela.add(lblNewLabel);
@@ -81,13 +81,13 @@ public class TelaCadastroFuncionario extends JFrame {
 		txtNome.setColumns(10);
 
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
-		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel_1.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
 		lblNewLabel_1.setBounds(495, 322, 66, 21);
 		contentPaneTela.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Email:");
-		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_2.setBounds(495, 385, 66, 21);
+		lblNewLabel_2.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
+		lblNewLabel_2.setBounds(495, 385, 114, 21);
 
 		contentPaneTela.add(lblNewLabel_2);
 
@@ -116,10 +116,10 @@ public class TelaCadastroFuncionario extends JFrame {
 		table.setModel(dataModel);
 		scrollPane.setViewportView(table);
 
-		JLabel lblNewLabel_7 = new JLabel(" Cadastro do Funcionário");
+		JLabel lblNewLabel_7 = new JLabel(" Cadastro de Funcionario");
 		lblNewLabel_7.setForeground(new Color(0, 0, 128));
 		lblNewLabel_7.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel_7.setBounds(721, 70, 424, 48);
+		lblNewLabel_7.setBounds(784, 70, 491, 48);
 		contentPaneTela.add(lblNewLabel_7);
 
 		/**********/
@@ -207,16 +207,11 @@ public class TelaCadastroFuncionario extends JFrame {
 
 			}
 		});
-		btnCadastrarFuncio.setForeground(new Color(255, 255, 255));
-		btnCadastrarFuncio.setBackground(new Color(0, 0, 128));
-		btnCadastrarFuncio.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
+		btnCadastrarFuncio.setForeground(new Color(0, 0, 255));
+		btnCadastrarFuncio.setBackground(new Color(255, 255, 255));
+		btnCadastrarFuncio.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
 		btnCadastrarFuncio.setBounds(495, 715, 217, 38);
 		contentPaneTela.add(btnCadastrarFuncio);
-
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/LogoHotel.png")));
-		lblNewLabel_5.setBounds(646, 143, 334, 79);
-		contentPaneTela.add(lblNewLabel_5);
 
 		JButton btnNewButton_1 = new JButton("Alterar");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -301,10 +296,10 @@ public class TelaCadastroFuncionario extends JFrame {
 
 			}
 		});
-		btnNewButton_1.setBackground(new Color(0, 0, 255));
-		btnNewButton_1.setForeground(new Color(255, 255, 255));
-		btnNewButton_1.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 17));
-		btnNewButton_1.setBounds(776, 715, 184, 38);
+		btnNewButton_1.setBackground(new Color(255, 255, 255));
+		btnNewButton_1.setForeground(new Color(0, 0, 255));
+		btnNewButton_1.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
+		btnNewButton_1.setBounds(746, 715, 217, 38);
 		contentPaneTela.add(btnNewButton_1);
 		atualizarTabela();
 
@@ -346,21 +341,24 @@ public class TelaCadastroFuncionario extends JFrame {
 			}
 		});
 		btnNewButton_2.setForeground(new Color(0, 0, 255));
-		btnNewButton_2.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 17));
-		btnNewButton_2.setBounds(1015, 715, 177, 38);
+		btnNewButton_2.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
+		btnNewButton_2.setBounds(995, 715, 217, 38);
 		contentPaneTela.add(btnNewButton_2);
 
 		JLabel lblNewLabel_10 = new JLabel("Cargo:");
-		lblNewLabel_10.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 19));
+		lblNewLabel_10.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
 		lblNewLabel_10.setBounds(495, 454, 75, 26);
 		contentPaneTela.add(lblNewLabel_10);
 
 		txtCargo = new JTextField();
-		txtCargo.setBounds(502, 491, 177, 20);
+		txtCargo.setBounds(495, 491, 177, 20);
 		contentPaneTela.add(txtCargo);
 		txtCargo.setColumns(10);
 
 		JButton btnNewButton = new JButton("Voltar");
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(0, 0, 255));
+		btnNewButton.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipal telaPrincipal = new TelaPrincipal();
@@ -370,16 +368,17 @@ public class TelaCadastroFuncionario extends JFrame {
 
 			}
 		});
-		btnNewButton.setBounds(1245, 715, 184, 38);
+		btnNewButton.setBounds(1245, 715, 217, 38);
 		contentPaneTela.add(btnNewButton);
 
 		txtFraseSecreta = new JTextField();
-		txtFraseSecreta.setBounds(502, 547, 225, 20);
+		txtFraseSecreta.setBounds(495, 554, 225, 20);
 		contentPaneTela.add(txtFraseSecreta);
 		txtFraseSecreta.setColumns(10);
 
-		JLabel lblNewLabel_3 = new JLabel("fraseSecreta");
-		lblNewLabel_3.setBounds(512, 532, 134, 14);
+		JLabel lblNewLabel_3 = new JLabel("Frase Secreta:");
+		lblNewLabel_3.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
+		lblNewLabel_3.setBounds(495, 522, 177, 26);
 		contentPaneTela.add(lblNewLabel_3);
 
 	}
