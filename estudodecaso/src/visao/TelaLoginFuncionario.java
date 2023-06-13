@@ -67,12 +67,8 @@ public class TelaLoginFuncionario extends JFrame {
 		setContentPane(contentPaneTela);
 		contentPaneTela.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(197, 246, 100, -150);
-		contentPaneTela.add(lblNewLabel);
-
 		JLabel lblNewLabel_1 = new JLabel(" Hotel");
-		lblNewLabel_1.setBounds(735, 123, 211, 44);
+		lblNewLabel_1.setBounds(870, 115, 211, 44);
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 
 		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 48));
@@ -81,29 +77,19 @@ public class TelaLoginFuncionario extends JFrame {
 
 		contentPaneTela.add(lblNewLabel_1);
 
-		JLabel lblNewLabel_2 = new JLabel("Email :");
-		lblNewLabel_2.setBounds(645, 337, 100, 34);
-		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_2);
-
-		JLabel lblNewLabel_3 = new JLabel("Frase secreta :");
-		lblNewLabel_3.setBounds(645, 414, 148, 34);
-		lblNewLabel_3.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-		contentPaneTela.add(lblNewLabel_3);
-
 		txtEmail = new JTextField();
-		txtEmail.setBounds(645, 382, 323, 20);
+		txtEmail.setBounds(769, 388, 323, 20);
 		txtEmail.setForeground(Color.BLACK);
 		contentPaneTela.add(txtEmail);
 		txtEmail.setColumns(10);
 
 		txtFraseSecreta = new JTextField();
-		txtFraseSecreta.setBounds(645, 459, 323, 20);
+		txtFraseSecreta.setBounds(769, 497, 323, 20);
 		contentPaneTela.add(txtFraseSecreta);
 		txtFraseSecreta.setColumns(10);
 
 		JButton btnLogin = new JButton("Login");
-		btnLogin.setBounds(690, 517, 211, 44);
+		btnLogin.setBounds(841, 627, 211, 44);
 
 		btnLogin.setBackground(new Color(0, 0, 128));
 
@@ -148,7 +134,7 @@ public class TelaLoginFuncionario extends JFrame {
 		contentPaneTela.add(btnLogin);
 
 		JLabel lblNewLabel_4 = new JLabel("Boulervard");
-		lblNewLabel_4.setBounds(706, 160, 251, 46);
+		lblNewLabel_4.setBounds(841, 152, 251, 46);
 		lblNewLabel_4.setForeground(new Color(0, 0, 128));
 
 		lblNewLabel_4.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 48));
@@ -158,8 +144,13 @@ public class TelaLoginFuncionario extends JFrame {
 		contentPaneTela.add(lblNewLabel_4);
 
 		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(541, 217, 394, 109);
+		lblNewLabel_6.setBounds(676, 209, 394, 109);
 		lblNewLabel_6.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LogoHotel.png")));
 		contentPaneTela.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel = new JLabel("\r\n");
+		lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/TLF.png")));
+		lblNewLabel.setBounds(0, 0, 1922, 1014);
+		contentPaneTela.add(lblNewLabel);
 	}
 }
