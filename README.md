@@ -1,17 +1,21 @@
+![Gestão de Hotel](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/96ab7e1e-b475-4b22-988e-ce1001ccfd62)
+
+
+
 # estudo_de_caso01_pds
 
 Estudo de Caso Gestão de Hotéis
 
 1. Descrição das Funcionalidades do Sistema:
 
-O sistema permitirá ao usuário (funcionário) as seguintes funcionalidades: cadastro de um cliente/hóspede; listagem de hóspedes; alteração de dados do hóspede; exclusão de um hóspede. Além disso, o sistema permitirá a realização de uma reserva de quarto (ou quartos) e também o cancelamento desta reserva se necessário. Por fim, o sistema permitirá fazer check-in e check-out, envolvendo neste último o pagamento desta estadia. 
+O sistema permitirá ao usuário (funcionário) as seguintes funcionalidades: cadastro de um cliente/hóspede; cadastro e um usuário/funcionário; cadastro de um endereço; alteração de dados do hóspede; exclusão e buscar  um hóspede;alteração e dados de um funcionário, excluir e buscar funcionário; Além disso, o sistema permitirá a realização de uma reserva de quarto (ou quartos) e também o cancelamento desta reserva se necessário. Por fim, o sistema permitirá fazer check-in e check-out, envolvendo neste último o pagamento desta estadia. 
 
 2. Diagrama de Casos de Uso:
-![Diagrama]()
+![Diagrama](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/fe376d11-9bd4-4704-8ec6-19c0a38cf9f0)
 
 3. Descrição do Fluxo de Telas do Sistema:
  
-O fluxograma desenvolvido contará com as seguintes telas, sendo elas: Tela Cadastro, a qual vai pedir se tem ou não um cadastro (nesse caso irá pedir que preencha com os dados do funcionário); a Tela Login que vai guardar o cadastro; a Tela Principal que vai ter acesso a reserva de hospedagem; a Tela Reserva que vai preencher com as informações do cliente (data de entrada e saída, tipo de quarto, número da reserva e quantidade de pessoas); a Tela Cancelar Reserva do Cliente, que vai cancelar a reserva do mesmo (solicitando o CPF do hóspede e o número da reserva); a Tela  Listagem de Hóspedes que vai listar os hóspedes se for pedido pelo cliente, seguindo caso seja necessário, para a Tela Exclusão de Hóspede,  que vai excluir o/os hóspedes ao preencher com os dados do cliente inseridos no cadastro e pelo número da reserva (nesse caso irá seguir para a Tela Principal novamente ou seguirá para a Tela de Efetuar Check-In); Tela Efetuar Check-In, que confirmará a reserva e estadia do hóspede, seguindo assim para a Tela de pagamento, o qual irá verificar o preço da diária, serviço de quarto (incluso ou não) e forma de pagamento (cartão de crédito, débito, boleto ou pix); seguindo estes processos, Check-Out confirma a saída do hóspede e vai para a tela Principal, sendo o botão Saída da Tela Principal o fim do programa.
+O fluxograma desenvolvido contará com as seguintes telas, sendo elas:  Tela login funcionário, a qual vai pedir se tem ou não um cadastro (nesse caso irá pedir que preencha com os dados do funcionário); a Tela Login que vai guardar o cadastro; a Tela Principal que vai ter acesso a reserva de hospedagem; a Tela Reserva que vai preencher com as informações do cliente (data de entrada e saída, tipo de quarto, número da reserva e quantidade de pessoas); a Tela Cancelar Reserva do Cliente, que vai cancelar a reserva do mesmo (solicitando o CPF do hóspede e o número da reserva); a Tela  Listagem de Hóspedes que vai listar os hóspedes se for pedido pelo cliente, seguindo caso seja necessário, para a Tela Exclusão de Hóspede,  que vai excluir o/os hóspedes ao preencher com os dados do cliente inseridos no cadastro e pelo número da reserva (nesse caso irá seguir para a Tela Principal novamente ou seguirá para a Tela de Efetuar Check-In); Tela Efetuar Check-In, que confirmará a reserva e estadia do hóspede, seguindo assim para a Tela de pagamento, o qual irá verificar o preço da diária, serviço de quarto (incluso ou não) e forma de pagamento (cartão de crédito, débito, boleto ou pix); seguindo estes processos, Check-Out confirma a saída do hóspede e vai para a tela Principal, sendo o botão Saída da Tela Principal o fim do programa.
 
 4. Fluxograma de Uso do Sistema:
 
