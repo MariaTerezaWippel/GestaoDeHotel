@@ -1,3 +1,6 @@
+Discentes: Maria Tereza, Bruna Reinert, Águida Ariane e Agatha Cristine
+
+
 ![Gestão de Hotel](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/96ab7e1e-b475-4b22-988e-ce1001ccfd62)
 
 
