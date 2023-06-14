@@ -1,28 +1,59 @@
-Discentes: Maria Tereza, Bruna Reinert, Águida Ariane e Agatha Cristine
-
+# GestãoDeHotel
 
 ![Gestão de Hotel](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/96ab7e1e-b475-4b22-988e-ce1001ccfd62)
 
 
-
-# gestãoDeHotelpds
+# <p align="center" >Estudo de caso 3</p><p align="center" > Prática em Desenvolvimento de Sistemas</p> 
 
 Estudo de Caso Gestão de Hotéis
 
-1. Descrição das Funcionalidades do Sistema:
+# 📈 Projeto
+Gerenciar eficientemente as operações de um hotel, incluindo o controle de hóspedes, funcionários, reservas e diárias.
+O projeto gestão de Hotel é uma prática em Desenvolvimento de Sistema do curso Técnico em Informática do IFSC. 
 
-O sistema permitirá ao usuário (funcionário) as seguintes funcionalidades: cadastro de um cliente/hóspede; cadastro e um usuário/funcionário; cadastro de um endereço; alteração de dados do hóspede; exclusão e buscar  um hóspede;alteração e dados de um funcionário, excluir e buscar funcionário; Além disso, o sistema permitirá a realização de uma reserva de quarto (ou quartos) e também o cancelamento desta reserva se necessário. Por fim, o sistema permitirá fazer check-in e check-out, envolvendo neste último o pagamento desta estadia. 
+O objetivo é promover a capacitação e o desenvolvimento de habilidades em programação.
 
-2. Diagrama de Casos de Uso:
+# 💻 Descrição do sistema: 
+O sistema é projetado para oferecer ao usuário (funcionário) uma ampla gama de funcionalidades essenciais. Isso inclui o cadastro de clientes/hóspedes, cadastro de usuários/funcionários e cadastro de endereços. Além disso, o sistema permite a alteração de dados dos hóspedes e funcionários, assim como a exclusão e busca de hóspedes e funcionários. Uma funcionalidade crucial é a capacidade de realizar reservas de quarto (ou quartos) e também o cancelamento dessas reservas, caso necessário. Por fim, incluindo o pagamento das diárias junto com reserva. Essas funcionalidades são desenvolvidas visando a eficiência e aprimoramento do gerenciamento de um estabelecimento hoteleiro.
+
+# 🔍 Métodos 
+<br>
+<p>1 : Cadastrar Endereço</p>
+<p>2 : Cadastrar Funcionário</p>
+<p>3 : Cadastrar Hóspede</p>
+<p>4 : Realizar Reserva</p>
+<p>5 : Alterar Endereço</p>
+<p>6 : Excluir Endereço</p>
+<p>7 : Alterar Funcionário</p>
+<p>8 : Excluir Funcionário</p>
+<p>9 : Alterar Hóspede</p>
+<p>10 : Excluir Hóspede</p>
+<p>11 : Alterar Reserva</p>
+<p>12 : Excluir Reserva</p>
+<br>
+
+
+Diagrama de Casos de Uso:
 ![Diagrama](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/fe376d11-9bd4-4704-8ec6-19c0a38cf9f0)
 
-3. Descrição do Fluxo de Telas do Sistema:
- 
-O fluxograma desenvolvido contará com as seguintes telas, sendo elas:  Tela login funcionário, a qual vai pedir se tem ou não um cadastro (nesse caso irá pedir que preencha com os dados do funcionário); a Tela Login que vai guardar o cadastro; a Tela Principal que vai ter acesso a reserva de hospedagem; a Tela Reserva que vai preencher com as informações do cliente (data de entrada e saída, tipo de quarto, número da reserva e quantidade de pessoas); a Tela Cancelar Reserva do Cliente, que vai cancelar a reserva do mesmo (solicitando o CPF do hóspede e o número da reserva); a Tela  Listagem de Hóspedes que vai listar os hóspedes se for pedido pelo cliente, seguindo caso seja necessário, para a Tela Exclusão de Hóspede,  que vai excluir o/os hóspedes ao preencher com os dados do cliente inseridos no cadastro e pelo número da reserva (nesse caso irá seguir para a Tela Principal novamente ou seguirá para a Tela de Efetuar Check-In); Tela Efetuar Check-In, que confirmará a reserva e estadia do hóspede, seguindo assim para a Tela de pagamento, o qual irá verificar o preço da diária, serviço de quarto (incluso ou não) e forma de pagamento (cartão de crédito, débito, boleto ou pix); seguindo estes processos, Check-Out confirma a saída do hóspede e vai para a tela Principal, sendo o botão Saída da Tela Principal o fim do programa.
 
-4. Fluxograma de Uso do Sistema:
+ # 📉Fluxograma do Sistema:
+![Diagrama]
 
-![Diagrama](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/42d7809a-2349-4cfb-8119-3b61cb36a61f)
+# ⚙️ Tecnologias 
+<br>
+<p>Tecnologia 1 : Java </p>
+<p>Tecnologia 2 : IDE eclipse workspace</p></br>
 
-5. Diagrama de Classes:
-O Diagrama de Classes é um documento único que permite visualizar todos os objetos de entidade da análise, bem como os relacionamentos entre eles,permitindo identificar as estruturas do mesmo. Para fazer uma reserva no hotel, foram desenvolvidas 9 classes que englobam todas as informações necessárias ao funcionamento da aplicação. As classes ListagemdeHospedes, LoginFuncionarios, CancelarReservas, CadastroFuncionarios,ExclusaodeHospedes , TelaPrincipal, Reservas, TelaCheckins e Pagamentos são apresentadas na imagem abaixo.
+# 🔮 Atualizações e aprimoramentos posteriores
+<br>
+<p align="justify"> Com o objetivo de aumentar a eficiência do sistema, é necessário incorporar tecnologias adicionais para aprimorar a compreensão e minimizar o risco de falhas.</p>
+
+# 📉 Diagrama de Classes:
+
+
+#  👨‍💻  Contribuintes
+
+<p align="left" >Docente 💗: Prof Bruna Caroline Russi MARAVILHOSA!</p>
+<p align="left" >Discente 🎓🤘🏻: Maria Tereza, Bruna Reinert, Águida Ariane e Agatha Cristine.</p>
+
