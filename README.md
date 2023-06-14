@@ -1,15 +1,13 @@
-Discentes: Maria Tereza, Bruna Reinert, Águida Ariane e Agatha Cristine
-
-
 ![Gestão de Hotel](https://github.com/MariaTerezaWippel/estudo_de_caso01_pds/assets/111304031/96ab7e1e-b475-4b22-988e-ce1001ccfd62)
 
 
 
 # gestãoDeHotelpds
 
-Estudo de Caso Gestão de Hotéis
+Estudo de Caso3
+Gestão de Hotéis
 
-1. Descrição das Funcionalidades do Sistema:
+1.Descrição das Funcionalidades do Sistema:
 
 O sistema permitirá ao usuário (funcionário) as seguintes funcionalidades: cadastro de um cliente/hóspede; cadastro e um usuário/funcionário; cadastro de um endereço; alteração de dados do hóspede; exclusão e buscar  um hóspede;alteração e dados de um funcionário, excluir e buscar funcionário; Além disso, o sistema permitirá a realização de uma reserva de quarto (ou quartos) e também o cancelamento desta reserva se necessário. Por fim, o sistema permitirá fazer check-in e check-out, envolvendo neste último o pagamento desta estadia. 
 
