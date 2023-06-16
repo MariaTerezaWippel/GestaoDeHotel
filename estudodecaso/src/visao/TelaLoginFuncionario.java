@@ -67,20 +67,9 @@ public class TelaLoginFuncionario extends JFrame {
 		setContentPane(contentPaneTela);
 		contentPaneTela.setLayout(null);
 
-		txtEmail = new JTextField();
-		txtEmail.setBounds(769, 388, 323, 20);
-		txtEmail.setForeground(Color.BLACK);
-		contentPaneTela.add(txtEmail);
-		txtEmail.setColumns(10);
-
-		txtFraseSecreta = new JTextField();
-		txtFraseSecreta.setBounds(769, 497, 323, 20);
-		contentPaneTela.add(txtFraseSecreta);
-		txtFraseSecreta.setColumns(10);
-
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(179, 234, 255));
-		panel.setBounds(668, 146, 534, 660);
+		panel.setBackground(new Color(155, 214, 249));
+		panel.setBounds(703, 147, 534, 660);
 		contentPaneTela.add(panel);
 		panel.setLayout(null);
 		
@@ -92,13 +81,8 @@ public class TelaLoginFuncionario extends JFrame {
 		lblNewLabel_3.setBounds(51, 61, 46, 14);
 		panel.add(lblNewLabel_3);
 		
-				JLabel lblNewLabel_6 = new JLabel("New label");
-				lblNewLabel_6.setBounds(11, 118, 394, 109);
-				panel.add(lblNewLabel_6);
-				lblNewLabel_6.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LogoHotel.png")));
-				
 				JLabel lblNewLabel_4 = new JLabel("Boulervard");
-				lblNewLabel_4.setBounds(167, 61, 251, 46);
+				lblNewLabel_4.setBounds(173, 69, 251, 46);
 				panel.add(lblNewLabel_4);
 				lblNewLabel_4.setForeground(new Color(0, 0, 128));
 				
@@ -107,7 +91,7 @@ public class TelaLoginFuncionario extends JFrame {
 								lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 								
 										JLabel lblNewLabel_1 = new JLabel(" Hotel");
-										lblNewLabel_1.setBounds(207, 30, 211, 44);
+										lblNewLabel_1.setBounds(213, 30, 211, 44);
 										panel.add(lblNewLabel_1);
 										lblNewLabel_1.setForeground(new Color(0, 0, 128));
 										
@@ -126,7 +110,35 @@ public class TelaLoginFuncionario extends JFrame {
 																		btnLogin.setBackground(new Color(25, 25, 112));
 																		
 																				btnLogin.setForeground(new Color(255, 255, 255));
-																				btnLogin.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 22));
+																				btnLogin.setFont(new Font("Sitka Subheading", Font.BOLD, 23));
+																				
+																						txtEmail = new JTextField();
+																						txtEmail.setBounds(226, 306, 217, 28);
+																						panel.add(txtEmail);
+																						txtEmail.setForeground(Color.BLACK);
+																						txtEmail.setColumns(10);
+																						
+																								txtFraseSecreta = new JTextField();
+																								txtFraseSecreta.setBounds(226, 363, 217, 28);
+																								panel.add(txtFraseSecreta);
+																								txtFraseSecreta.setColumns(10);
+																								
+																								JLabel lblNewLabel_5 = new JLabel("Email:");
+																								lblNewLabel_5.setForeground(new Color(0, 0, 128));
+																								lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+																								lblNewLabel_5.setBounds(150, 307, 75, 28);
+																								panel.add(lblNewLabel_5);
+																								
+																								JLabel lblNewLabel_6 = new JLabel("Senha Secreta:");
+																								lblNewLabel_6.setForeground(new Color(0, 0, 128));
+																								lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+																								lblNewLabel_6.setBounds(79, 368, 157, 21);
+																								panel.add(lblNewLabel_6);
+																				
+																				JLabel lblNewLabel = new JLabel("");
+																				lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/background.png")));
+																				lblNewLabel.setBounds(0, 0, 1934, 1021);
+																				contentPaneTela.add(lblNewLabel);
 																				btnLogin.addActionListener(new ActionListener() {
 																					public void actionPerformed(ActionEvent e) {
 																						String erros = "";
@@ -161,12 +173,6 @@ public class TelaLoginFuncionario extends JFrame {
 																						}
 																					}
 																				});
-
-		
-		JLabel lblNewLabel = new JLabel("\r\n");
-		lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/TLF.png")));
-		lblNewLabel.setBounds(0, 0, 1922, 1014);
-		contentPaneTela.add(lblNewLabel);
 		
 	}
 }

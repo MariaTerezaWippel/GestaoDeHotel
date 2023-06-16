@@ -60,16 +60,9 @@ public class TelaPrincipal extends JFrame {
 		JLabel lblHotel = new JLabel("HotelBoulevard.com");
 		lblHotel.setForeground(new Color(0, 0, 128));
 		lblHotel.setBackground(new Color(255, 255, 255));
-		lblHotel.setBounds(637, 115, 396, 41);
-		lblHotel.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 36));
+		lblHotel.setBounds(778, 115, 396, 41);
+		lblHotel.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
 		contentPaneTela.add(lblHotel);
-
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(564, 190, 325, 111);
-		lblNewLabel.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/LogoHotel.png")));
-		contentPaneTela.add(lblNewLabel);
-		
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(209, 292, 690, 476);
@@ -90,6 +83,9 @@ public class TelaPrincipal extends JFrame {
 		table.getColumnModel().getColumn(3).setPreferredWidth(98);
 		scrollPane.setViewportView(table);
 		
+		JLabel label = new JLabel("New label");
+		scrollPane.setColumnHeaderView(label);
+		
 		JButton btncadastrarHospede = new JButton("Cadastrar Hospedes");
 		btncadastrarHospede.setForeground(new Color(0, 0, 128));
 		btncadastrarHospede.addActionListener(new ActionListener() {
@@ -100,8 +96,8 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btncadastrarHospede.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-		btncadastrarHospede.setBounds(957, 380, 254, 47);
+		btncadastrarHospede.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btncadastrarHospede.setBounds(1198, 261, 254, 47);
 		contentPaneTela.add(btncadastrarHospede);
 		
 		JButton btnCadastrarFuncionrio = new JButton("Cadastrar Funcionario");
@@ -114,8 +110,8 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnCadastrarFuncionrio.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 19));
-		btnCadastrarFuncionrio.setBounds(957, 482, 254, 47);
+		btnCadastrarFuncionrio.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnCadastrarFuncionrio.setBounds(1198, 368, 254, 47);
 		contentPaneTela.add(btnCadastrarFuncionrio);
 		
 		JButton btnReserva = new JButton("Reserva de Hospede");
@@ -128,8 +124,8 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnReserva.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 19));
-		btnReserva.setBounds(957, 583, 254, 47);
+		btnReserva.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnReserva.setBounds(1198, 475, 254, 47);
 		contentPaneTela.add(btnReserva);
 		
 		JButton btnEndereço = new JButton("Cadastrar Endereço");
@@ -142,15 +138,11 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnEndereço.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-		btnEndereço.setBounds(957, 680, 254, 47);
+		btnEndereço.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnEndereço.setBounds(1198, 589, 254, 47);
 		contentPaneTela.add(btnEndereço);
 		
-		JLabel lblNewLabel_1 = new JLabel("Reservas ");
-		lblNewLabel_1.setBounds(435, 258, 325, 14);
-		contentPaneTela.add(lblNewLabel_1);
-		
-		JButton btnVoltarPricipal = new JButton("Voltar");
+		JButton btnVoltarPricipal = new JButton("Sair");
 		btnVoltarPricipal.setForeground(new Color(255, 255, 255));
 		btnVoltarPricipal.setBackground(new Color(0, 0, 255));
 		btnVoltarPricipal.addActionListener(new ActionListener() {
@@ -161,9 +153,24 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnVoltarPricipal.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnVoltarPricipal.setBounds(957, 890, 254, 47);
+		btnVoltarPricipal.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnVoltarPricipal.setBounds(1198, 721, 254, 47);
 		contentPaneTela.add(btnVoltarPricipal);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(155, 214, 249));
+		panel.setBounds(209, 261, 690, 30);
+		contentPaneTela.add(panel);
+		
+		JLabel lblNewLabel = new JLabel("RESERVAS");
+		lblNewLabel.setForeground(new Color(0, 0, 128));
+		lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/Imagens/background.png")));
+		lblNewLabel_1.setBounds(0, 0, 1949, 1061);
+		contentPaneTela.add(lblNewLabel_1);
 		atualizarTabela();
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {

@@ -27,6 +27,8 @@ import Controle.HospedeDao;
 import modelo.Endereco;
 import modelo.Funcionario;
 import modelo.Hospede;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 
 public class TelaCadastroHospede extends JFrame {
 
@@ -51,31 +53,25 @@ public class TelaCadastroHospede extends JFrame {
 
 		setBounds(100, 100, 2000, 1400);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(135, 206, 250));
+		contentPane.setBackground(new Color(155, 214, 249));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("Cadastrar Hóspede");
-		lblNewLabel.setForeground(new Color(0, 0, 128));
-		lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 28));
-		lblNewLabel.setBounds(310, 26, 268, 39);
-		contentPane.add(lblNewLabel);
-
 		JLabel lblNewLabel_1 = new JLabel("Data Nascimento:");
-		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_1.setBounds(76, 232, 158, 23);
+		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_1.setBounds(177, 343, 190, 23);
 		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Telefone: ");
-		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_2.setBounds(147, 271, 103, 23);
+		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_2.setBounds(177, 380, 135, 23);
 		contentPane.add(lblNewLabel_2);
 
 		JLabel lblNewLabel_3 = new JLabel("Endereço:");
-		lblNewLabel_3.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_3.setBounds(142, 305, 92, 23);
+		lblNewLabel_3.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_3.setBounds(177, 422, 135, 23);
 		contentPane.add(lblNewLabel_3);
 
 		txtDataNasci = new JTextField();
@@ -88,7 +84,7 @@ public class TelaCadastroHospede extends JFrame {
 		txtDataNasci = new JFormattedTextField(mascaraDataNasci);
 		/**********/
 
-		txtDataNasci.setBounds(250, 232, 116, 20);
+		txtDataNasci.setBounds(377, 338, 116, 26);
 		contentPane.add(txtDataNasci);
 		txtDataNasci.setColumns(10);
 
@@ -103,12 +99,12 @@ public class TelaCadastroHospede extends JFrame {
 		txtTelefoneHospede = new JFormattedTextField(mascaraTelefoneHospede);
 		/**********/
 
-		txtTelefoneHospede.setBounds(249, 271, 135, 20);
+		txtTelefoneHospede.setBounds(292, 377, 135, 26);
 		contentPane.add(txtTelefoneHospede);
 		txtTelefoneHospede.setColumns(10);
 
 		txtEndereçoHospede = new JTextField();
-		txtEndereçoHospede.setBounds(247, 305, 152, 20);
+		txtEndereçoHospede.setBounds(292, 418, 220, 28);
 		contentPane.add(txtEndereçoHospede);
 		txtEndereçoHospede.setColumns(10);
 
@@ -200,8 +196,8 @@ public class TelaCadastroHospede extends JFrame {
 
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 19));
-		btnNewButton.setBounds(482, 100, 165, 33);
+		btnNewButton.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton.setBounds(276, 524, 165, 47);
 		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Alterar");
@@ -319,8 +315,8 @@ public class TelaCadastroHospede extends JFrame {
 		});
 		btnNewButton_1.setForeground(new Color(255, 255, 255));
 		btnNewButton_1.setBackground(new Color(0, 0, 255));
-		btnNewButton_1.setFont(new Font("Sitka Subheading", Font.BOLD, 17));
-		btnNewButton_1.setBounds(482, 145, 165, 33);
+		btnNewButton_1.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton_1.setBounds(528, 524, 165, 47);
 		contentPane.add(btnNewButton_1);
 
 		JButton btnNewButton_2 = new JButton("Excluir");
@@ -360,23 +356,24 @@ public class TelaCadastroHospede extends JFrame {
 			}
 		});
 		btnNewButton_2.setForeground(new Color(0, 0, 255));
-		btnNewButton_2.setFont(new Font("Sitka Subheading", Font.BOLD, 17));
-		btnNewButton_2.setBounds(482, 189, 165, 33);
+		btnNewButton_2.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton_2.setBounds(528, 611, 165, 47);
 		contentPane.add(btnNewButton_2);
 
 		JLabel lblNewLabel_4 = new JLabel("Nome:");
-		lblNewLabel_4.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_4.setBounds(164, 105, 59, 23);
+		lblNewLabel_4.setForeground(new Color(0, 0, 0));
+		lblNewLabel_4.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_4.setBounds(177, 208, 74, 23);
 		contentPane.add(lblNewLabel_4);
 
 		txtNomeHospede = new JTextField();
-		txtNomeHospede.setBounds(249, 105, 135, 20);
+		txtNomeHospede.setBounds(261, 210, 296, 23);
 		contentPane.add(txtNomeHospede);
 		txtNomeHospede.setColumns(10);
 
-		JLabel lblNewLabel_5 = new JLabel("Cpf:");
-		lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_5.setBounds(188, 149, 62, 23);
+		JLabel lblNewLabel_5 = new JLabel("CEP:");
+		lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_5.setBounds(177, 252, 62, 23);
 		contentPane.add(lblNewLabel_5);
 
 		MaskFormatter mascaraCpfHospede = null;
@@ -388,22 +385,22 @@ public class TelaCadastroHospede extends JFrame {
 		txtCpfHospede = new JFormattedTextField(mascaraCpfHospede);
 		/**********/
 
-		txtCpfHospede.setBounds(250, 149, 86, 20);
+		txtCpfHospede.setBounds(261, 254, 86, 23);
 		contentPane.add(txtCpfHospede);
 		txtCpfHospede.setColumns(10);
 
 		JLabel lblNewLabel_6 = new JLabel("Email:");
-		lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD, 18));
-		lblNewLabel_6.setBounds(164, 184, 59, 26);
+		lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_6.setBounds(177, 301, 73, 26);
 		contentPane.add(lblNewLabel_6);
 
 		txtEmailHospede = new JTextField();
-		txtEmailHospede.setBounds(250, 186, 86, 20);
+		txtEmailHospede.setBounds(261, 301, 296, 23);
 		contentPane.add(txtEmailHospede);
 		txtEmailHospede.setColumns(10);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(723, 107, 648, 689);
+		scrollPane.setBounds(930, 208, 648, 689);
 		contentPane.add(scrollPane);
 
 		table = new JTable();
@@ -411,6 +408,9 @@ public class TelaCadastroHospede extends JFrame {
 		scrollPane.setViewportView(table);
 
 		JButton btnNewButton_3 = new JButton("Voltar");
+		btnNewButton_3.setForeground(new Color(255, 255, 255));
+		btnNewButton_3.setBackground(new Color(0, 0, 255));
+		btnNewButton_3.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipal telaPrincipal = new TelaPrincipal();
@@ -419,8 +419,33 @@ public class TelaCadastroHospede extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton_3.setBounds(435, 783, 183, 53);
+		btnNewButton_3.setBounds(276, 611, 164, 47);
 		contentPane.add(btnNewButton_3);
+						
+						JPanel panel = new JPanel();
+						panel.setBackground(new Color(153, 204, 255));
+						panel.setBounds(0, 0, 1924, 53);
+						contentPane.add(panel);
+						
+						JLabel lblNewLabel_7 = new JLabel("Cadastrar Hospede");
+						lblNewLabel_7.setForeground(new Color(0, 0, 128));
+						lblNewLabel_7.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
+						panel.add(lblNewLabel_7);
+						
+						JPanel panel_1 = new JPanel();
+						panel_1.setBackground(new Color(155, 214, 249));
+						panel_1.setBounds(930, 177, 648, 32);
+						contentPane.add(panel_1);
+						
+						JLabel lblNewLabel = new JLabel("Cadastros");
+						lblNewLabel.setForeground(new Color(0, 0, 128));
+						lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+						panel_1.add(lblNewLabel);
+						
+						JLabel lblNewLabel_8 = new JLabel("New label");
+						lblNewLabel_8.setIcon(new ImageIcon(TelaCadastroHospede.class.getResource("/Imagens/background.png")));
+						lblNewLabel_8.setBounds(0, 0, 1924, 1061);
+						contentPane.add(lblNewLabel_8);
 
 		atualizarTabela();
 	}

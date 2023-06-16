@@ -96,19 +96,9 @@ public class TelaReserva extends JFrame {
 		setContentPane(contentPaneTela_1);
 		contentPaneTela_1.setLayout(null);
 
-		JLabel lblNewLabel_1 = new JLabel("Reserva da Hospedagem");
-		lblNewLabel_1.setBounds(478, 55, 586, 54);
-		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 35));
-		contentPaneTela_1.add(lblNewLabel_1);
-
 		JLabel lblNewLabel_2 = new JLabel("Quantidade de Dias: ");
-		lblNewLabel_2.setBounds(93, 370, 221, 26);
-		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-
-		lblNewLabel_1.setForeground(new Color(0, 0, 128));
-		lblNewLabel_1.setBackground(new Color(255, 255, 255));
-		lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 48));
-		contentPaneTela_1.add(lblNewLabel_1);
+		lblNewLabel_2.setBounds(189, 358, 221, 26);
+		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 
 		lblNewLabel_2.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 20));
 
@@ -123,7 +113,7 @@ public class TelaReserva extends JFrame {
 		}
 
 		JLabel lblNewLabel_5 = new JLabel("Quantidade de Pessoas:");
-		lblNewLabel_5.setBounds(93, 591, 233, 27);
+		lblNewLabel_5.setBounds(189, 503, 233, 27);
 		lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
 
 		contentPaneTela_1.add(lblNewLabel_5);
@@ -132,8 +122,8 @@ public class TelaReserva extends JFrame {
 		MaskFormatter mascaraQuantdPessoa = null;
 
 		JLabel lblNewLabel_6 = new JLabel("Nome Completo:");
-		lblNewLabel_6.setBounds(113, 298, 188, 20);
-		lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_6.setBounds(189, 310, 188, 20);
+		lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 		contentPaneTela_1.add(lblNewLabel_6);
 
 		txtNomecomple = new JTextField();
@@ -144,7 +134,7 @@ public class TelaReserva extends JFrame {
 		contentPaneTela_1.add(lblNewLabel_6);
 
 		txtNomecomple_1 = new JTextField();
-		txtNomecomple_1.setBounds(99, 329, 310, 20);
+		txtNomecomple_1.setBounds(361, 310, 310, 26);
 		contentPaneTela_1.add(txtNomecomple_1);
 		txtNomecomple_1.setColumns(10);
 
@@ -238,10 +228,10 @@ public class TelaReserva extends JFrame {
 
 			}
 		});
-		btnRealizarReserva.setBounds(93, 680, 188, 33);
+		btnRealizarReserva.setBounds(318, 683, 201, 53);
 		btnRealizarReserva.setForeground(new Color(255, 255, 255));
 		btnRealizarReserva.setBackground(new Color(0, 0, 128));
-		btnRealizarReserva.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 18));
+		btnRealizarReserva.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 
 		contentPaneTela_1.add(btnRealizarReserva);
 		contentPaneTela_1.add(btnRealizarReserva);
@@ -374,8 +364,8 @@ public class TelaReserva extends JFrame {
 		});
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(0, 0, 255));
-		btnNewButton.setFont(new Font("Sitka Subheading", Font.BOLD, 16));
-		btnNewButton.setBounds(560, 624, 152, 33);
+		btnNewButton.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton.setBounds(581, 683, 201, 53);
 		contentPaneTela_1.add(btnNewButton);
 
 		JButton btnCancelar = new JButton("Excluir");
@@ -415,8 +405,8 @@ public class TelaReserva extends JFrame {
 			}
 		});
 		btnCancelar.setForeground(new Color(0, 0, 255));
-		btnCancelar.setFont(new Font("Sitka Subheading", Font.BOLD, 16));
-		btnCancelar.setBounds(560, 680, 152, 33);
+		btnCancelar.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnCancelar.setBounds(581, 773, 201, 53);
 		contentPaneTela_1.add(btnCancelar);
 
 		txtQuantidadeDias = new JTextField();
@@ -428,17 +418,19 @@ public class TelaReserva extends JFrame {
 			e.printStackTrace();
 		}
 
-		JLabel lblNewLabel = new JLabel("CPF");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel.setBounds(113, 228, 46, 14);
+		JLabel lblNewLabel = new JLabel("CPF:");
+		lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel.setBounds(189, 256, 46, 22);
 		contentPaneTela_1.add(lblNewLabel);
 
 		txtCpf = new JTextField();
 		txtCpf.setColumns(10);
-		txtCpf.setBounds(113, 253, 310, 20);
+		txtCpf.setBounds(245, 253, 310, 26);
 		contentPaneTela_1.add(txtCpf);
 
 		JButton btnNewButton_1 = new JButton("Buscar Hospede");
+		btnNewButton_1.setForeground(new Color(0, 0, 255));
+		btnNewButton_1.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -465,11 +457,11 @@ public class TelaReserva extends JFrame {
 
 			}
 		});
-		btnNewButton_1.setBounds(466, 247, 132, 33);
+		btnNewButton_1.setBounds(622, 253, 179, 30);
 		contentPaneTela_1.add(btnNewButton_1);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(722, 130, 661, 614);
+		scrollPane.setBounds(1084, 249, 661, 614);
 		contentPaneTela_1.add(scrollPane);
 
 		table = new JTable();
@@ -478,6 +470,9 @@ public class TelaReserva extends JFrame {
 		scrollPane.setViewportView(table);
 
 		JButton btnNewButton_2 = new JButton("Voltar");
+		btnNewButton_2.setBackground(new Color(0, 0, 255));
+		btnNewButton_2.setForeground(new Color(255, 255, 255));
+		btnNewButton_2.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipal telaPrincipal = new TelaPrincipal();
@@ -486,51 +481,82 @@ public class TelaReserva extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton_2.setBounds(359, 682, 132, 27);
+		btnNewButton_2.setBounds(318, 774, 201, 51);
 		contentPaneTela_1.add(btnNewButton_2);
 
-		JLabel lblNewLabel_3 = new JLabel("servicoQuarto");
-		lblNewLabel_3.setBounds(93, 460, 124, 14);
+		JLabel lblNewLabel_3 = new JLabel("Serviço de Quarto:");
+		lblNewLabel_3.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_3.setBounds(189, 401, 274, 31);
 		contentPaneTela_1.add(lblNewLabel_3);
 
-		rdbtnSim = new JRadioButton("sim ");
+		rdbtnSim = new JRadioButton("Sim ");
+		rdbtnSim.setFont(new Font("Sitka Subheading", Font.BOLD, 16));
+		rdbtnSim.setBackground(new Color(155, 214, 249));
 		buttonGroup.add(rdbtnSim);
-		rdbtnSim.setBounds(100, 482, 63, 23);
+		rdbtnSim.setBounds(189, 439, 63, 40);
 		contentPaneTela_1.add(rdbtnSim);
 
-		rdbtnNao = new JRadioButton("nao");
+		rdbtnNao = new JRadioButton("Não");
+		rdbtnNao.setFont(new Font("Sitka Subheading", Font.BOLD, 16));
+		rdbtnNao.setBackground(new Color(155, 214, 249));
 		buttonGroup.add(rdbtnNao);
-		rdbtnNao.setBounds(165, 482, 63, 23);
+		rdbtnNao.setBounds(299, 439, 63, 40);
 		contentPaneTela_1.add(rdbtnNao);
 
-		JLabel lblNewLabel_5_1 = new JLabel("forma de pagamento");
+		JLabel lblNewLabel_5_1 = new JLabel("Forma de Pagamento:");
 		lblNewLabel_5_1.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
-		lblNewLabel_5_1.setBounds(93, 526, 233, 27);
+		lblNewLabel_5_1.setBounds(189, 570, 233, 27);
 		contentPaneTela_1.add(lblNewLabel_5_1);
 
-		JLabel lblNewLabel_4 = new JLabel("valor diaria");
-		lblNewLabel_4.setBounds(330, 416, 161, 20);
+		JLabel lblNewLabel_4 = new JLabel("Valor da Diária:");
+		lblNewLabel_4.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_4.setBounds(499, 401, 161, 30);
 		contentPaneTela_1.add(lblNewLabel_4);
 
 		txtQuantidadeHospedes = new JTextField();
-		txtQuantidadeHospedes.setBounds(93, 629, 217, 20);
+		txtQuantidadeHospedes.setBounds(189, 534, 217, 25);
 		contentPaneTela_1.add(txtQuantidadeHospedes);
 		txtQuantidadeHospedes.setColumns(10);
 
 		txtFormaPagamento = new JTextField();
-		txtFormaPagamento.setBounds(92, 552, 191, 20);
+		txtFormaPagamento.setBounds(189, 606, 201, 26);
 		contentPaneTela_1.add(txtFormaPagamento);
 		txtFormaPagamento.setColumns(10);
 
 		txtquantDias = new JTextField();
-		txtquantDias.setBounds(99, 414, 132, 20);
+		txtquantDias.setBounds(387, 361, 98, 26);
 		contentPaneTela_1.add(txtquantDias);
 		txtquantDias.setColumns(10);
 
 		txtValorDiaria = new JTextField();
-		txtValorDiaria.setBounds(330, 447, 98, 20);
+		txtValorDiaria.setBounds(530, 446, 98, 26);
 		contentPaneTela_1.add(txtValorDiaria);
 		txtValorDiaria.setColumns(10);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(153, 204, 255));
+		panel.setBounds(0, 0, 1924, 53);
+		contentPaneTela_1.add(panel);
+		
+		JLabel lblNewLabel_7 = new JLabel("Cadastrar Reserva");
+		lblNewLabel_7.setForeground(new Color(0, 0, 128));
+		lblNewLabel_7.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
+		panel.add(lblNewLabel_7);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(155, 214, 249));
+		panel_1.setBounds(1084, 216, 661, 32);
+		contentPaneTela_1.add(panel_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("Cadastros");
+		lblNewLabel_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+		panel_1.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/background.png")));
+		lblNewLabel_8.setBounds(0, 0, 1924, 1061);
+		contentPaneTela_1.add(lblNewLabel_8);
 		atualizarTabela();
 
 	}
