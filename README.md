@@ -35,6 +35,7 @@ O sistema é projetado para oferecer ao usuário (funcionário) uma ampla gama d
 
 
 # 📈 Fluxograma do Sistema:
+![Fluxograma](https://github.com/MariaTerezaWippel/GestaoDeHotel/assets/111304031/f1120c95-a359-40c5-86f9-5734a79c76b5)
 
 
 
