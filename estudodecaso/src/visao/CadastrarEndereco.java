@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
@@ -20,15 +21,19 @@ import Controle.EnderecoDao;
 import Controle.HospedeDao;
 import modelo.Endereco;
 import modelo.Hospede;
+import javax.swing.JComboBox;
+import javax.swing.event.AncestorListener;
+import javax.swing.event.AncestorEvent;
 
 public class CadastrarEndereco extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtCep;
-	private JTextField txtEstado;
 	private JTextField txtCidade;
 	private JTextField txtBairro;
 	private JTextField txtRua;
+	private ArrayList<String>listaEstados;
+	private JComboBox cbxEstados;
 
 	public CadastrarEndereco() {
 		setTitle("Tela Cadastro Endereço");
@@ -86,11 +91,6 @@ public class CadastrarEndereco extends JFrame {
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
-		txtEstado = new JTextField();
-		txtEstado.setBounds(779, 407, 39, 20);
-		contentPane.add(txtEstado);
-		txtEstado.setColumns(10);
-
 		txtCidade = new JTextField();
 		txtCidade.setBounds(779, 462, 129, 20);
 		contentPane.add(txtCidade);
@@ -113,13 +113,14 @@ public class CadastrarEndereco extends JFrame {
 				String erros = "";
 
 				String cep = txtCep.getText().replace("-", "");
-				String estado = txtEstado.getText();
 				String cidade = txtCidade.getText();
 				String bairro = txtBairro.getText();
 				String rua = txtRua.getText();
+				String estado =(String) cbxEstados.getSelectedItem();
 
 				Endereco endereco = new Endereco();
-
+				endereco.setEstado(estado);
+				
 				if (cep == null || cep.trim() == "" || cep.isEmpty()) {
 					erros += " Cep\n";
 				} else {
@@ -162,7 +163,7 @@ public class CadastrarEndereco extends JFrame {
 		btnEndereco.setBackground(new Color(255, 255, 255));
 		btnEndereco.setForeground(new Color(0, 0, 255));
 		btnEndereco.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnEndereco.setBounds(1101, 348, 173, 37);
+		btnEndereco.setBounds(1104, 413, 173, 37);
 		contentPane.add(btnEndereco);
 
 		JButton btnEditarEnde = new JButton("Editar");
@@ -172,12 +173,14 @@ public class CadastrarEndereco extends JFrame {
 				String erros = "";
 
 				String cep = txtCep.getText().replace("-", "");
-				String estado = txtEstado.getText();
 				String cidade = txtCidade.getText();
 				String bairro = txtBairro.getText();
 				String rua = txtRua.getText();
 
 				Endereco endereco = new Endereco();
+				String estado =(String) cbxEstados.getSelectedItem();
+
+				endereco.setEstado(estado);
 
 				if (cep == null || cep.trim() == "" || cep.isEmpty()) {
 					erros += " Cep\n";
@@ -220,7 +223,7 @@ public class CadastrarEndereco extends JFrame {
 		btnEditarEnde.setBackground(new Color(255, 255, 255));
 		btnEditarEnde.setForeground(new Color(0, 0, 255));
 		btnEditarEnde.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnEditarEnde.setBounds(1101, 414, 173, 37);
+		btnEditarEnde.setBounds(1104, 479, 173, 37);
 		contentPane.add(btnEditarEnde);
 
 		JButton btnExcluirEnde = new JButton("Excluir");
@@ -253,7 +256,7 @@ public class CadastrarEndereco extends JFrame {
 		});
 		btnExcluirEnde.setForeground(new Color(0, 0, 255));
 		btnExcluirEnde.setFont(new Font("Dialog", Font.BOLD, 20));
-		btnExcluirEnde.setBounds(1101, 483, 170, 37);
+		btnExcluirEnde.setBounds(1104, 548, 170, 37);
 		contentPane.add(btnExcluirEnde);
 
 		JButton btnNewButton_1 = new JButton("Voltar");
@@ -271,14 +274,62 @@ public class CadastrarEndereco extends JFrame {
 		});
 		btnNewButton_1.setBounds(1104, 639, 170, 37);
 		contentPane.add(btnNewButton_1);
+		
+		cbxEstados = new JComboBox();
+		cbxEstados.addAncestorListener(new AncestorListener() {
+			public void ancestorAdded(AncestorEvent event) {
+				listaEstados = new ArrayList<>();
+				listaEstados = listaEstado();
+				for(int i = 0; i < listaEstados.size();i++) {
+					cbxEstados.addItem(listaEstados.get(i));
+				}
+			}
+			public void ancestorMoved(AncestorEvent event) {
+			}
+			public void ancestorRemoved(AncestorEvent event) {
+			}
+		});
+		cbxEstados.setBounds(779, 403, 129, 22);
+		contentPane.add(cbxEstados);
+		
+		JButton btnNewButton = new JButton("Buscar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String cep = txtCep.getText().replace("-", "");
+				Endereco endereco = new Endereco();
+				endereco.setCep(Long.parseLong(cep));
+				listaEndereco(endereco);
+			}
+		});
+		btnNewButton.setBounds(1104, 348, 173, 46);
+		contentPane.add(btnNewButton);
 	}
 
 	public void limparDados() {
 		txtCep.setText("");
-		txtEstado.setText("");
 		txtCidade.setText("");
 		txtBairro.setText("");
 		txtRua.setText("");
 
+	}
+	public static ArrayList<String>listaEstado(){
+		ArrayList<String>listaEstados= new ArrayList<>();
+		listaEstados.add("SC");
+		listaEstados.add("RS");
+		listaEstados.add("PR");
+		return listaEstados;
+		
+	}
+	public void listaEndereco(Endereco endereco) {
+	EnderecoDao	enderecoDao = new EnderecoDao();
+	enderecoDao.getIntancia();
+	Endereco enderecoNovo = new  Endereco();
+	enderecoNovo=  enderecoDao.consultarEndereco(endereco);
+	txtCep.setText(String.valueOf(enderecoNovo.getCep()));
+    txtCidade.setText(enderecoNovo.getCidade());
+	txtBairro.setText(enderecoNovo.getBairro());
+	txtRua.setText(enderecoNovo.getRua());
+	cbxEstados.setSelectedItem(enderecoNovo.getEstado());
+	
 	}
 }
