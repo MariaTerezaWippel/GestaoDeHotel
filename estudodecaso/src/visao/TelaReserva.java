@@ -447,7 +447,7 @@ public class TelaReserva extends JFrame {
 				hospede.setCpf(Long.valueOf(cpf));
 				HospedeDao hospedeDao = new HospedeDao();
 				hospedeDao.getIntancia();
-				hospede = hospedeDao.consultarHospede(hospede);
+				hospede = hospedeDao.consultarHospede();
 				if (hospede != null) {
 					txtNomecomple_1.setText(hospede.getNome());
 					txtCpf.setEditable(false);

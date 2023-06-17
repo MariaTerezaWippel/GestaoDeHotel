@@ -55,11 +55,11 @@ public class HospedeDao {
 		return false;
 	}
 
-	public Hospede consultarHospede(Hospede hospede) {
+	public Hospede consultarHospede() {
 		Hospede hosp = new Hospede();
 		for (Hospede h : listaHospede) {
 
-			if (h.getCpf().equals(hospede.getCpf())) {
+			if (h.getCpf().equals(hosp.getCpf())) {
 				hosp.setCpf(h.getCpf());
 				hosp.setDataNascimento(h.getDataNascimento());
 				hosp.setEmail(h.getEmail());
