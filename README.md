@@ -49,6 +49,12 @@ O sistema é projetado para oferecer ao usuário (funcionário) uma ampla gama d
 <p align="justify"> Com o objetivo de aumentar a eficiência do sistema, é necessário incorporar tecnologias adicionais para aprimorar a compreensão e minimizar o risco de falhas</p>
 
 # 📉 Diagrama de Classes:
+![](https://github.com/MariaTerezaWippel/GestaoDeHotel/assets/111304031/f6914b14-400c-4a7b-ab3c-07b155a53077)
+![](https://github.com/MariaTerezaWippel/GestaoDeHotel/assets/111304031/5e9b0cba-9bf7-4828-8f22-e6de797f098b)
+![](https://github.com/MariaTerezaWippel/GestaoDeHotel/assets/111304031/4e75eaa3-19b2-4cbb-80f2-c74427f817f6)
+
+
+
 
 #  👨‍💻  Contribuintes
 
