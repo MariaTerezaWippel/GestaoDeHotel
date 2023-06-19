@@ -74,7 +74,7 @@ public class TelaCadastroHospede extends JFrame {
 		lblNewLabel_3.setBounds(177, 422, 135, 23);
 		contentPane.add(lblNewLabel_3);
 
-		txtDataNasci = new JTextField();
+		/**********/
 		MaskFormatter mascaraDataNasci = null;
 		try {
 			mascaraDataNasci = new MaskFormatter("##/##/####");
@@ -88,7 +88,7 @@ public class TelaCadastroHospede extends JFrame {
 		contentPane.add(txtDataNasci);
 		txtDataNasci.setColumns(10);
 
-		txtTelefoneHospede = new JTextField();
+	
 		/**********/
 		MaskFormatter mascaraTelefoneHospede = null;
 		try {
@@ -103,16 +103,17 @@ public class TelaCadastroHospede extends JFrame {
 		contentPane.add(txtTelefoneHospede);
 		txtTelefoneHospede.setColumns(10);
 
-		txtEndereçoHospede = new JTextField();
+		
 		/**********/
 		MaskFormatter mascaraCep = null;
 		try {
-			mascaraCep = new MaskFormatter("###.###.###-##");
+			mascaraCep = new MaskFormatter("#####-###");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 		txtEndereçoHospede = new JFormattedTextField(mascaraCep);
 		/**********/
+		
 		txtEndereçoHospede.setBounds(292, 418, 220, 28);
 		contentPane.add(txtEndereçoHospede);
 		txtEndereçoHospede.setColumns(10);
@@ -125,9 +126,8 @@ public class TelaCadastroHospede extends JFrame {
 				String cpf = txtCpfHospede.getText().replace("-", "").replace(".", "");
 				String email = txtEmailHospede.getText();
 				String dataNascimento = txtDataNasci.getText();
-				String telefone = txtTelefoneHospede.getText().replace("(", "").replace(")", "").replace("-", "")
-						.replace(" ", "");
-				String enderecoCep = txtEndereçoHospede.getText();
+				String telefone = txtTelefoneHospede.getText().replace("(", "").replace(")", "").replace("-", "").replace(" ", "");
+				String enderecoCep = txtEndereçoHospede.getText().replace("-", "");
 
 				String erros = "";
 
@@ -165,10 +165,9 @@ public class TelaCadastroHospede extends JFrame {
 					erros += "cargo\n";
 				} else {
 					Long enderecoInt = Long.valueOf(enderecoCep);
-
 					endereco.setCep(enderecoInt);
-
 					hospede.setEndereco(endereco);
+					
 				}
 				if (erros.trim() != "") {
 					JOptionPane.showMessageDialog(null, "Dados inválidos\n" + erros);
@@ -206,7 +205,7 @@ public class TelaCadastroHospede extends JFrame {
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		btnNewButton.setBounds(276, 524, 165, 47);
+		btnNewButton.setBounds(275, 524, 165, 47);
 		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Alterar");
@@ -219,6 +218,7 @@ public class TelaCadastroHospede extends JFrame {
 
 				txtCpfHospede.setEditable(false);
 				int position = table.getSelectedRow();
+				
 				String erros = "";
 
 				if (position == -1) {
