@@ -69,24 +69,24 @@ public class TelaCadastroFuncionario extends JFrame {
 		contentPaneTela.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Nome:");
-		lblNewLabel.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel.setBounds(495, 253, 75, 21);
 
 		contentPaneTela.add(lblNewLabel);
 
 		txtNome = new JTextField();
 		txtNome.setForeground(new Color(0, 0, 0));
-		txtNome.setBounds(495, 290, 405, 21);
+		txtNome.setBounds(495, 290, 304, 21);
 		contentPaneTela.add(txtNome);
 		txtNome.setColumns(10);
 
 		JLabel lblNewLabel_1 = new JLabel("CPF:");
-		lblNewLabel_1.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
+		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_1.setBounds(495, 322, 66, 21);
 		contentPaneTela.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Email:");
-		lblNewLabel_2.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_2.setBounds(495, 385, 114, 21);
 
 		contentPaneTela.add(lblNewLabel_2);
@@ -116,12 +116,6 @@ public class TelaCadastroFuncionario extends JFrame {
 		table.setModel(dataModel);
 		scrollPane.setViewportView(table);
 
-		JLabel lblNewLabel_7 = new JLabel(" Cadastro de Funcionario");
-		lblNewLabel_7.setForeground(new Color(0, 0, 128));
-		lblNewLabel_7.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 36));
-		lblNewLabel_7.setBounds(784, 70, 491, 48);
-		contentPaneTela.add(lblNewLabel_7);
-
 		/**********/
 		MaskFormatter mascaraCpf = null;
 		try {
@@ -137,7 +131,7 @@ public class TelaCadastroFuncionario extends JFrame {
 		txtCpf.setColumns(10);
 
 		txtEmailFuncionario = new JTextField();
-		txtEmailFuncionario.setBounds(495, 415, 403, 20);
+		txtEmailFuncionario.setBounds(495, 415, 304, 20);
 		contentPaneTela.add(txtEmailFuncionario);
 		txtEmailFuncionario.setColumns(10);
 
@@ -207,10 +201,10 @@ public class TelaCadastroFuncionario extends JFrame {
 
 			}
 		});
-		btnCadastrarFuncio.setForeground(new Color(0, 0, 255));
-		btnCadastrarFuncio.setBackground(new Color(255, 255, 255));
-		btnCadastrarFuncio.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnCadastrarFuncio.setBounds(495, 715, 217, 38);
+		btnCadastrarFuncio.setForeground(new Color(255, 255, 255));
+		btnCadastrarFuncio.setBackground(new Color(0, 0, 128));
+		btnCadastrarFuncio.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+		btnCadastrarFuncio.setBounds(731, 694, 184, 53);
 		contentPaneTela.add(btnCadastrarFuncio);
 
 		JButton btnNewButton_1 = new JButton("Alterar");
@@ -296,10 +290,10 @@ public class TelaCadastroFuncionario extends JFrame {
 
 			}
 		});
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		btnNewButton_1.setForeground(new Color(0, 0, 255));
-		btnNewButton_1.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnNewButton_1.setBounds(746, 715, 217, 38);
+		btnNewButton_1.setBackground(new Color(0, 0, 255));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+		btnNewButton_1.setBounds(949, 694, 184, 53);
 		contentPaneTela.add(btnNewButton_1);
 		atualizarTabela();
 
@@ -341,24 +335,24 @@ public class TelaCadastroFuncionario extends JFrame {
 			}
 		});
 		btnNewButton_2.setForeground(new Color(0, 0, 255));
-		btnNewButton_2.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnNewButton_2.setBounds(995, 715, 217, 38);
+		btnNewButton_2.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+		btnNewButton_2.setBounds(949, 778, 184, 53);
 		contentPaneTela.add(btnNewButton_2);
 
 		JLabel lblNewLabel_10 = new JLabel("Cargo:");
-		lblNewLabel_10.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
+		lblNewLabel_10.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_10.setBounds(495, 454, 75, 26);
 		contentPaneTela.add(lblNewLabel_10);
 
 		txtCargo = new JTextField();
-		txtCargo.setBounds(495, 491, 177, 20);
+		txtCargo.setBounds(495, 491, 184, 20);
 		contentPaneTela.add(txtCargo);
 		txtCargo.setColumns(10);
 
 		JButton btnNewButton = new JButton("Voltar");
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(0, 0, 255));
-		btnNewButton.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
+		btnNewButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipal telaPrincipal = new TelaPrincipal();
@@ -368,18 +362,33 @@ public class TelaCadastroFuncionario extends JFrame {
 
 			}
 		});
-		btnNewButton.setBounds(1245, 715, 217, 38);
+		btnNewButton.setBounds(731, 778, 184, 53);
 		contentPaneTela.add(btnNewButton);
 
 		txtFraseSecreta = new JTextField();
-		txtFraseSecreta.setBounds(495, 554, 225, 20);
+		txtFraseSecreta.setBounds(495, 554, 184, 20);
 		contentPaneTela.add(txtFraseSecreta);
 		txtFraseSecreta.setColumns(10);
 
 		JLabel lblNewLabel_3 = new JLabel("Frase Secreta:");
-		lblNewLabel_3.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
+		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(495, 522, 177, 26);
 		contentPaneTela.add(lblNewLabel_3);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(153, 204, 255));
+		panel.setBounds(0, 0, 1924, 53);
+		contentPaneTela.add(panel);
+		
+		JLabel lblNewLabel_7_1 = new JLabel("Cadastrar Funcionario");
+		lblNewLabel_7_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_7_1.setFont(new Font("Dialog", Font.BOLD, 42));
+		panel.add(lblNewLabel_7_1);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/background.png")));
+		lblNewLabel_4.setBounds(0, 0, 1924, 1061);
+		contentPaneTela.add(lblNewLabel_4);
 
 	}
 

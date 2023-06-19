@@ -61,7 +61,7 @@ public class TelaCadastroHospede extends JFrame {
 
 		JLabel lblNewLabel_1 = new JLabel("Data Nascimento:");
 		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
-		lblNewLabel_1.setBounds(177, 343, 190, 23);
+		lblNewLabel_1.setBounds(177, 336, 190, 23);
 		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Telefone: ");
@@ -196,7 +196,7 @@ public class TelaCadastroHospede extends JFrame {
 
 		btnNewButton.setBackground(new Color(0, 0, 128));
 		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton.setBounds(276, 524, 165, 47);
 		contentPane.add(btnNewButton);
 
@@ -315,7 +315,7 @@ public class TelaCadastroHospede extends JFrame {
 		});
 		btnNewButton_1.setForeground(new Color(255, 255, 255));
 		btnNewButton_1.setBackground(new Color(0, 0, 255));
-		btnNewButton_1.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton_1.setBounds(528, 524, 165, 47);
 		contentPane.add(btnNewButton_1);
 
@@ -356,7 +356,7 @@ public class TelaCadastroHospede extends JFrame {
 			}
 		});
 		btnNewButton_2.setForeground(new Color(0, 0, 255));
-		btnNewButton_2.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton_2.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton_2.setBounds(528, 611, 165, 47);
 		contentPane.add(btnNewButton_2);
 
@@ -373,7 +373,7 @@ public class TelaCadastroHospede extends JFrame {
 
 		JLabel lblNewLabel_5 = new JLabel("CEP:");
 		lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
-		lblNewLabel_5.setBounds(177, 252, 62, 23);
+		lblNewLabel_5.setBounds(177, 254, 62, 23);
 		contentPane.add(lblNewLabel_5);
 
 		MaskFormatter mascaraCpfHospede = null;
@@ -391,7 +391,7 @@ public class TelaCadastroHospede extends JFrame {
 
 		JLabel lblNewLabel_6 = new JLabel("Email:");
 		lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
-		lblNewLabel_6.setBounds(177, 301, 73, 26);
+		lblNewLabel_6.setBounds(177, 299, 73, 26);
 		contentPane.add(lblNewLabel_6);
 
 		txtEmailHospede = new JTextField();
@@ -410,7 +410,7 @@ public class TelaCadastroHospede extends JFrame {
 		JButton btnNewButton_3 = new JButton("Voltar");
 		btnNewButton_3.setForeground(new Color(255, 255, 255));
 		btnNewButton_3.setBackground(new Color(0, 0, 255));
-		btnNewButton_3.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnNewButton_3.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipal telaPrincipal = new TelaPrincipal();

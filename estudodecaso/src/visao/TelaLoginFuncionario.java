@@ -80,24 +80,6 @@ public class TelaLoginFuncionario extends JFrame {
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setBounds(51, 61, 46, 14);
 		panel.add(lblNewLabel_3);
-		
-				JLabel lblNewLabel_4 = new JLabel("Boulervard");
-				lblNewLabel_4.setBounds(173, 69, 251, 46);
-				panel.add(lblNewLabel_4);
-				lblNewLabel_4.setForeground(new Color(0, 0, 128));
-				
-						lblNewLabel_4.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 48));
-						
-								lblNewLabel_4.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
-								
-										JLabel lblNewLabel_1 = new JLabel(" Hotel");
-										lblNewLabel_1.setBounds(213, 30, 211, 44);
-										panel.add(lblNewLabel_1);
-										lblNewLabel_1.setForeground(new Color(0, 0, 128));
-										
-												lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 48));
-												
-														lblNewLabel_1.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 36));
 														
 														
 
@@ -119,21 +101,27 @@ public class TelaLoginFuncionario extends JFrame {
 																						txtEmail.setColumns(10);
 																						
 																								txtFraseSecreta = new JTextField();
-																								txtFraseSecreta.setBounds(226, 363, 217, 28);
+																								txtFraseSecreta.setBounds(226, 361, 217, 28);
 																								panel.add(txtFraseSecreta);
 																								txtFraseSecreta.setColumns(10);
 																								
 																								JLabel lblNewLabel_5 = new JLabel("Email:");
 																								lblNewLabel_5.setForeground(new Color(0, 0, 128));
-																								lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
-																								lblNewLabel_5.setBounds(150, 307, 75, 28);
+																								lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD, 18));
+																								lblNewLabel_5.setBounds(86, 306, 75, 28);
 																								panel.add(lblNewLabel_5);
 																								
 																								JLabel lblNewLabel_6 = new JLabel("Senha Secreta:");
 																								lblNewLabel_6.setForeground(new Color(0, 0, 128));
-																								lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
-																								lblNewLabel_6.setBounds(79, 368, 157, 21);
+																								lblNewLabel_6.setFont(new Font("Dialog", Font.BOLD, 18));
+																								lblNewLabel_6.setBounds(86, 368, 157, 21);
 																								panel.add(lblNewLabel_6);
+																								
+																								JLabel lblNewLabel_1 = new JLabel("Hotel Boulevard");
+																								lblNewLabel_1.setForeground(new Color(0, 0, 128));
+																								lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 40));
+																								lblNewLabel_1.setBounds(112, 83, 485, 44);
+																								panel.add(lblNewLabel_1);
 																				
 																				JLabel lblNewLabel = new JLabel("");
 																				lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/background.png")));

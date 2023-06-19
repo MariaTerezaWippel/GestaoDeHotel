@@ -24,6 +24,7 @@ import modelo.Hospede;
 import javax.swing.JComboBox;
 import javax.swing.event.AncestorListener;
 import javax.swing.event.AncestorEvent;
+import javax.swing.ImageIcon;
 
 public class CadastrarEndereco extends JFrame {
 
@@ -46,35 +47,31 @@ public class CadastrarEndereco extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("Cadastrar Endereço");
-		lblNewLabel.setForeground(new Color(0, 0, 128));
-		lblNewLabel.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 36));
-		lblNewLabel.setBounds(731, 167, 410, 32);
-		contentPane.add(lblNewLabel);
-
 		JLabel lblNewLabel_1 = new JLabel("CEP:");
-		lblNewLabel_1.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
-		lblNewLabel_1.setBounds(657, 348, 46, 32);
+		lblNewLabel_1.setForeground(new Color(0, 0, 0));
+		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblNewLabel_1.setBounds(684, 298, 60, 32);
 		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Estado:");
-		lblNewLabel_2.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
-		lblNewLabel_2.setBounds(657, 396, 94, 32);
+		lblNewLabel_2.setForeground(new Color(0, 0, 0));
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblNewLabel_2.setBounds(684, 346, 94, 32);
 		contentPane.add(lblNewLabel_2);
 
 		JLabel lblNewLabel_3 = new JLabel("Cidade:");
-		lblNewLabel_3.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
-		lblNewLabel_3.setBounds(657, 451, 94, 32);
+		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblNewLabel_3.setBounds(684, 401, 94, 32);
 		contentPane.add(lblNewLabel_3);
 
 		JLabel lblNewLabel_4 = new JLabel("Bairro:");
-		lblNewLabel_4.setFont(new Font("Dialog", Font.BOLD, 18));
-		lblNewLabel_4.setBounds(657, 501, 60, 32);
+		lblNewLabel_4.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblNewLabel_4.setBounds(684, 451, 83, 32);
 		contentPane.add(lblNewLabel_4);
 
 		JLabel lblNewLabel_5 = new JLabel("Rua:");
-		lblNewLabel_5.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 18));
-		lblNewLabel_5.setBounds(657, 553, 46, 32);
+		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblNewLabel_5.setBounds(684, 503, 46, 32);
 		contentPane.add(lblNewLabel_5);
 
 		/**********/
@@ -87,22 +84,22 @@ public class CadastrarEndereco extends JFrame {
 		txtCep = new JFormattedTextField(mascaraCep1);
 		/**********/
 
-		txtCep.setBounds(779, 356, 129, 20);
+		txtCep.setBounds(741, 306, 129, 24);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
 		txtCidade = new JTextField();
-		txtCidade.setBounds(779, 462, 129, 20);
+		txtCidade.setBounds(771, 409, 204, 24);
 		contentPane.add(txtCidade);
 		txtCidade.setColumns(10);
 
 		txtBairro = new JTextField();
-		txtBairro.setBounds(779, 510, 129, 20);
+		txtBairro.setBounds(759, 459, 216, 24);
 		contentPane.add(txtBairro);
 		txtBairro.setColumns(10);
 
 		txtRua = new JTextField();
-		txtRua.setBounds(778, 562, 169, 20);
+		txtRua.setBounds(740, 511, 235, 24);
 		contentPane.add(txtRua);
 		txtRua.setColumns(10);
 
@@ -160,13 +157,13 @@ public class CadastrarEndereco extends JFrame {
 
 			}
 		});
-		btnEndereco.setBackground(new Color(255, 255, 255));
-		btnEndereco.setForeground(new Color(0, 0, 255));
-		btnEndereco.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnEndereco.setBounds(1104, 413, 173, 37);
+		btnEndereco.setBackground(new Color(0, 0, 128));
+		btnEndereco.setForeground(new Color(255, 255, 255));
+		btnEndereco.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+		btnEndereco.setBounds(791, 602, 173, 58);
 		contentPane.add(btnEndereco);
 
-		JButton btnEditarEnde = new JButton("Editar");
+		JButton btnEditarEnde = new JButton("Alterar");
 		btnEditarEnde.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -220,10 +217,10 @@ public class CadastrarEndereco extends JFrame {
 
 			}
 		});
-		btnEditarEnde.setBackground(new Color(255, 255, 255));
-		btnEditarEnde.setForeground(new Color(0, 0, 255));
-		btnEditarEnde.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
-		btnEditarEnde.setBounds(1104, 479, 173, 37);
+		btnEditarEnde.setBackground(new Color(0, 0, 255));
+		btnEditarEnde.setForeground(new Color(255, 255, 255));
+		btnEditarEnde.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+		btnEditarEnde.setBounds(1005, 602, 173, 58);
 		contentPane.add(btnEditarEnde);
 
 		JButton btnExcluirEnde = new JButton("Excluir");
@@ -255,14 +252,14 @@ public class CadastrarEndereco extends JFrame {
 			}
 		});
 		btnExcluirEnde.setForeground(new Color(0, 0, 255));
-		btnExcluirEnde.setFont(new Font("Dialog", Font.BOLD, 20));
-		btnExcluirEnde.setBounds(1104, 548, 170, 37);
+		btnExcluirEnde.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+		btnExcluirEnde.setBounds(1005, 695, 170, 58);
 		contentPane.add(btnExcluirEnde);
 
 		JButton btnNewButton_1 = new JButton("Voltar");
 		btnNewButton_1.setForeground(new Color(255, 255, 255));
 		btnNewButton_1.setBackground(new Color(0, 0, 255));
-		btnNewButton_1.setFont(new Font("DejaVu Sans Mono", Font.BOLD, 20));
+		btnNewButton_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipal telaPrincipal = new TelaPrincipal();
@@ -272,7 +269,7 @@ public class CadastrarEndereco extends JFrame {
 
 			}
 		});
-		btnNewButton_1.setBounds(1104, 639, 170, 37);
+		btnNewButton_1.setBounds(791, 695, 170, 58);
 		contentPane.add(btnNewButton_1);
 		
 		cbxEstados = new JComboBox();
@@ -289,10 +286,12 @@ public class CadastrarEndereco extends JFrame {
 			public void ancestorRemoved(AncestorEvent event) {
 			}
 		});
-		cbxEstados.setBounds(779, 403, 129, 22);
+		cbxEstados.setBounds(771, 354, 138, 24);
 		contentPane.add(cbxEstados);
 		
 		JButton btnNewButton = new JButton("Buscar");
+		btnNewButton.setForeground(new Color(0, 0, 255));
+		btnNewButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String cep = txtCep.getText().replace("-", "");
@@ -301,8 +300,23 @@ public class CadastrarEndereco extends JFrame {
 				listaEndereco(endereco);
 			}
 		});
-		btnNewButton.setBounds(1104, 348, 173, 46);
+		btnNewButton.setBounds(1078, 298, 173, 37);
 		contentPane.add(btnNewButton);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(153, 204, 255));
+		panel.setBounds(0, 0, 1924, 53);
+		contentPane.add(panel);
+		
+		JLabel lblNewLabel_7 = new JLabel("Cadastrar Endereço");
+		lblNewLabel_7.setForeground(new Color(0, 0, 128));
+		lblNewLabel_7.setFont(new Font("Dialog", Font.BOLD, 42));
+		panel.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(CadastrarEndereco.class.getResource("/Imagens/background.png")));
+		lblNewLabel.setBounds(0, 0, 2251, 1141);
+		contentPane.add(lblNewLabel);
 	}
 
 	public void limparDados() {

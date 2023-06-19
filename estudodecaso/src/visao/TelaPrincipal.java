@@ -60,7 +60,7 @@ public class TelaPrincipal extends JFrame {
 		JLabel lblHotel = new JLabel("HotelBoulevard.com");
 		lblHotel.setForeground(new Color(0, 0, 128));
 		lblHotel.setBackground(new Color(255, 255, 255));
-		lblHotel.setBounds(778, 115, 396, 41);
+		lblHotel.setBounds(778, 115, 434, 41);
 		lblHotel.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
 		contentPaneTela.add(lblHotel);
 		
@@ -96,7 +96,7 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btncadastrarHospede.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btncadastrarHospede.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btncadastrarHospede.setBounds(1198, 261, 254, 47);
 		contentPaneTela.add(btncadastrarHospede);
 		
@@ -110,7 +110,7 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnCadastrarFuncionrio.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnCadastrarFuncionrio.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnCadastrarFuncionrio.setBounds(1198, 368, 254, 47);
 		contentPaneTela.add(btnCadastrarFuncionrio);
 		
@@ -124,7 +124,7 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnReserva.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnReserva.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnReserva.setBounds(1198, 475, 254, 47);
 		contentPaneTela.add(btnReserva);
 		
@@ -138,7 +138,7 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnEndereço.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnEndereço.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnEndereço.setBounds(1198, 589, 254, 47);
 		contentPaneTela.add(btnEndereço);
 		
@@ -153,7 +153,7 @@ public class TelaPrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnVoltarPricipal.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		btnVoltarPricipal.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnVoltarPricipal.setBounds(1198, 721, 254, 47);
 		contentPaneTela.add(btnVoltarPricipal);
 		
