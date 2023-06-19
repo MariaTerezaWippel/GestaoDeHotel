@@ -407,6 +407,18 @@ public class TelaReserva extends JFrame {
 		contentPaneTela_1.add(lblNewLabel);
 
 		txtCpf = new JTextField();
+		
+		/**********/
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCpf = new JFormattedTextField(mascaraCpf);
+		
+		/**********/
+		
 		txtCpf.setColumns(10);
 		txtCpf.setBounds(245, 253, 310, 26);
 		contentPaneTela_1.add(txtCpf);

@@ -104,6 +104,15 @@ public class TelaCadastroHospede extends JFrame {
 		txtTelefoneHospede.setColumns(10);
 
 		txtEndereçoHospede = new JTextField();
+		/**********/
+		MaskFormatter mascaraCep = null;
+		try {
+			mascaraCep = new MaskFormatter("###.###.###-##");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtEndereçoHospede = new JFormattedTextField(mascaraCep);
+		/**********/
 		txtEndereçoHospede.setBounds(292, 418, 220, 28);
 		contentPane.add(txtEndereçoHospede);
 		txtEndereçoHospede.setColumns(10);
@@ -385,7 +394,7 @@ public class TelaCadastroHospede extends JFrame {
 		txtCpfHospede = new JFormattedTextField(mascaraCpfHospede);
 		/**********/
 
-		txtCpfHospede.setBounds(261, 254, 86, 23);
+		txtCpfHospede.setBounds(261, 254, 166, 23);
 		contentPane.add(txtCpfHospede);
 		txtCpfHospede.setColumns(10);
 
