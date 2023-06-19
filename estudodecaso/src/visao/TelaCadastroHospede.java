@@ -69,7 +69,7 @@ public class TelaCadastroHospede extends JFrame {
 		lblNewLabel_2.setBounds(177, 380, 135, 23);
 		contentPane.add(lblNewLabel_2);
 
-		JLabel lblNewLabel_3 = new JLabel("Endereço:");
+		JLabel lblNewLabel_3 = new JLabel("CEP:");
 		lblNewLabel_3.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(177, 422, 135, 23);
 		contentPane.add(lblNewLabel_3);
@@ -371,7 +371,7 @@ public class TelaCadastroHospede extends JFrame {
 		contentPane.add(txtNomeHospede);
 		txtNomeHospede.setColumns(10);
 
-		JLabel lblNewLabel_5 = new JLabel("CEP:");
+		JLabel lblNewLabel_5 = new JLabel("CPF:");
 		lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
 		lblNewLabel_5.setBounds(177, 254, 62, 23);
 		contentPane.add(lblNewLabel_5);
