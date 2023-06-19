@@ -122,11 +122,11 @@ public class TelaLoginFuncionario extends JFrame {
 																								lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 40));
 																								lblNewLabel_1.setBounds(112, 83, 485, 44);
 																								panel.add(lblNewLabel_1);
-																				
-																				JLabel lblNewLabel = new JLabel("");
-																				lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/background.png")));
-																				lblNewLabel.setBounds(0, 0, 1934, 1021);
-																				contentPaneTela.add(lblNewLabel);
+																								
+																								JLabel lblNewLabel = new JLabel("");
+																								lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/background.png")));
+																								lblNewLabel.setBounds(0, 0, 1924, 1027);
+																								contentPaneTela.add(lblNewLabel);
 																				btnLogin.addActionListener(new ActionListener() {
 																					public void actionPerformed(ActionEvent e) {
 																						String erros = "";

@@ -61,7 +61,7 @@ public class TelaPrincipal extends JFrame {
 		lblHotel.setForeground(new Color(0, 0, 128));
 		lblHotel.setBackground(new Color(255, 255, 255));
 		lblHotel.setBounds(778, 115, 434, 41);
-		lblHotel.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
+		lblHotel.setFont(new Font("Dialog", Font.BOLD, 42));
 		contentPaneTela.add(lblHotel);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -162,9 +162,9 @@ public class TelaPrincipal extends JFrame {
 		panel.setBounds(209, 261, 690, 30);
 		contentPaneTela.add(panel);
 		
-		JLabel lblNewLabel = new JLabel("RESERVAS");
+		JLabel lblNewLabel = new JLabel("Reservas");
 		lblNewLabel.setForeground(new Color(0, 0, 128));
-		lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");

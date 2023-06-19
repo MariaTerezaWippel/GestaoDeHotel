@@ -385,6 +385,16 @@ public class TelaCadastroFuncionario extends JFrame {
 		lblNewLabel_7_1.setFont(new Font("Dialog", Font.BOLD, 42));
 		panel.add(lblNewLabel_7_1);
 		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(155, 214, 249));
+		panel_1.setBounds(928, 222, 518, 32);
+		contentPaneTela.add(panel_1);
+		
+		JLabel lblNewLabel_5 = new JLabel("Cadastros");
+		lblNewLabel_5.setForeground(new Color(0, 0, 128));
+		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+		panel_1.add(lblNewLabel_5);
+		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/background.png")));
 		lblNewLabel_4.setBounds(0, 0, 1924, 1061);
@@ -421,5 +431,4 @@ public class TelaCadastroFuncionario extends JFrame {
 		txtCargo.setText(funcionarioSelecionado.getCargo());
 		txtFraseSecreta.setText(funcionarioSelecionado.getFraseSecreta());
 	}
-
 }

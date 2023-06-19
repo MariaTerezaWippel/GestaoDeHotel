@@ -60,17 +60,17 @@ public class TelaCadastroHospede extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblNewLabel_1 = new JLabel("Data Nascimento:");
-		lblNewLabel_1.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_1.setBounds(177, 336, 190, 23);
 		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Telefone: ");
-		lblNewLabel_2.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_2.setBounds(177, 380, 135, 23);
 		contentPane.add(lblNewLabel_2);
 
 		JLabel lblNewLabel_3 = new JLabel("CEP:");
-		lblNewLabel_3.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(177, 422, 135, 23);
 		contentPane.add(lblNewLabel_3);
 
@@ -84,7 +84,7 @@ public class TelaCadastroHospede extends JFrame {
 		txtDataNasci = new JFormattedTextField(mascaraDataNasci);
 		/**********/
 
-		txtDataNasci.setBounds(377, 338, 116, 26);
+		txtDataNasci.setBounds(366, 338, 116, 26);
 		contentPane.add(txtDataNasci);
 		txtDataNasci.setColumns(10);
 
@@ -362,7 +362,7 @@ public class TelaCadastroHospede extends JFrame {
 
 		JLabel lblNewLabel_4 = new JLabel("Nome:");
 		lblNewLabel_4.setForeground(new Color(0, 0, 0));
-		lblNewLabel_4.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_4.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_4.setBounds(177, 208, 74, 23);
 		contentPane.add(lblNewLabel_4);
 
@@ -372,7 +372,7 @@ public class TelaCadastroHospede extends JFrame {
 		txtNomeHospede.setColumns(10);
 
 		JLabel lblNewLabel_5 = new JLabel("CPF:");
-		lblNewLabel_5.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_5.setBounds(177, 254, 62, 23);
 		contentPane.add(lblNewLabel_5);
 
@@ -390,7 +390,7 @@ public class TelaCadastroHospede extends JFrame {
 		txtCpfHospede.setColumns(10);
 
 		JLabel lblNewLabel_6 = new JLabel("Email:");
-		lblNewLabel_6.setFont(new Font("Sitka Subheading", Font.BOLD, 20));
+		lblNewLabel_6.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_6.setBounds(177, 299, 73, 26);
 		contentPane.add(lblNewLabel_6);
 
@@ -429,7 +429,7 @@ public class TelaCadastroHospede extends JFrame {
 						
 						JLabel lblNewLabel_7 = new JLabel("Cadastrar Hospede");
 						lblNewLabel_7.setForeground(new Color(0, 0, 128));
-						lblNewLabel_7.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
+						lblNewLabel_7.setFont(new Font("Dialog", Font.BOLD, 42));
 						panel.add(lblNewLabel_7);
 						
 						JPanel panel_1 = new JPanel();
@@ -439,7 +439,7 @@ public class TelaCadastroHospede extends JFrame {
 						
 						JLabel lblNewLabel = new JLabel("Cadastros");
 						lblNewLabel.setForeground(new Color(0, 0, 128));
-						lblNewLabel.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 20));
+						lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 						panel_1.add(lblNewLabel);
 						
 						JLabel lblNewLabel_8 = new JLabel("New label");

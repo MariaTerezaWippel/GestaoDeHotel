@@ -289,7 +289,7 @@ public class CadastrarEndereco extends JFrame {
 		cbxEstados.setBounds(771, 354, 138, 24);
 		contentPane.add(cbxEstados);
 		
-		JButton btnNewButton = new JButton("Buscar");
+		JButton btnNewButton = new JButton("Buscar Endereço");
 		btnNewButton.setForeground(new Color(0, 0, 255));
 		btnNewButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -300,7 +300,7 @@ public class CadastrarEndereco extends JFrame {
 				listaEndereco(endereco);
 			}
 		});
-		btnNewButton.setBounds(1078, 298, 173, 37);
+		btnNewButton.setBounds(1078, 298, 204, 37);
 		contentPane.add(btnNewButton);
 		
 		JPanel panel = new JPanel();
@@ -315,7 +315,7 @@ public class CadastrarEndereco extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(CadastrarEndereco.class.getResource("/Imagens/background.png")));
-		lblNewLabel.setBounds(0, 0, 2251, 1141);
+		lblNewLabel.setBounds(0, 0, 2312, 1141);
 		contentPane.add(lblNewLabel);
 	}
 
