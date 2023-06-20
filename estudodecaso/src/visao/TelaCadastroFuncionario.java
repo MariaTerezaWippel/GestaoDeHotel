@@ -404,6 +404,11 @@ public class TelaCadastroFuncionario extends JFrame {
 		lblNewLabel_5.setForeground(new Color(0, 0, 128));
 		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		panel_1.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/background.png")));
+		lblNewLabel_4.setBounds(0, 0, 1604, 881);
+		contentPaneTela.add(lblNewLabel_4);
 
 
 	}

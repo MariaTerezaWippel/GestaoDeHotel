@@ -8,21 +8,30 @@ import javax.swing.border.EmptyBorder;
 
 import Controle.FuncionarioDao;
 import modelo.Funcionario;
+import visao.TelaReserva.PanelComBackgroundImage;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+
 import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.Canvas;
 import java.awt.Label;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JTextPane;
 import java.awt.Panel;
@@ -56,11 +65,20 @@ public class TelaLoginFuncionario extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaLoginFuncionario() {
+
 		setExtendedState(MAXIMIZED_BOTH);
 		setTitle("Tela Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 2000, 2000);
-		contentPaneTela = new JPanel();
+		BufferedImage bg = null;
+		try {
+			bg = ImageIO.read(new File("src\\Imagens\\background.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		contentPaneTela = new PanelComBackgroundImage(bg);
 		contentPaneTela.setBackground(new Color(135, 206, 250));
 		contentPaneTela.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -120,11 +138,17 @@ public class TelaLoginFuncionario extends JFrame {
 		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 40));
 		lblNewLabel_1.setBounds(112, 83, 485, 44);
 		panel.add(lblNewLabel_1);
-
+		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/background.png")));
-		lblNewLabel.setBounds(0, 0, 1924, 1027);
-		contentPaneTela.add(lblNewLabel);
+		lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LOGOhotelC.png")));
+		lblNewLabel.setBounds(-72, 153, 652, 438);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LogoHotel.png")));
+		lblNewLabel_4.setBounds(10, 110, 351, 224);
+		panel.add(lblNewLabel_4);
+
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String erros = "";
@@ -160,5 +184,20 @@ public class TelaLoginFuncionario extends JFrame {
 			}
 		});
 
+	}
+
+	class PanelComBackgroundImage extends JPanel {
+
+		Image bg;
+
+		PanelComBackgroundImage(Image bg) {
+			this.bg = bg;
+		}
+
+		@Override
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawImage(bg, 0, 0, getWidth(), getHeight(), this);
+		}
 	}
 }

@@ -32,7 +32,7 @@ import Controle.HospedeDao;
 import modelo.Endereco;
 import modelo.Funcionario;
 import modelo.Hospede;
-//import visao.TelaPrincipal.PanelComBackgroundImage;
+import visao.TelaPrincipal.PanelComBackgroundImage;
 
 import javax.swing.SwingConstants;
 import javax.imageio.ImageIO;

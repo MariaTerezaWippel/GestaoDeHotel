@@ -1,3 +1,4 @@
+
 package visao;
 
 import java.awt.Color;
@@ -74,11 +75,13 @@ public class TelaReserva extends JFrame {
 
 		setBounds(100, 100, 2000, 1500);
 		/*
-		 * BufferedImage bg = null; try { bg = ImageIO.read(new
-		 * File("src\\Imagens\\background.png"));
-		 * 
-		 * } catch (IOException e) { e.printStackTrace(); }
-		 */
+		BufferedImage bg = null;
+		try {
+			bg = ImageIO.read(new File("src\\Imagens\\background.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}*/
 
 		contentPaneTela_1 = new JPanel();
 		contentPaneTela_1.setForeground(new Color(0, 0, 0));
@@ -112,6 +115,8 @@ public class TelaReserva extends JFrame {
 		txtNomecomple_1.setBounds(262, 310, 310, 26);
 		contentPaneTela_1.add(txtNomecomple_1);
 		txtNomecomple_1.setColumns(10);
+
+
 
 		btnRealizarReserva = new JButton("Realizar Reserva");
 		btnRealizarReserva.addActionListener(new ActionListener() {
@@ -174,9 +179,9 @@ public class TelaReserva extends JFrame {
 					JOptionPane.showMessageDialog(null, "Dados invalidos" + erros);
 					return;
 				}
-				String formaPagamento = (String) comboBox.getSelectedItem();
+				String formaPagamento =(String) comboBox.getSelectedItem();
 				reserva.setFormaPagamento(formaPagamento);
-
+				
 				var reservaDao = new ReservaDao();
 				reservaDao.getIntancia();
 				reserva.setHospede(hospede);
@@ -202,6 +207,7 @@ public class TelaReserva extends JFrame {
 		btnRealizarReserva.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 
 		contentPaneTela_1.add(btnRealizarReserva);
+	
 
 		JButton btnNewButton = new JButton("Alterar");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -211,6 +217,8 @@ public class TelaReserva extends JFrame {
 				btnRealizarReserva.setVisible(false);
 				contentPaneTela_1.remove(btnRealizarReserva);
 
+				
+				
 				txtCpf.setEditable(false);
 				int position = table.getSelectedRow();
 				String erros = "";
@@ -250,8 +258,8 @@ public class TelaReserva extends JFrame {
 
 						Hospede hospede = new Hospede();
 						Reserva reserva = new Reserva();
-
-						String formaPagamento = (String) comboBox.getSelectedItem();
+						
+						String formaPagamento =(String) comboBox.getSelectedItem();
 						reserva.setFormaPagamento(formaPagamento);
 
 						if (nomecompleto == null || nomecompleto.trim() == "" || nomecompleto.isEmpty()) {
@@ -395,7 +403,7 @@ public class TelaReserva extends JFrame {
 		contentPaneTela_1.add(lblNewLabel);
 
 		txtCpf = new JTextField();
-
+		
 		/**********/
 		MaskFormatter mascaraCpf = null;
 		try {
@@ -404,9 +412,9 @@ public class TelaReserva extends JFrame {
 			e.printStackTrace();
 		}
 		txtCpf = new JFormattedTextField(mascaraCpf);
-
+		
 		/**********/
-
+		
 		txtCpf.setColumns(10);
 		txtCpf.setBounds(245, 253, 310, 26);
 		contentPaneTela_1.add(txtCpf);
@@ -466,20 +474,18 @@ public class TelaReserva extends JFrame {
 		});
 		btnNewButton_2.setBounds(318, 774, 201, 51);
 		contentPaneTela_1.add(btnNewButton_2);
-
+		
 		comboBox = new JComboBox();
 		comboBox.addAncestorListener(new AncestorListener() {
 			public void ancestorAdded(AncestorEvent event) {
 				listaFormaPagamentos = new ArrayList<>();
 				listaFormaPagamentos = listaFormaPagamento();
-				for (int i = 0; i < listaFormaPagamentos.size(); i++) {
+				for(int i = 0; i < listaFormaPagamentos.size();i++) {
 					comboBox.addItem(listaFormaPagamentos.get(i));
 				}
 			}
-
 			public void ancestorMoved(AncestorEvent event) {
 			}
-
 			public void ancestorRemoved(AncestorEvent event) {
 			}
 		});
@@ -487,6 +493,7 @@ public class TelaReserva extends JFrame {
 		contentPaneTela_1.add(comboBox);
 		atualizarTabela();
 
+		
 		JLabel lblNewLabel_3_1 = new JLabel("Serviço de Quarto:");
 		lblNewLabel_3_1.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_3_1.setBounds(189, 401, 274, 31);
@@ -530,42 +537,49 @@ public class TelaReserva extends JFrame {
 		txtValorDiaria.setBounds(530, 446, 98, 26);
 		contentPaneTela_1.add(txtValorDiaria);
 		txtValorDiaria.setColumns(10);
-
+		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(153, 204, 255));
 		panel.setBounds(0, 0, 1924, 53);
 		contentPaneTela_1.add(panel);
-
+		
 		JLabel lblNewLabel_7 = new JLabel("Cadastrar Reserva");
 		lblNewLabel_7.setForeground(new Color(0, 0, 128));
 		lblNewLabel_7.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
 		panel.add(lblNewLabel_7);
-
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(155, 214, 249));
 		panel_1.setBounds(1084, 216, 661, 32);
 		contentPaneTela_1.add(panel_1);
-
+		
 		JLabel lblNewLabel_1 = new JLabel("Cadastros");
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		panel_1.add(lblNewLabel_1);
-
+		
 		JLabel lblNewLabel_2 = new JLabel("Nome:");
 		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_2.setBounds(189, 304, 201, 30);
 		contentPaneTela_1.add(lblNewLabel_2);
-
+		
 		JLabel lblNewLabel_3 = new JLabel("Quantidade de dias:");
 		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(189, 363, 217, 27);
 		contentPaneTela_1.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/background.png")));
+		lblNewLabel_6.setBounds(0, 0, 1631, 893);
+		contentPaneTela_1.add(lblNewLabel_6);
+		
 
+	
 	}
 
 	public void limparDados() {
 		txtCpf.setText("");
-
+		
 		txtQuantidadeHospedes.setText("");
 		txtValorDiaria.setText("");
 		txtNomecomple_1.setText("");
@@ -591,14 +605,13 @@ public class TelaReserva extends JFrame {
 		}
 
 	}
-
-	public static ArrayList<String> listaFormaPagamento() {
-		ArrayList<String> listaFormaPagamentos = new ArrayList<>();
+	public static ArrayList<String>listaFormaPagamento(){
+		ArrayList<String>listaFormaPagamentos= new ArrayList<>();
 		listaFormaPagamentos.add("Dinheiro");
 		listaFormaPagamentos.add("Credito");
 		listaFormaPagamentos.add("Debito");
 		return listaFormaPagamentos;
-
+		
 	}
 
 	private void preencherDados(Reserva reservaSelecionado) {
@@ -610,15 +623,14 @@ public class TelaReserva extends JFrame {
 		txtquantDias.setText(String.valueOf(reservaSelecionado.getQuantidadeDedias()));
 		int i = 0;
 		for (String string : listaFormaPagamentos) {
-			if (string.equals(reservaSelecionado.getFormaPagamento())) {
-				comboBox.setSelectedIndex(i);
-				break;
-			}
-			i++;
+		    if (string.equals(reservaSelecionado.getFormaPagamento())) {
+		    	comboBox.setSelectedIndex(i);
+		        break;
+		    }
+		    i++;
 		}
-
+		
 	}
-
 	class PanelComBackgroundImage extends JPanel {
 
 		Image bg;

@@ -8,11 +8,15 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JToggleButton;
 import javax.swing.JMenu;
@@ -22,6 +26,9 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JCheckBoxMenuItem;
@@ -33,6 +40,7 @@ import javax.swing.table.DefaultTableModel;
 
 import Controle.ReservaDao;
 import modelo.Reserva;
+import visao.TelaReserva.PanelComBackgroundImage;
 
 import java.awt.SystemColor;
 
@@ -46,7 +54,15 @@ public class TelaPrincipal extends JFrame {
 		setTitle("Tela Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 2000, 1500);
-		contentPaneTela = new JPanel();
+		
+		BufferedImage bg = null;
+		try {
+			bg = ImageIO.read(new File("src\\Imagens\\background.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		contentPaneTela = new PanelComBackgroundImage(bg);
 		contentPaneTela.setBackground(new Color(100, 149, 237));
 		contentPaneTela.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -206,5 +222,19 @@ public class TelaPrincipal extends JFrame {
 			table.setModel(tabela);
 		}
 
+	}
+	class PanelComBackgroundImage extends JPanel {
+
+		Image bg;
+
+		PanelComBackgroundImage(Image bg) {
+			this.bg = bg;
+		}
+
+		@Override
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawImage(bg, 0, 0, getWidth(), getHeight(), this);
+		}
 	}
 }

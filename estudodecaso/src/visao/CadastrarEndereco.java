@@ -289,20 +289,6 @@ public class CadastrarEndereco extends JFrame {
 		cbxEstados.setBounds(771, 354, 138, 24);
 		contentPane.add(cbxEstados);
 		
-		JButton btnNewButton = new JButton("Buscar Endereço");
-		btnNewButton.setForeground(new Color(0, 0, 255));
-		btnNewButton.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String cep = txtCep.getText().replace("-", "");
-				Endereco endereco = new Endereco();
-				endereco.setCep(Long.parseLong(cep));
-				listaEndereco(endereco);
-			}
-		});
-		btnNewButton.setBounds(1078, 298, 204, 37);
-		contentPane.add(btnNewButton);
-		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(153, 204, 255));
 		panel.setBounds(0, 0, 1924, 53);
