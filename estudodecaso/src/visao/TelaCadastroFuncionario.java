@@ -407,7 +407,7 @@ public class TelaCadastroFuncionario extends JFrame {
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/background.png")));
-		lblNewLabel_4.setBounds(0, 0, 1604, 881);
+		lblNewLabel_4.setBounds(0, 0, 1936, 1050);
 		contentPaneTela.add(lblNewLabel_4);
 
 

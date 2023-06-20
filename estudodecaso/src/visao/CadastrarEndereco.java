@@ -50,28 +50,28 @@ public class CadastrarEndereco extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel("CEP:");
 		lblNewLabel_1.setForeground(new Color(0, 0, 0));
 		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblNewLabel_1.setBounds(684, 298, 60, 32);
+		lblNewLabel_1.setBounds(809, 300, 60, 32);
 		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Estado:");
 		lblNewLabel_2.setForeground(new Color(0, 0, 0));
 		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblNewLabel_2.setBounds(684, 346, 94, 32);
+		lblNewLabel_2.setBounds(809, 348, 94, 32);
 		contentPane.add(lblNewLabel_2);
 
 		JLabel lblNewLabel_3 = new JLabel("Cidade:");
 		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblNewLabel_3.setBounds(684, 401, 94, 32);
+		lblNewLabel_3.setBounds(809, 403, 94, 32);
 		contentPane.add(lblNewLabel_3);
 
 		JLabel lblNewLabel_4 = new JLabel("Bairro:");
 		lblNewLabel_4.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblNewLabel_4.setBounds(684, 451, 83, 32);
+		lblNewLabel_4.setBounds(809, 453, 83, 32);
 		contentPane.add(lblNewLabel_4);
 
 		JLabel lblNewLabel_5 = new JLabel("Rua:");
 		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblNewLabel_5.setBounds(684, 503, 46, 32);
+		lblNewLabel_5.setBounds(809, 505, 46, 32);
 		contentPane.add(lblNewLabel_5);
 
 		/**********/
@@ -84,22 +84,22 @@ public class CadastrarEndereco extends JFrame {
 		txtCep = new JFormattedTextField(mascaraCep1);
 		/**********/
 
-		txtCep.setBounds(741, 306, 129, 24);
+		txtCep.setBounds(896, 308, 129, 24);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
 		txtCidade = new JTextField();
-		txtCidade.setBounds(771, 409, 204, 24);
+		txtCidade.setBounds(896, 411, 204, 24);
 		contentPane.add(txtCidade);
 		txtCidade.setColumns(10);
 
 		txtBairro = new JTextField();
-		txtBairro.setBounds(759, 459, 216, 24);
+		txtBairro.setBounds(896, 461, 216, 24);
 		contentPane.add(txtBairro);
 		txtBairro.setColumns(10);
 
 		txtRua = new JTextField();
-		txtRua.setBounds(740, 511, 235, 24);
+		txtRua.setBounds(896, 513, 235, 24);
 		contentPane.add(txtRua);
 		txtRua.setColumns(10);
 
@@ -286,7 +286,7 @@ public class CadastrarEndereco extends JFrame {
 			public void ancestorRemoved(AncestorEvent event) {
 			}
 		});
-		cbxEstados.setBounds(771, 354, 138, 24);
+		cbxEstados.setBounds(896, 356, 138, 24);
 		contentPane.add(cbxEstados);
 		
 		JPanel panel = new JPanel();

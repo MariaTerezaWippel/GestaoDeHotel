@@ -127,22 +127,18 @@ public class TelaLoginFuncionario extends JFrame {
 		lblNewLabel_5.setBounds(86, 306, 75, 28);
 		panel.add(lblNewLabel_5);
 
-		JLabel lblNewLabel_6 = new JLabel("Senha Secreta:");
+		JLabel lblNewLabel_6 = new JLabel("Frase Secreta:");
 		lblNewLabel_6.setForeground(new Color(0, 0, 128));
 		lblNewLabel_6.setFont(new Font("Dialog", Font.BOLD, 18));
 		lblNewLabel_6.setBounds(86, 368, 157, 21);
 		panel.add(lblNewLabel_6);
 
-		JLabel lblNewLabel_1 = new JLabel("Hotel Boulevard");
+		JLabel lblNewLabel_1 = new JLabel(" Boulevard");
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 40));
-		lblNewLabel_1.setBounds(112, 83, 485, 44);
+		lblNewLabel_1.setBounds(150, 83, 222, 44);
 		panel.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LOGOhotelC.png")));
-		lblNewLabel.setBounds(-72, 153, 652, 438);
-		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon(TelaLoginFuncionario.class.getResource("/Imagens/LogoHotel.png")));

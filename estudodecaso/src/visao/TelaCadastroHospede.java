@@ -461,7 +461,7 @@ public class TelaCadastroHospede extends JFrame {
 						
 						JLabel lblNewLabel_8 = new JLabel("");
 						lblNewLabel_8.setIcon(new ImageIcon(TelaCadastroHospede.class.getResource("/Imagens/background.png")));
-						lblNewLabel_8.setBounds(0, 0, 1604, 897);
+						lblNewLabel_8.setBounds(0, 0, 1924, 1061);
 						contentPane.add(lblNewLabel_8);
 						
 			

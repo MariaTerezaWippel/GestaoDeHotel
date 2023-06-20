@@ -570,7 +570,7 @@ public class TelaReserva extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/background.png")));
-		lblNewLabel_6.setBounds(0, 0, 1631, 893);
+		lblNewLabel_6.setBounds(0, 0, 1924, 1061);
 		contentPaneTela_1.add(lblNewLabel_6);
 		
 
