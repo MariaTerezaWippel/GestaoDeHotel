@@ -1,56 +1,41 @@
-
 package visao;
 
-import java.awt.EventQueue;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
 import Controle.HospedeDao;
 import Controle.ReservaDao;
-import modelo.Endereco;
 import modelo.Hospede;
 import modelo.Reserva;
-
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
-import java.awt.Font;
-import javax.swing.JTextField;
-import java.awt.Color;
-import javax.swing.JButton;
-import javax.swing.JScrollPane;
-import javax.swing.JToolBar;
-import javax.swing.JDesktopPane;
-import javax.swing.JCheckBox;
-import javax.swing.JToggleButton;
-import javax.swing.JEditorPane;
-import javax.swing.JFormattedTextField;
-import javax.swing.JTree;
-import javax.swing.JSpinner;
-import java.awt.Canvas;
-import java.awt.Checkbox;
-import java.awt.Button;
-import java.awt.SystemColor;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.awt.Scrollbar;
-import java.awt.ScrollPane;
-import javax.swing.JRadioButton;
-import java.awt.Component;
-import javax.swing.Box;
-import java.awt.Dimension;
-import javax.swing.JComboBox;
-import javax.swing.ImageIcon;
-import java.awt.Label;
-import javax.swing.JTabbedPane;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.ButtonGroup;
 
 public class TelaReserva extends JFrame {
 
@@ -71,12 +56,13 @@ public class TelaReserva extends JFrame {
 	private ArrayList<Reserva> listaReserva;
 	private JTextField txtNomecomple;
 	private JTextField txtQuantidadeHospedes;
-	private JTextField txtFormaPagamento;
 	private JTextField txtquantDias;
 	private JTextField txtValorDiaria;
 	private JButton salvar;
 	private Reserva reservaSelecionado;
 	private JButton btnRealizarReserva;
+	private ArrayList<String> listaFormaPagamentos;
+	private JComboBox comboBox;
 
 	/**
 	 * Create the frame.
@@ -87,6 +73,12 @@ public class TelaReserva extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		setBounds(100, 100, 2000, 1500);
+		/*
+		 * BufferedImage bg = null; try { bg = ImageIO.read(new
+		 * File("src\\Imagens\\background.png"));
+		 * 
+		 * } catch (IOException e) { e.printStackTrace(); }
+		 */
 
 		contentPaneTela_1 = new JPanel();
 		contentPaneTela_1.setForeground(new Color(0, 0, 0));
@@ -121,17 +113,12 @@ public class TelaReserva extends JFrame {
 		contentPaneTela_1.add(txtNomecomple_1);
 		txtNomecomple_1.setColumns(10);
 
-		JComboBox DataSaidabox = new JComboBox();
-		DataSaidabox.setBounds(980, 318, 239, 22);
-		DataSaidabox.setEditable(true);
-
 		btnRealizarReserva = new JButton("Realizar Reserva");
 		btnRealizarReserva.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				String nomecompleto = txtNomecomple_1.getText();
-				String cpf = txtCpf.getText().replace("-", "");
-				String formaPagamento = txtFormaPagamento.getText();
+				String cpf = txtCpf.getText().replace("-", "").replace(".", "");
 				String quantaspesssoas = txtQuantidadeHospedes.getText();
 				String servicoQuarto = "";
 				String valorDiaria = txtValorDiaria.getText().replace("", "");
@@ -178,11 +165,6 @@ public class TelaReserva extends JFrame {
 				} else {
 					reserva.setQuantidadeDedias(Integer.valueOf(quantidadeDias));
 				}
-				if (formaPagamento == null || formaPagamento.trim() == "" || formaPagamento.isEmpty()) {
-					erros += "formaPagamento\n";
-				} else {
-					reserva.setFormaPagamento(formaPagamento);
-				}
 				if (quantaspesssoas == null || quantaspesssoas.trim() == "" || quantaspesssoas.isEmpty()) {
 					erros += "quantas pesssoas\n";
 				} else {
@@ -192,6 +174,9 @@ public class TelaReserva extends JFrame {
 					JOptionPane.showMessageDialog(null, "Dados invalidos" + erros);
 					return;
 				}
+				String formaPagamento = (String) comboBox.getSelectedItem();
+				reserva.setFormaPagamento(formaPagamento);
+
 				var reservaDao = new ReservaDao();
 				reservaDao.getIntancia();
 				reserva.setHospede(hospede);
@@ -217,12 +202,6 @@ public class TelaReserva extends JFrame {
 		btnRealizarReserva.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 
 		contentPaneTela_1.add(btnRealizarReserva);
-		contentPaneTela_1.add(btnRealizarReserva);
-
-		contentPaneTela_1.add(btnRealizarReserva);
-		contentPaneTela_1.add(btnRealizarReserva);
-		JComboBox<String> jComboBox = new JComboBox<String>();
-		jComboBox.addItem("      -SELECIONE-     ");
 
 		JButton btnNewButton = new JButton("Alterar");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -238,6 +217,17 @@ public class TelaReserva extends JFrame {
 
 				if (position == -1) {
 					JOptionPane.showMessageDialog(null, "Nenhum paciente selecionado");
+					salvar.setVisible(false);
+					contentPaneTela_1.remove(salvar);
+
+					btnRealizarReserva.setBounds(318, 683, 201, 53);
+					btnRealizarReserva.setForeground(new Color(255, 255, 255));
+					btnRealizarReserva.setBackground(new Color(0, 0, 128));
+					btnRealizarReserva.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 18));
+					btnRealizarReserva.setVisible(true);
+					contentPaneTela_1.add(btnRealizarReserva);
+
+					txtCpf.setEditable(true);
 					return;
 				}
 
@@ -250,8 +240,7 @@ public class TelaReserva extends JFrame {
 					public void actionPerformed(ActionEvent e) {
 
 						String nomecompleto = txtNomecomple_1.getText();
-						String cpf = txtCpf.getText().replace("-", "");
-						String formaPagamento = txtFormaPagamento.getText();
+						String cpf = txtCpf.getText().replace("-", "").replace(".", "");
 						String quantaspesssoas = txtQuantidadeHospedes.getText();
 						String servicoQuarto = "";
 						String valorDiaria = txtValorDiaria.getText();
@@ -261,6 +250,9 @@ public class TelaReserva extends JFrame {
 
 						Hospede hospede = new Hospede();
 						Reserva reserva = new Reserva();
+
+						String formaPagamento = (String) comboBox.getSelectedItem();
+						reserva.setFormaPagamento(formaPagamento);
 
 						if (nomecompleto == null || nomecompleto.trim() == "" || nomecompleto.isEmpty()) {
 							erros += "nome\n";
@@ -295,11 +287,6 @@ public class TelaReserva extends JFrame {
 						} else {
 							reserva.setQuantidadeDedias(Integer.valueOf(quantidadeDias));
 						}
-						if (formaPagamento == null || formaPagamento.trim() == "" || formaPagamento.isEmpty()) {
-							erros += "formaPagamento\n";
-						} else {
-							reserva.setFormaPagamento(formaPagamento);
-						}
 						if (quantaspesssoas == null || quantaspesssoas.trim() == "" || quantaspesssoas.isEmpty()) {
 							erros += "quantas pesssoas\n";
 						} else {
@@ -326,7 +313,7 @@ public class TelaReserva extends JFrame {
 						salvar.setVisible(false);
 						contentPaneTela_1.remove(salvar);
 
-						btnRealizarReserva.setBounds(280, 600, 188, 33);
+						btnRealizarReserva.setBounds(318, 683, 201, 53);
 						btnRealizarReserva.setForeground(new Color(255, 255, 255));
 						btnRealizarReserva.setBackground(new Color(0, 0, 128));
 						btnRealizarReserva.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 18));
@@ -336,10 +323,11 @@ public class TelaReserva extends JFrame {
 						txtCpf.setEditable(true);
 					}
 				});
-				salvar.setBounds(280, 600, 188, 33);
+				salvar.setBounds(318, 683, 201, 53);
 				salvar.setForeground(new Color(255, 255, 255));
 				salvar.setBackground(new Color(0, 0, 128));
-				salvar.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 18));
+				salvar.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+
 				contentPaneTela_1.add(salvar);
 
 			}
@@ -354,7 +342,7 @@ public class TelaReserva extends JFrame {
 		JButton btnCancelar = new JButton("Excluir");
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				txtCpf.setEditable(true);
 				int position = table.getSelectedRow();
 				String erros = "";
 
@@ -407,7 +395,7 @@ public class TelaReserva extends JFrame {
 		contentPaneTela_1.add(lblNewLabel);
 
 		txtCpf = new JTextField();
-		
+
 		/**********/
 		MaskFormatter mascaraCpf = null;
 		try {
@@ -416,9 +404,9 @@ public class TelaReserva extends JFrame {
 			e.printStackTrace();
 		}
 		txtCpf = new JFormattedTextField(mascaraCpf);
-		
+
 		/**********/
-		
+
 		txtCpf.setColumns(10);
 		txtCpf.setBounds(245, 253, 310, 26);
 		contentPaneTela_1.add(txtCpf);
@@ -442,7 +430,7 @@ public class TelaReserva extends JFrame {
 				hospede.setCpf(Long.valueOf(cpf));
 				HospedeDao hospedeDao = new HospedeDao();
 				hospedeDao.getIntancia();
-				hospede = hospedeDao.consultarHospede();
+				hospede = hospedeDao.consultarHospedeCPF(hospede.getCpf());
 				if (hospede != null) {
 					txtNomecomple_1.setText(hospede.getNome());
 					txtCpf.setEditable(false);
@@ -478,7 +466,27 @@ public class TelaReserva extends JFrame {
 		});
 		btnNewButton_2.setBounds(318, 774, 201, 51);
 		contentPaneTela_1.add(btnNewButton_2);
-		
+
+		comboBox = new JComboBox();
+		comboBox.addAncestorListener(new AncestorListener() {
+			public void ancestorAdded(AncestorEvent event) {
+				listaFormaPagamentos = new ArrayList<>();
+				listaFormaPagamentos = listaFormaPagamento();
+				for (int i = 0; i < listaFormaPagamentos.size(); i++) {
+					comboBox.addItem(listaFormaPagamentos.get(i));
+				}
+			}
+
+			public void ancestorMoved(AncestorEvent event) {
+			}
+
+			public void ancestorRemoved(AncestorEvent event) {
+			}
+		});
+		comboBox.setBounds(199, 616, 223, 22);
+		contentPaneTela_1.add(comboBox);
+		atualizarTabela();
+
 		JLabel lblNewLabel_3_1 = new JLabel("Serviço de Quarto:");
 		lblNewLabel_3_1.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_3_1.setBounds(189, 401, 274, 31);
@@ -513,11 +521,6 @@ public class TelaReserva extends JFrame {
 		contentPaneTela_1.add(txtQuantidadeHospedes);
 		txtQuantidadeHospedes.setColumns(10);
 
-		txtFormaPagamento = new JTextField();
-		txtFormaPagamento.setBounds(189, 606, 201, 26);
-		contentPaneTela_1.add(txtFormaPagamento);
-		txtFormaPagamento.setColumns(10);
-
 		txtquantDias = new JTextField();
 		txtquantDias.setBounds(390, 364, 98, 26);
 		contentPaneTela_1.add(txtquantDias);
@@ -527,48 +530,42 @@ public class TelaReserva extends JFrame {
 		txtValorDiaria.setBounds(530, 446, 98, 26);
 		contentPaneTela_1.add(txtValorDiaria);
 		txtValorDiaria.setColumns(10);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(153, 204, 255));
 		panel.setBounds(0, 0, 1924, 53);
 		contentPaneTela_1.add(panel);
-		
+
 		JLabel lblNewLabel_7 = new JLabel("Cadastrar Reserva");
 		lblNewLabel_7.setForeground(new Color(0, 0, 128));
 		lblNewLabel_7.setFont(new Font("Sitka Subheading", Font.BOLD, 42));
 		panel.add(lblNewLabel_7);
-		
+
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(155, 214, 249));
 		panel_1.setBounds(1084, 216, 661, 32);
 		contentPaneTela_1.add(panel_1);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Cadastros");
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		panel_1.add(lblNewLabel_1);
-		
+
 		JLabel lblNewLabel_2 = new JLabel("Nome:");
 		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_2.setBounds(189, 304, 201, 30);
 		contentPaneTela_1.add(lblNewLabel_2);
-		
+
 		JLabel lblNewLabel_3 = new JLabel("Quantidade de dias:");
 		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(189, 363, 217, 27);
 		contentPaneTela_1.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setIcon(new ImageIcon(TelaReserva.class.getResource("/Imagens/background.png")));
-		lblNewLabel_6.setBounds(0, 0, 1924, 1061);
-		contentPaneTela_1.add(lblNewLabel_6);
-		atualizarTabela();
 
 	}
 
 	public void limparDados() {
 		txtCpf.setText("");
-		txtFormaPagamento.setText("");
+
 		txtQuantidadeHospedes.setText("");
 		txtValorDiaria.setText("");
 		txtNomecomple_1.setText("");
@@ -595,14 +592,45 @@ public class TelaReserva extends JFrame {
 
 	}
 
+	public static ArrayList<String> listaFormaPagamento() {
+		ArrayList<String> listaFormaPagamentos = new ArrayList<>();
+		listaFormaPagamentos.add("Dinheiro");
+		listaFormaPagamentos.add("Credito");
+		listaFormaPagamentos.add("Debito");
+		return listaFormaPagamentos;
+
+	}
+
 	private void preencherDados(Reserva reservaSelecionado) {
 
 		txtCpf.setText(String.valueOf(reservaSelecionado.getHospede().getCpf()));
-		txtFormaPagamento.setText(reservaSelecionado.getFormaPagamento());
 		txtQuantidadeHospedes.setText(String.valueOf(reservaSelecionado.getQuantidadeHospede()));
 		txtValorDiaria.setText(String.valueOf(reservaSelecionado.getDiaria()));
 		txtNomecomple_1.setText(reservaSelecionado.getHospede().getNome());
 		txtquantDias.setText(String.valueOf(reservaSelecionado.getQuantidadeDedias()));
+		int i = 0;
+		for (String string : listaFormaPagamentos) {
+			if (string.equals(reservaSelecionado.getFormaPagamento())) {
+				comboBox.setSelectedIndex(i);
+				break;
+			}
+			i++;
+		}
 
+	}
+
+	class PanelComBackgroundImage extends JPanel {
+
+		Image bg;
+
+		PanelComBackgroundImage(Image bg) {
+			this.bg = bg;
+		}
+
+		@Override
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawImage(bg, 0, 0, getWidth(), getHeight(), this);
+		}
 	}
 }

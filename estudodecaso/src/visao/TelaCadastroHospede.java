@@ -3,8 +3,13 @@ package visao;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 
@@ -27,7 +32,10 @@ import Controle.HospedeDao;
 import modelo.Endereco;
 import modelo.Funcionario;
 import modelo.Hospede;
+//import visao.TelaPrincipal.PanelComBackgroundImage;
+
 import javax.swing.SwingConstants;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class TelaCadastroHospede extends JFrame {
@@ -46,6 +54,7 @@ public class TelaCadastroHospede extends JFrame {
 	private EnderecoDao enderecoDao;
 	private Hospede hospedeSelecionado;
 	private JButton salvar;
+	private JButton btnNewButton;
 
 	public TelaCadastroHospede() {
 		setTitle("Tela Cadastro Hóspede");
@@ -118,7 +127,7 @@ public class TelaCadastroHospede extends JFrame {
 		contentPane.add(txtEndereçoHospede);
 		txtEndereçoHospede.setColumns(10);
 
-		JButton btnNewButton = new JButton("Cadastrar");
+		btnNewButton = new JButton("Cadastrar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -223,6 +232,8 @@ public class TelaCadastroHospede extends JFrame {
 
 				if (position == -1) {
 					JOptionPane.showMessageDialog(null, "Nenhum hóspede selecionado");
+					contentPane.add(btnNewButton);
+					btnNewButton.setVisible(true);
 					return;
 				}
 
@@ -240,7 +251,7 @@ public class TelaCadastroHospede extends JFrame {
 						String dataNascimento = txtDataNasci.getText();
 						String telefone = txtTelefoneHospede.getText().replace("(", "").replace(")", "")
 								.replace("-", "").replace(" ", "");
-						String enderecoCep = txtEndereçoHospede.getText();
+						String enderecoCep = txtEndereçoHospede.getText().replace("-", "");
 
 						String erros = "";
 
@@ -303,10 +314,7 @@ public class TelaCadastroHospede extends JFrame {
 						salvar.setVisible(false);
 						contentPane.remove(salvar);
 
-						btnNewButton_1.setForeground(new Color(255, 255, 255));
-						btnNewButton_1.setBackground(new Color(0, 0, 255));
-						btnNewButton_1.setFont(new Font("Sitka Subheading", Font.BOLD, 17));
-						btnNewButton_1.setBounds(482, 145, 165, 33);
+						
 						contentPane.add(btnNewButton);
 						btnNewButton.setVisible(true);
 
@@ -315,10 +323,10 @@ public class TelaCadastroHospede extends JFrame {
 				});
 				salvar.setBackground(new Color(0, 0, 128));
 				salvar.setForeground(new Color(255, 255, 255));
-				salvar.setFont(new Font("Sitka Subheading", Font.BOLD | Font.ITALIC, 19));
-				salvar.setBounds(482, 100, 165, 33);
+				salvar.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+				salvar.setBounds(275, 524, 165, 47);
 				contentPane.add(salvar);
-
+				salvar.setVisible(true);
 			}
 
 		});
@@ -451,10 +459,12 @@ public class TelaCadastroHospede extends JFrame {
 						lblNewLabel.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 						panel_1.add(lblNewLabel);
 						
-						JLabel lblNewLabel_8 = new JLabel("New label");
+						JLabel lblNewLabel_8 = new JLabel("");
 						lblNewLabel_8.setIcon(new ImageIcon(TelaCadastroHospede.class.getResource("/Imagens/background.png")));
-						lblNewLabel_8.setBounds(0, 0, 1924, 1061);
+						lblNewLabel_8.setBounds(0, 0, 1604, 897);
 						contentPane.add(lblNewLabel_8);
+						
+			
 
 		atualizarTabela();
 	}
@@ -495,5 +505,19 @@ public class TelaCadastroHospede extends JFrame {
 		txtDataNasci.setText(hospedeSelecionado.getDataNascimento());
 		txtTelefoneHospede.setText(String.valueOf(hospedeSelecionado.getTelefone()));
 		txtEndereçoHospede.setText(String.valueOf(hospedeSelecionado.getEndereco().getCep()));
+	}
+	class PanelComBackgroundImage extends JPanel {
+
+		Image bg;
+
+		PanelComBackgroundImage(Image bg) {
+			this.bg = bg;
+		}
+
+		@Override
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawImage(bg, 0, 0, getWidth(), getHeight(), this);
+		}
 	}
 }

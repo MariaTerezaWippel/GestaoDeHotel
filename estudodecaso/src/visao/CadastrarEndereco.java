@@ -338,12 +338,20 @@ public class CadastrarEndereco extends JFrame {
 	EnderecoDao	enderecoDao = new EnderecoDao();
 	enderecoDao.getIntancia();
 	Endereco enderecoNovo = new  Endereco();
-	enderecoNovo=  enderecoDao.consultarEndereco(endereco);
+	enderecoNovo =  enderecoDao.consultarEndereco(endereco);
 	txtCep.setText(String.valueOf(enderecoNovo.getCep()));
     txtCidade.setText(enderecoNovo.getCidade());
 	txtBairro.setText(enderecoNovo.getBairro());
 	txtRua.setText(enderecoNovo.getRua());
 	cbxEstados.setSelectedItem(enderecoNovo.getEstado());
 	
+	int i = 0;
+	for (String string : listaEstados) {
+	    if (string.equals(enderecoNovo.getEstado())) {
+	        cbxEstados.setSelectedIndex(i);
+	        break;
+	    }
+	    i++;
+	}
 	}
 }

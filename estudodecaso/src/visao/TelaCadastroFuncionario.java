@@ -221,6 +221,11 @@ public class TelaCadastroFuncionario extends JFrame {
 
 				if (position == -1) {
 					JOptionPane.showMessageDialog(null, "Nenhum paciente selecionado");
+					btnCadastrarFuncio.setForeground(new Color(255, 255, 255));
+					btnCadastrarFuncio.setBackground(new Color(0, 0, 128));
+					btnCadastrarFuncio.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+					btnCadastrarFuncio.setBounds(731, 694, 184, 53);
+					contentPaneTela.add(btnCadastrarFuncio);
 					return;
 				}
 
@@ -279,13 +284,18 @@ public class TelaCadastroFuncionario extends JFrame {
 							atualizarTabela();
 							limparDados();
 						}
+						btnCadastrarFuncio.setForeground(new Color(255, 255, 255));
+						btnCadastrarFuncio.setBackground(new Color(0, 0, 128));
+						btnCadastrarFuncio.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
+						btnCadastrarFuncio.setBounds(731, 694, 184, 53);
+						contentPaneTela.add(btnCadastrarFuncio);
 						txtCpf.setEditable(true);
 					}
 				});
 				salvar.setForeground(new Color(255, 255, 255));
 				salvar.setBackground(new Color(0, 0, 128));
 				salvar.setFont(new Font("Source Serif Pro Semibold", Font.BOLD | Font.ITALIC, 18));
-				salvar.setBounds(495, 715, 217, 38);
+				salvar.setBounds(731, 694, 184, 53);
 				contentPaneTela.add(salvar);
 
 			}
@@ -394,11 +404,7 @@ public class TelaCadastroFuncionario extends JFrame {
 		lblNewLabel_5.setForeground(new Color(0, 0, 128));
 		lblNewLabel_5.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 20));
 		panel_1.add(lblNewLabel_5);
-		
-		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon(TelaCadastroFuncionario.class.getResource("/Imagens/background.png")));
-		lblNewLabel_4.setBounds(0, 0, 1924, 1061);
-		contentPaneTela.add(lblNewLabel_4);
+
 
 	}
 

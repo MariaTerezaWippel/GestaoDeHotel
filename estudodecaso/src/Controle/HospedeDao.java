@@ -71,6 +71,22 @@ public class HospedeDao {
 		}
 		return null;
 	}
+	public Hospede consultarHospedeCPF(Long cpf) {
+		Hospede hosp = new Hospede();
+		for (Hospede h : listaHospede) {
+
+			if (h.getCpf().equals(cpf)) {
+				hosp.setCpf(h.getCpf());
+				hosp.setDataNascimento(h.getDataNascimento());
+				hosp.setEmail(h.getEmail());
+				hosp.setEndereco(h.getEndereco());
+				hosp.setTelefone(h.getTelefone());
+				hosp.setNome(h.getNome());
+				return hosp;
+			}
+		}
+		return null;
+	}
 
 	public ArrayList<Hospede> listaHospede() {
 		return HospedeDao.listaHospede;
